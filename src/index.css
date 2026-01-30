@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+   -ms-overflow-style: none;     /* IE / Edge */
+}
+
+/* Hide vertical scrollbar but keep scrolling */
+html {
+  scrollbar-width: none;        /* Firefox */
+}
+
+
+body::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari */
+}
+
+@font-face {
+  font-family: "Times Now";
+  src: url("/src/assets/fonts/times-now/TimesNow-SemiLightItalic.woff") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Times Now";
+  src: url("/src/assets/fonts/times-now/TimesNow-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Variable";
+  src: url("/src/assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+  font-weight: 100 900; /* variable font range */
+  font-style: normal;
+}
