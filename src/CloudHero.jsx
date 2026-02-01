@@ -65,21 +65,21 @@ const CloudHero = () => {
       {/* BUILD MORE SECTION — UNCHANGED */}{" "}
       <div className=" absolute top-[0%] left-[50%] z-50 text-left max-w-md ">
         {" "}
-        <h2 className=" font-['Meie_Script'] font-normal text-[40px] leading-[100%] tracking-[0] text-[#32312B] select-none ml-0 ">
+        <h2 className="font-normal text-[40px] leading-[100%] tracking-[0] text-[#32312B] select-none ml-0 " style={{ fontFamily: "Meie Script" }} >
           {" "}
           Build more with us{" "}
         </h2>{" "}
         <div className="mt-2 w-[420px] text-right relative left-[-100px]">
           {" "}
-          <p className="font-['Times Now',serif] font-[350] text-[10px] leading-[1.2] text-[#32312B] pl-24">
+          <p className=" font-[600] text-[10px] leading-[1.2] text-[#32312B] pl-24"  style={{ fontFamily: "Times Now, Times, serif" }}>
             {" "}
             Explore the range and depth of our robust assortment{" "}
           </p>{" "}
-          <p className="font-['Times Now',serif] font-[350] text-[10px] leading-[1.2] text-[#32312B] pl-12">
+          <p className="font-[600] text-[10px] leading-[1.2] text-[#32312B] pl-12" style={{ fontFamily: "Times Now, Times, serif" }}>
             {" "}
             of offering, tailored to address ever-evolving {" "}
           </p>{" "}
-          <p className="font-['Times Now',serif] font-[350] text-[10px] leading-[1.2] text-[#32312B] pl-0">
+          <p className="font-[600] text-[10px] leading-[1.2] text-[#32312B] pl-0" style={{ fontFamily: "Times Now, Times, serif" }}>
             {" "}
             business needs and expectations.{" "}
           </p>{" "}

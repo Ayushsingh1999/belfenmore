@@ -39,55 +39,77 @@ const Middle = () => {
       "
     >
       {/* FIRST CLOUD */}
-      <div className="relative flex justify-center">
-        <img
-          src={cloudBg}
-          alt=""
-          className="
-            w-[100vw]
-            min-w-[1400px]
-            h-auto
-          "
-        />
+<div className="relative flex justify-center bg-[#FFFDC] overflow-hidden">
+  {/* Base background (the thing to blend with) */}
+  <img
+    src={cloudBg}
+    alt=""
+    className="
+      w-[100vw]
+      min-w-[1400px]
+      h-auto
+      block
+    "
+  />
 
-        <img
-          src={middle_section_img1_txt_1}
-          alt=""
-          className="
-            absolute
-            top-[35%]
-            left-1/2
-            -translate-x-1/2
-            w-[200px]
-          "
-        />
+  {/* Luminosity layer on top of background */}
+  <img
+    src={cloudBg}
+    alt=""
+    className="
+      absolute
+      inset-0
+      w-[100vw]
+      min-w-[1400px]
+      h-auto
+      mix-blend-luminosity
+      pointer-events-none
+    "
+  />
 
-        <img
-          src={middle_section_img1_txt_2}
-          alt=""
-          className="
-            absolute
-            top-[70%]
-            left-1/2
-            -translate-x-[120%]
-            w-[180px]
-          "
-        />
+  {/* Center text 1 */}
+  <img
+    src={middle_section_img1_txt_1}
+    alt=""
+    className="
+      absolute
+      top-[35%]
+      left-1/2
+      -translate-x-1/2
+      w-[200px]
+      z-10
+    "
+  />
 
-        
-        <img
-          src={t2}
-          alt=""
-          className="
-            absolute
-            top-[76%]
-            left-[50%]
-            -translate-x-[120%]
-            w-[180px]
-            z-50
-          "
-        />
-      </div>
+  {/* Center text 2 */}
+  <img
+    src={middle_section_img1_txt_2}
+    alt=""
+    className="
+      absolute
+      top-[70%]
+      left-1/2
+      -translate-x-[120%]
+      w-[180px]
+      z-20
+    "
+  />
+
+  {/* Top text */}
+  <img
+    src={t2}
+    alt=""
+    className="
+      absolute
+      top-[76%]
+      left-[50%]
+      -translate-x-[120%]
+      w-[180px]
+      z-30
+    "
+  />
+</div>
+
 
       {/* STACKED CLOUDS */}
       {cloudTexts.map((img, i) => (

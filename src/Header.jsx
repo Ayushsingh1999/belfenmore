@@ -3,7 +3,7 @@ import logo from "../src/assets/logo.png";
 import title from "../src/assets/web_main_title.png";
 
 const HEADER_HEIGHT = 130;
-const EDGE_PADDING = "p-3"; // ✅ SAME spacing on top, left, right
+const EDGE_PADDING = "p-4"; // ✅ SAME spacing on top, left, right
 
 const Header = () => {
   const [open, setOpen] = useState(false);

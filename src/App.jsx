@@ -23,7 +23,7 @@ function App() {
               left-0
               right-0
               bottom-0
-              bg-[#f6efe3]
+              bg-[#fffdc]
               mix-blend-multiply
               opacity-40
               z-10
