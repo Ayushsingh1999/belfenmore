@@ -71,15 +71,15 @@ const CloudHero = () => {
         </h2>{" "}
         <div className="mt-2 w-[420px] text-right relative left-[-100px]">
           {" "}
-          <p className=" font-[600] text-[10px] leading-[1.2] text-[#32312B] pl-24"  style={{ fontFamily: "Times Now, Times, serif" }}>
+          <p className=" font-[500] text-[10px] leading-[1.2] text-[#32312B] pl-24"  style={{ fontFamily: "Times Now, Times, serif" }}>
             {" "}
             Explore the range and depth of our robust assortment{" "}
           </p>{" "}
-          <p className="font-[600] text-[10px] leading-[1.2] text-[#32312B] pl-12" style={{ fontFamily: "Times Now, Times, serif" }}>
+          <p className="font-[500] text-[10px] leading-[1.2] text-[#32312B] pl-12" style={{ fontFamily: "Times Now, Times, serif" }}>
             {" "}
             of offering, tailored to address ever-evolving {" "}
           </p>{" "}
-          <p className="font-[600] text-[10px] leading-[1.2] text-[#32312B] pl-0" style={{ fontFamily: "Times Now, Times, serif" }}>
+          <p className="font-[500] text-[10px] leading-[1.2] text-[#32312B] pl-0" style={{ fontFamily: "Times Now, Times, serif" }}>
             {" "}
             business needs and expectations.{" "}
           </p>{" "}
