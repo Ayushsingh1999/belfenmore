@@ -10,7 +10,7 @@ const JourneySection = () => {
       {/* ================= DESKTOP DESIGN ================= */}
       <div className="hidden md:block mt-20">
         {/* TOP HEADING */}
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mb-0">
           <h3
             style={{
               fontFamily: "Times Now",

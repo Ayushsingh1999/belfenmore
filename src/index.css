@@ -37,3 +37,7 @@ body::-webkit-scrollbar {
   font-weight: 100 900; /* variable font range */
   font-style: normal;
 }
+
+.mob-text {
+  hyphens: auto;
+}

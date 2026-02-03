@@ -13,7 +13,7 @@ const Header = () => {
   const location = useLocation();
 
   const isProspectArgumentPage =
-    location.pathname === "/prospect-argument";
+    location.pathname === "/prospect-augment";
 
   return (
     <header

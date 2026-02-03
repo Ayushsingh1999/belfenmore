@@ -1,36 +1,51 @@
 // EnvisionSection.jsx
 import React from "react";
-import images from "../assets/images.png"; // sea image
-import Envision from "../assets/Envision.png"; // logo
+import Envision from "../assets/Envision.png";
+import beach_sea from "../assets/beach_sea_image.png";
 
 const EnvisionSection = () => {
   return (
-    <div className="w-full ">
-      {/* Envision logo/full-width section */}
-      <div className="w-full">
+    <div className="w-full bg-[#fffdec] overflow-hidden">
+      <div className="relative w-full">
+
+        {/* EN VISION — CLEAN */}
         <img
           src={Envision}
           alt="Envision"
-          className="w-full object-cover"
-        />
-      </div>
-
-      {/* Sea background image with gradient overlay */}
-      <div className="w-full relative">
-        <img
-          src={images}
-          alt="Sea"
-          className="w-full h-64 md:h-100 lg:h-196 object-cover"
+          className="
+            w-full
+            object-cover
+            relative
+            z-10
+            translate-y-12
+          "
         />
 
-        {/* Gradient Overlay */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-[50%] z-30 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fdf9ed 100%)",
-          }}
-        />
+        {/* SEA LAYER */}
+        <div className="relative z-20 -mt-16">
+          <img
+            src={beach_sea}
+            alt="Sea"
+            className="
+              w-full
+              h-64
+              md:h-96
+              lg:h-[180px]
+              object-cover
+              object-top
+            "
+          />
+
+          {/* LOCAL BLEND — ONLY AT MEETING POINT */}
+          <div
+            className="absolute top-0 left-0 w-full h-20 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, #fffdec 0%, rgba(255,253,236,0.85) 1%, rgba(255,253,236,0.4) 80%, rgba(255,253,236,0) 100%)",
+            }}
+          />
+        </div>
+
       </div>
     </div>
   );

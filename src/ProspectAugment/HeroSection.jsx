@@ -87,7 +87,7 @@ const HeroSection = () => {
     />
 
     {/* ===== FEATURES (ALIGNED UNDER IMAGE WIDTH) ===== */}
-    <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+    <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left ml-3">
       {features.map((feature, index) => (
         <div
           key={index}
@@ -99,7 +99,7 @@ const HeroSection = () => {
             style={{
               fontFamily: "'Times Now', Times, serif",
               fontWeight: 600,
-              fontSize: "28px",     // ⬇ tuned for 2xl width
+              fontSize: "22px",     // ⬇ tuned for 2xl width
               lineHeight: "100%",
               color: "#25241E",
             }}
@@ -108,10 +108,9 @@ const HeroSection = () => {
   src={e}
   alt="Icon"
   style={{
-    width: "44px",        // slightly wider for balance
-    height: "96px",       // ⬆⬆ key change (tall E)
-    marginRight: "-28px", // pulls word closer like the image
-    marginTop: "-8px",    // lifts E to align optically
+    height: "110px",
+    marginRight: "-30px", // pulls word closer like the image
+    marginTop: "-10px",    // lifts E to align optically
     objectFit: "contain",
     display: "block",
   }}
@@ -120,12 +119,25 @@ const HeroSection = () => {
           </h3>
 
           {/* ===== DESKTOP DESCRIPTION ===== */}
-          <p
-            className="hidden md:block mt-3 font-normal text-[13px] leading-[1.6] text-gray-700"
-            style={{ fontFamily: "Cabinet Grotesk Variable" }}
-          >
-            {feature.desktopDesc}
-          </p>
+<p
+  className="
+    hidden md:block
+    mt-3
+    font-normal
+    text-[13px]
+    leading-[1.6]
+    text-gray-700
+    text-justify
+  "
+  style={{
+    fontFamily: "Cabinet Grotesk Variable",
+    textJustify: "inter-word",
+    textAlignLast: "justify",
+    hyphens: "auto",
+  }}
+>
+  {feature.desktopDesc}
+</p>
 
           {/* ===== MOBILE DESCRIPTION ===== */}
           <p

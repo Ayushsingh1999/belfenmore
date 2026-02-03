@@ -16,13 +16,48 @@ import t4 from "./assets/t4.png";
 import t5 from "./assets/t5.png";
 import t6 from "./assets/t6.png";
  
-import Footer from "./components/Footer";
  
-/* 🔥 REUSABLE MASKED + BLEND IMAGE */
-const MaskedBlendImage = ({ src, className = "", flip = false, zIndex }) => {
+/* 🔥 LOGICAL Z-INDEX PATTERN */
+const Z_INDEX = {
+  // Background elements
+  SUN: 5,
+ 
+  // Text on clouds = CLOUD_z-index + 1 (text sits just above its cloud)
+  TEXT_MAIN_1: 11,
+  TEXT_MAIN_2: 19, // done
+  TEXT_MAIN_3: 21, // done
+  TEXT_MAIN_4: 22,
+  TEXT_MAIN_5: 23, // done
+  TEXT_MAIN_6: 24,
+  TEXT_MAIN_7: 62,
+ 
+ 
+  // Cloud images (increasing with each cloud)
+  CLOUD_BG: 10,
+ 
+  // Middle clouds - increment by 10 each time
+  CLOUD_1: 20,  // done
+  CLOUD_2: 30,  // done
+  CLOUD_3: 40,  // done
+  CLOUD_4: 50,  // done
+  CLOUD_5: 60,  // done
+ 
+  // Description text = TEXT_MAIN_z-index + 2 (description above main text)
+  TEXT_DESC_2: 23,  // done
+  TEXT_DESC_3: 33,  // done
+  TEXT_DESC_4: 43,  // done
+  TEXT_DESC_5: 53,  //done
+  TEXT_DESC_6: 63,  //done
+   
+  // Container
+  CONTAINER: 100
+};
+ 
+/* 🔥 FIXED MASKED + BLEND IMAGE - SEPARATE MASK AND IMAGE */
+const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10 }) => {
   return (
     <div className={`relative w-full ${className}`}>
-      {/* Cream background masked by image */}
+      {/* Cream background masked by image - NEVER flipped */}
       <div
         className="absolute inset-0 bg-[#FFFDEC]"
         style={{
@@ -37,180 +72,249 @@ const MaskedBlendImage = ({ src, className = "", flip = false, zIndex }) => {
         }}
       />
      
-      {/* Original image with blend mode */}
+      {/* Original image with blend mode - Only image gets flipped */}
       <img
         src={src}
         alt=""
-        className={`relative w-full h-auto mix-blend-luminosity ${flip ? "scale-x-[-1]" : ""}`}
+        className="relative w-full h-auto mix-blend-luminosity"
+        style={{
+          zIndex,
+          transform: flip ? "scaleX(-1)" : "none"
+        }}
       />
     </div>
   );
 };
-
-
  
-/* 🔥 TEXT ITEM COMPONENT WITH ADJUSTABLE POSITIONING */
+/* 🔥 TEXT ITEM COMPONENT */
 const TextItem = ({
   src,
   top,
   position = "center",
-  leftValue = "15%",    // Custom left position value
-  rightValue = "15%",   // Custom right position value
+  leftValue = "15%",
+  rightValue = "15%",
   width = "clamp(160px,16vw,200px)",
-  className = ""
+  className = "",
+  zIndex = 65,
+  href, // New prop for link URL
+  onClick // New prop for click handler
 }) => {
-  return (
-    <div className={`absolute z-50 ${className}`}
+  const content = (
+    <div className={`absolute ${className}`}
       style={{
         top,
         left: position === "left" ? leftValue : position === "center" ? "50%" : "auto",
         right: position === "right" ? rightValue : "auto",
         transform: position === "center" ? "translateX(-50%)" : "none",
-        width
+        width,
+        zIndex,
+        cursor: href || onClick ? 'pointer' : 'default'
       }}>
       <img src={src} alt="" className="w-full" />
     </div>
   );
+ 
+  // Wrap with link if href is provided
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="pointer-events-auto"
+      >
+        {content}
+      </a>
+    );
+  }
+ 
+  // Wrap with clickable div if onClick is provided
+  if (onClick) {
+    return (
+      <div
+        onClick={onClick}
+        className="pointer-events-auto cursor-pointer"
+      >
+        {content}
+      </div>
+    );
+  }
+ 
+  return content;
 };
  
 const Middle = () => {
+  // Example URLs - replace these with your actual URLs
+  const linkUrls = {
+    group1: "https://example.com/group1",
+    group2: "https://example.com/group2",
+    group3: "https://example.com/group3",
+    group4: "https://example.com/group4",
+    group5: "https://example.com/group5",
+    group6: "https://example.com/group6",
+    group7: "https://example.com/group7"
+  };
+ 
   return (
-    <section className="relative w-full z-20 pointer-events-none overflow-x-hidden -mt-[45vh]">
+    <section className="relative w-full pointer-events-none overflow-x-hidden -mt-[45vh]" style={{ zIndex: Z_INDEX.CONTAINER }}>
       {/* CONTAINER FOR ALL CLOUDS */}
       <div className="relative w-full max-w-[2000px] mx-auto">
-
-      {/* 🔥 NOISE LAYER */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.08] mix-blend-overlay"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
-          backgroundSize: "120px 120px",
-        }}
-      />
        
-        {/* FIRST CLOUD (big cloud - only CENTERED main heading) */}
-        <div className="relative w-full">
-          <MaskedBlendImage src={cloudBg} />
-          {/* CENTERED: First text (NOT part of alternating pattern) */}
+        {/* FIRST CLOUD (big cloud) */}
+        <div className="relative w-full" style={{ zIndex: Z_INDEX.CLOUD_BG }}>
+          <MaskedBlendImage src={cloudBg} flip={false} zIndex={Z_INDEX.CLOUD_BG} />
+          {/* CENTERED: First text */}
           <TextItem
             src={middle_section_img1_txt_1}
             top="32%"
             position="center"
             width="clamp(200px,20vw,240px)"
+            zIndex={Z_INDEX.TEXT_MAIN_1}
+            href={linkUrls.group1} // Added link
           />
         </div>
  
-        {/* STACKED CLOUDS SECTION - 5 middle_cloud_2 clouds total */}
+        {/* STACKED CLOUDS SECTION */}
         <div className="relative">
          
           {/* CLOUD 1 of 5 - LEFT (text group 2: t2) */}
-          <div className="relative -mt-[clamp(400px,40vw,470px)]">
-            <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={20}/> {/* Normal */}
+          <div className="relative -mt-[clamp(400px,40vw,470px)]" style={{ zIndex: Z_INDEX.CLOUD_1 }}>
+            <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_1} />
             {/* LEFT: Text group 2 */}
             <TextItem
               src={middle_section_img1_txt_2}
-              top="19%"
+              top="15%"
               position="left"
-              leftValue="32%" // ADJUST THIS: Smaller = closer to left edge
-              zIndex={60}
+              leftValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_MAIN_2}
+              href={linkUrls.group2} // Added link
             />
             <TextItem
               src={t2}
-              top="34%"
+              top="30%"
               position="left"
-              leftValue="32%" // Same as above for alignment
-              zIndex={70}
+              leftValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_DESC_2}
+              href={linkUrls.group2} // Added link (same as main text)
             />
           </div>
  
           {/* CLOUD 2 of 5 - RIGHT (text group 3: t3) */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]">
-            <MaskedBlendImage src={middle_cloud_2} flip={true} /> {/* Flipped */}
+          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_2 }}>
+            <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_2} />
             {/* RIGHT: Text group 3 */}
             <TextItem
               src={middle_section_img1_txt_3}
               top="15%"
               position="right"
-              rightValue="32%" // ADJUST THIS: Smaller = closer to right edge
+              rightValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_MAIN_3}
+              href={linkUrls.group3} // Added link
             />
             <TextItem
               src={t3}
-              top="32%"
+              top="30%"
               position="right"
-              rightValue="32%" // Same as above for alignment
+              rightValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_DESC_3}
+              href={linkUrls.group3} // Added link (same as main text)
             />
           </div>
  
           {/* CLOUD 3 of 5 - LEFT (text group 4: t4) */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]">
-            <MaskedBlendImage src={middle_cloud_2} flip={false} /> {/* Normal */}
+          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_3 }}>
+            <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_3} />
             {/* LEFT: Text group 4 */}
             <TextItem
               src={middle_section_img1_txt_4}
-              top="17%"
+              top="15%"
               position="left"
-              leftValue="32%" // ADJUST THIS
+              leftValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_MAIN_4}
+              href={linkUrls.group4} // Added link
             />
             <TextItem
               src={t4}
-              top="32%"
+              top="30%"
               position="left"
-              leftValue="32%" // Same as above
+              leftValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_DESC_4}
+              href={linkUrls.group4} // Added link (same as main text)
             />
           </div>
  
           {/* CLOUD 4 of 5 - RIGHT (text group 5: t5) */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]">
-            <MaskedBlendImage src={middle_cloud_2} flip={true} /> {/* Flipped */}
+          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_4 }}>
+            <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_4} />
             {/* RIGHT: Text group 5 */}
             <TextItem
               src={middle_section_img1_txt_5}
               top="13%"
               position="right"
-              rightValue="32%" // ADJUST THIS
+              rightValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_MAIN_5}
+              href={linkUrls.group5} // Added link
             />
             <TextItem
               src={t5}
               top="32%"
               position="right"
-              rightValue="32%" // Same as above
+              rightValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_DESC_5}
+              href={linkUrls.group5} // Added link (same as main text)
             />
           </div>
  
           {/* CLOUD 5 of 5 - LEFT + CENTER (text group 6: t6 + centered text) */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]">
-            <MaskedBlendImage src={middle_cloud_2} flip={false} /> {/* Normal */}
+          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_5 }}>
+            <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_5} />
             {/* LEFT: Text group 6 (t6) */}
             <TextItem
               src={middle_section_img1_txt_6}
-              top="18%"
+              top="13%"
               position="left"
-              leftValue="32%" // ADJUST THIS
+              leftValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_MAIN_6}
+              href={linkUrls.group6} // Added link
             />
             <TextItem
               src={t6}
-              top="33%"
+              top="30%"
               position="left"
-              leftValue="32%" // Same as above
+              leftValue="32%"
+              width="clamp(160px,16vw,200px)"
+              zIndex={Z_INDEX.TEXT_DESC_6}
+              href={linkUrls.group6} // Added link (same as main text)
             />
-            {/* CENTERED: Final text (middle_section_img1_txt_7) */}
+            {/* CENTERED: Final text */}
             <TextItem
               src={middle_section_img1_txt_7}
               top="75%"
               position="center"
               width="clamp(200px,20vw,240px)"
+              zIndex={Z_INDEX.TEXT_MAIN_7}
+              href={linkUrls.group7} // Added link
             />
           </div>
         </div>
  
         {/* SUN / BEECH */}
-        <div className="relative -mt-[20px]">
-          <img src={sun_beech} />
+        <div className="relative -mt-[20px]" style={{ zIndex: Z_INDEX.SUN }}>
+          <img src={sun_beech} flip={false} zIndex={Z_INDEX.SUN} />
         </div>
       </div>
- 
     </section>
   );
 };
  
 export default Middle;
+ 
