@@ -1,44 +1,21 @@
-import "./App.css";
-import Header from "./Header";
-import CloudHero from "./CloudHero";
-import Middle from "./Middle";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/Mainlayout";
+import Home from "./pages/Home";
+import ProspectArgument from "./pages/ProspectArgument";
 
 function App() {
   return (
-    <div className="bg-[#FFFDEC] min-h-screen overflow-x-hidden">
-      <Header />
-
-      {/* offset for fixed header */}
-      <main className="pt-[120px] md:pt-[140px]">
-
-        {/* ===== EFFECT WRAPPER (IMPORTANT) ===== */}
-        <div className="relative">
-
-          {/* CREAM OVERLAY — extended UPWARD */}
-          <div
-            className="
-              pointer-events-none
-              absolute
-              -top-[50vh]
-              left-0
-              right-0
-              bottom-0
-              bg-[#fffdc]
-              mix-blend-multiply
-              opacity-40
-              z-10
-            "
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/prospect-augment"
+            element={<ProspectArgument />}
           />
-
-          {/* CONTENT ABOVE OVERLAY */}
-          <div className="relative z-20">
-            <CloudHero />
-            <Middle />
-          </div>
-
-        </div>
-      </main>
-    </div>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

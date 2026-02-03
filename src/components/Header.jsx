@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import logo from "../src/assets/logo.png";
-import title from "../src/assets/web_main_title.png";
+import { useLocation } from "react-router-dom";
+import logo from "../assets/subtract.svg";
+import logo2 from "../assets/logo.png"
+import title from "../assets/web_main_title.png";
+import Groupdimend from "../assets/Groupdimend.png";
 
 const HEADER_HEIGHT = 130;
-const EDGE_PADDING = "p-4"; // ✅ SAME spacing on top, left, right
+const EDGE_PADDING = "p-4";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const isProspectArgumentPage =
+    location.pathname === "/prospect-argument";
 
   return (
     <header
@@ -24,13 +31,25 @@ const Header = () => {
           ${EDGE_PADDING}
         `}
       >
-        {/* LEFT LOGO */}
-        <div className="hidden md:flex items-start">
-          <img
-            src={logo}
-            alt="Logo"
-            className="w-36 object-contain"
-          />
+        {/* LEFT LOGO (DESKTOP ONLY) */}
+        <div className="hidden md:flex items-start transition-all duration-300 ease-out">
+        {!isProspectArgumentPage ? (
+          /* ===== DEFAULT LOGO ===== */
+          <div className="hidden md:flex items-start">
+            <img
+              src={logo2}
+              alt="Logo2"
+              className="w-36 object-contain"
+            />
+          </div>
+        ) : (
+          /* ===== PROSPECT ARGUMENT LOGO ===== */
+          <div className="hidden md:flex items-start gap-3">
+            <img src={logo} alt="Logo" className="w-12 mt-2" />
+            <div className="border-l-2 border-black h-10 mt-0"></div>
+            <img src={Groupdimend} alt="Logo" className="w-5 mt-2.5" />
+          </div>
+        )}
         </div>
 
         {/* CENTER TITLE */}
@@ -53,7 +72,7 @@ const Header = () => {
             font-light
             text-[9.5px]
             gap-3
-            mt-1.5
+            mt-0.5
             leading-tight
             font-['Plus_Jakarta_Sans']
           "
@@ -66,9 +85,11 @@ const Header = () => {
             <a href="#">TRENDS</a>
           </div>
 
-          <a href="#" className="font-semibold">
+          {isProspectArgumentPage ? <a href="#">
             BRANDS
-          </a>
+          </a>:<a href="#" className="font-semibold">
+            BRANDS
+          </a> }
           <a href="#">CAREERS</a>
         </nav>
 

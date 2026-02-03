@@ -1,6 +1,5 @@
-import logo from "./assets/Subtract.svg";
-import grassGroup from "./assets/grass_group.png"; // grouped grass image
-import grassGroupwithLogo from "./assets/grasswithlogo.png"
+import logo from "../assets/Subtract.svg";
+import grassGroupwithLogo from "../assets/grasswithlogo.png"
 
 const Footer = () => {
   return (
