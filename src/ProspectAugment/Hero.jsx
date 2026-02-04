@@ -60,6 +60,8 @@ const Hero = () => {
         />
       </div>
 
+      
+
       {/* ================= MOBILE ================= */}
       <div className="flex flex-col justify-end min-h-[70vh] md:hidden relative z-40">
         <div className="absolute top-3 left-1/2 -translate-x-1/2 z-40">

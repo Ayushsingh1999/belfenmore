@@ -29,80 +29,50 @@ const JourneySection = () => {
         <div className="relative w-full">
           {/* ===== BANNER IMAGE (EDITORIAL CREAM GRADIENT) ===== */}
           <div className="relative w-full h-[720px] overflow-hidden">
-            {/* Banner Image */}
+            {/* Banner Image with 90% opacity */}
             <img
               src={banner}
               alt="Banner"
               className="
-        w-full
-        h-full
-        object-cover
-        grayscale
-        contrast-105
-        brightness-98
-      "
+      w-full
+      h-full
+      object-cover
+      opacity-90
+    "
             />
 
-            {/* TOP CREAM FADE */}
-            <div
-              className="absolute top-0 left-0 w-full h-[30%] pointer-events-none z-[1]"
-              style={{
-                background:
-                  "linear-gradient(to bottom, #FFFDEC 0%, rgba(255,253,236,0.65) 45%, rgba(255,253,236,0) 100%)",
-              }}
-            />
-
-            {/* BOTTOM CREAM FADE */}
-            <div
-              className="absolute bottom-0 left-0 w-full h-[45%] pointer-events-none z-[1]"
-              style={{
-                background:
-                  "linear-gradient(to top, #FFFDEC 0%, rgba(255,253,236,0.75) 50%, rgba(255,253,236,0) 100%)",
-              }}
-            />
-
-            {/* SIDE VIGNETTE */}
+            {/* Radial Blend Mode Effect */}
             <div
               className="absolute inset-0 pointer-events-none z-[1]"
               style={{
                 background:
-                  "radial-gradient(circle at center, rgba(255,253,236,0) 55%, rgba(255,253,236,0.55) 100%)",
-              }}
-            />
-
-            {/* SOFT TONE WASH */}
-            <div
-              className="absolute inset-0 pointer-events-none z-[1]"
-              style={{
-                background: "rgba(255,253,236,0.12)",
-                mixBlendMode: "soft-light",
+                  "radial-gradient(circle at center, rgba(255, 253, 236, 0.2) 0%, rgba(255, 253, 236, 0.8) 100%)",
+                mixBlendMode: "luminosity",
               }}
             />
           </div>
 
           {/* ===== CENTERED WAVE + CONTENT WRAPPER ===== */}
           <div className="absolute top-0 left-0 w-full flex justify-center z-10">
-            <div className="relative w-full max-w-2xl ">
+            <div className="relative w-full max-w-3xl ">
               {/* ===== WAVE IMAGE (UNCHANGED) ===== */}
               <img src={waves} alt="Waves" className="w-full" />
 
               {/* ===== JOURNEY TEXT ===== */}
               <h1
                 className="
-          absolute
-          -top-16
-          left-1/2
-          -translate-x-1/2
-          text-center
-          text-[#FFFDEC]
-          drop-shadow-[1px_1px_0_#000]
-          drop-shadow-[-1px_1px_0_#000]
-          drop-shadow-[1px_-1px_0_#000]
-          drop-shadow-[-1px_-1px_0_#000]
-        "
+    absolute
+    -top-14
+    left-1/2
+    -translate-x-1/2
+    text-center
+    text-[#FFFDEC]
+    drop-shadow-[1px_-1px_0_#000]  /* Bottom-right to top-right */
+    drop-shadow-[-1px_-1px_0_#000] /* Bottom-left to top-left */
+  "
                 style={{
                   fontFamily: "Meie Script",
-                  fontSize: "100px",
+                  fontSize: "85px",
                   lineHeight: "120%",
                 }}
               >
@@ -110,16 +80,15 @@ const JourneySection = () => {
               </h1>
 
               {/* ===== CONTENT UNDER WAVE (ALIGNED WIDTH) ===== */}
-              <div className="mt-16">
-                <div className="grid grid-cols-3 gap-10 text-gray-700">
+              <div className="mt-6">
+                <div className="grid grid-cols-3 gap-0 text-gray-700">
                   {/* LEFT COLUMN */}
                   <div className="space-y-6 text-sm tracking-wide text-left">
                     <div>
                       <h4
                         className="
     uppercase
-    text-[16px]
-    tracking-[0.12em]
+    text-[14px]
   "
                         style={{
                           fontFamily: "Times Now, Times, serif",
@@ -130,10 +99,10 @@ const JourneySection = () => {
                         Domain Tech
                       </h4>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
                         Solution Engineering
                       </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px]  uppercase text-[#32312B]">
                         Business Engineering
                       </p>
                     </div>
@@ -142,8 +111,7 @@ const JourneySection = () => {
                       <h4
                         className="
     uppercase
-    text-[16px]
-    tracking-[0.12em]
+    text-[14px]
   "
                         style={{
                           fontFamily: "Times Now, Times, serif",
@@ -154,18 +122,19 @@ const JourneySection = () => {
                         Tech Ops
                       </h4>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
                         Site Reliability
                       </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px]  uppercase text-[#32312B]">
                         Security & Compliance
                       </p>
                     </div>
                   </div>
 
                   {/* CENTER TEXT */}
-                  <div className="flex items-start justify-center text-center px-4">
+                  <div className="flex justify-center gap-2 text-center mt-16">
                     <p
+                      className="flex flex-col items-center font-light text-center"
                       style={{
                         fontFamily: "Times Now",
                         fontStyle: "italic",
@@ -174,9 +143,16 @@ const JourneySection = () => {
                         color: "#32312B",
                       }}
                     >
-                      Propel innovation and transformation together, powered by
-                      our Intelligent Assets that shape industry trends and
-                      emerging technologies.
+                      {/* Line 1 */}
+                      <span className="max-w-[80%]">
+                        Propel innovation and transformation together,
+                      </span>
+
+                      {/* Line 2 */}
+                      <span className="max-w-[95%]">
+                        powered by our Intelligent Assets that shape industry
+                        trends and emerging technologies.
+                      </span>
                     </p>
                   </div>
 
@@ -186,8 +162,7 @@ const JourneySection = () => {
                       <h4
                         className="
     uppercase
-    text-[16px]
-    tracking-[0.12em]
+    text-[14px]
   "
                         style={{
                           fontFamily: "Times Now, Times, serif",
@@ -198,10 +173,10 @@ const JourneySection = () => {
                         Business Ops
                       </h4>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
                         Customer Journey
                       </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
                         Product Design
                       </p>
                     </div>
@@ -210,8 +185,7 @@ const JourneySection = () => {
                       <h4
                         className="
     uppercase
-    text-[16px]
-    tracking-[0.12em]
+    text-[14px]
   "
                         style={{
                           fontFamily: "Times Now, Times, serif",
@@ -222,10 +196,10 @@ const JourneySection = () => {
                         Emerging Tech
                       </h4>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
                         AI Engineering
                       </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-3 uppercase text-[#32312B]">
+                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
                         AI Architecture
                       </p>
                     </div>
@@ -300,7 +274,7 @@ const JourneySection = () => {
         {/* Sections */}
         <div className="flex flex-col items-center text-center space-y-6 mt-6 w-full px-4 sm:px-6">
           <div className="w-full max-w-full">
-            <h4 className="font-semibold uppercase section-heading">
+            <h4 className="font-['Times Now'] font-semibold uppercase section-heading">
               Domain Tech
             </h4>{" "}
             <p className="font-['Cabinet_Grotesk_Variable'] font-medium text-[11px] mt-3 leading-[20px] uppercase text-[#32312B] mb-2">
@@ -312,7 +286,7 @@ const JourneySection = () => {
           </div>
 
           <div className="w-full max-w-full">
-            <h4 className="font-semibold uppercase section-heading">
+            <h4 className="font-['Times Now'] font-semibold uppercase section-heading">
               Tech Ops
             </h4>
             <p className="font-['Cabinet_Grotesk_Variable'] font-medium text-[11px] mt-3 leading-[20px] uppercase text-[#32312B] mb-2">
@@ -324,7 +298,7 @@ const JourneySection = () => {
           </div>
 
           <div className="w-full max-w-full">
-            <h4 className="font-semibold uppercase section-heading">
+            <h4 className=" font-['Times Now'] font-semibold uppercase section-heading">
               Business Ops
             </h4>
             <p className="font-['Cabinet_Grotesk_Variable'] font-medium text-[11px] mt-3 leading-[20px] uppercase text-[#32312B] mb-2">
@@ -336,7 +310,7 @@ const JourneySection = () => {
           </div>
 
           <div className="w-full max-w-full">
-            <h4 className="font-semibold uppercase section-heading">
+            <h4 className=" font-['Times Now'] font-semibold uppercase section-heading">
               Emerging Tech
             </h4>
             <p className="font-['Cabinet_Grotesk_Variable'] font-medium text-[11px] mt-3 leading-[20px] uppercase text-[#32312B] mb-2">

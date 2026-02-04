@@ -17,7 +17,7 @@ const EnvisionSection = () => {
             object-cover
             relative
             z-10
-            translate-y-12
+            translate-y-1
           "
         />
 

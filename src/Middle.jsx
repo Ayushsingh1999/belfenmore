@@ -15,7 +15,9 @@ import t3 from "./assets/t3.png";
 import t4 from "./assets/t4.png";
 import t5 from "./assets/t5.png";
 import t6 from "./assets/t6.png";
- 
+
+// Import Link if using React Router
+// import { Link } from 'react-router-dom';
  
 /* 🔥 LOGICAL Z-INDEX PATTERN */
 const Z_INDEX = {
@@ -119,8 +121,8 @@ const TextItem = ({
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={href.startsWith('http') ? "_blank" : "_self"}
+        rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
         className="pointer-events-auto"
       >
         {content}
@@ -144,11 +146,11 @@ const TextItem = ({
 };
  
 const Middle = () => {
-  // Example URLs - replace these with your actual URLs
+  // Updated URLs - Cloud 2 (group3) now points to /prospect-augment
   const linkUrls = {
     group1: "https://www.youtube.com",
-    group2: "https://www.tesla.com/",
-    group3: "https://www.apple.com/",
+    group2: "/prospect-augment",
+    group3: "https://www.tesla.com/", 
     group4: "https://www.reddit.com/",
     group5: "https://x.com/",
     group6: "https://www.freecodecamp.org/",
@@ -170,7 +172,7 @@ const Middle = () => {
             position="center"
             width="clamp(200px,20vw,240px)"
             zIndex={Z_INDEX.TEXT_MAIN_1}
-            href={linkUrls.group1} // Added link
+            href={linkUrls.group1}
           />
         </div>
  
@@ -188,7 +190,7 @@ const Middle = () => {
               leftValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_MAIN_2}
-              href={linkUrls.group2} // Added link
+              href={linkUrls.group2}
             />
             <TextItem
               src={t2}
@@ -197,7 +199,7 @@ const Middle = () => {
               leftValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_DESC_2}
-              href={linkUrls.group2} // Added link (same as main text)
+              href={linkUrls.group2}
             />
           </div>
  
@@ -212,7 +214,7 @@ const Middle = () => {
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_MAIN_3}
-              href={linkUrls.group3} // Added link
+              href={linkUrls.group3} // Now points to /prospect-augment
             />
             <TextItem
               src={t3}
@@ -221,7 +223,7 @@ const Middle = () => {
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_DESC_3}
-              href={linkUrls.group3} // Added link (same as main text)
+              href={linkUrls.group3} // Now points to /prospect-augment
             />
           </div>
  
@@ -236,7 +238,7 @@ const Middle = () => {
               leftValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_MAIN_4}
-              href={linkUrls.group4} // Added link
+              href={linkUrls.group4}
             />
             <TextItem
               src={t4}
@@ -245,7 +247,7 @@ const Middle = () => {
               leftValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_DESC_4}
-              href={linkUrls.group4} // Added link (same as main text)
+              href={linkUrls.group4}
             />
           </div>
  
@@ -260,7 +262,7 @@ const Middle = () => {
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_MAIN_5}
-              href={linkUrls.group5} // Added link
+              href={linkUrls.group5}
             />
             <TextItem
               src={t5}
@@ -269,7 +271,7 @@ const Middle = () => {
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_DESC_5}
-              href={linkUrls.group5} // Added link (same as main text)
+              href={linkUrls.group5}
             />
           </div>
  
@@ -284,7 +286,7 @@ const Middle = () => {
               leftValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_MAIN_6}
-              href={linkUrls.group6} // Added link
+              href={linkUrls.group6}
             />
             <TextItem
               src={t6}
@@ -293,7 +295,7 @@ const Middle = () => {
               leftValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_DESC_6}
-              href={linkUrls.group6} // Added link (same as main text)
+              href={linkUrls.group6}
             />
             {/* CENTERED: Final text */}
             <TextItem
@@ -302,7 +304,7 @@ const Middle = () => {
               position="center"
               width="clamp(200px,20vw,240px)"
               zIndex={Z_INDEX.TEXT_MAIN_7}
-              href={linkUrls.group7} // Added link
+              href={linkUrls.group7}
             />
           </div>
         </div>
@@ -317,4 +319,3 @@ const Middle = () => {
 };
  
 export default Middle;
- 
