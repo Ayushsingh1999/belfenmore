@@ -13,7 +13,7 @@ const CapitaliseSection = () => {
           fontFamily: "'Times Now', serif",
           fontWeight: 250,
           fontStyle: "extraLight",
-          fontSize: "32px",
+          fontSize: "22 px",
           lineHeight: "100%",
           letterSpacing: "0%",
         }}
@@ -31,7 +31,7 @@ const CapitaliseSection = () => {
       </div>
       {/* LOGO TEXT WITH FLOWER CENTER */}
       <div
-        className="mt-6 flex items-center justify-center gap-3"
+        className="mt-[-400px] flex items-center justify-center gap-3"
         style={{ position: "absolute" }}
       >
         <p
