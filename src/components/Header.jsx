@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import logo from "../assets/subtract.svg";
-import logo2 from "../assets/logo.png"
+import logo2 from "../assets/logo.png";
 import title from "../assets/web_main_title.png";
 import Groupdimend from "../assets/Groupdimend.png";
 
@@ -12,8 +12,11 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-  const isProspectArgumentPage =
-    location.pathname === "/prospect-augment";
+  const isProspectArgumentPage = location.pathname === "/prospect-augment";
+
+  const isDomain = location.pathname === "/domain";
+
+  const isRoot = location.pathname === "/";
 
   return (
     <header
@@ -33,23 +36,19 @@ const Header = () => {
       >
         {/* LEFT LOGO (DESKTOP ONLY) */}
         <div className="hidden md:flex items-start transition-all duration-300 ease-out">
-        {!isProspectArgumentPage ? (
-          /* ===== DEFAULT LOGO ===== */
-          <div className="hidden md:flex items-start">
-            <img
-              src={logo2}
-              alt="Logo2"
-              className="w-36 object-contain"
-            />
-          </div>
-        ) : (
-          /* ===== PROSPECT ARGUMENT LOGO ===== */
-          <div className="hidden md:flex items-start gap-3">
-            <img src={logo} alt="Logo" className="w-12 mt-2" />
-            <div className="border-l-2 border-black h-10 mt-0"></div>
-            <img src={Groupdimend} alt="Logo" className="w-5 mt-2.5" />
-          </div>
-        )}
+          {isProspectArgumentPage && (
+            <div className="hidden md:flex items-start gap-3">
+              <img src={logo} alt="Logo" className="w-12 mt-2" />
+              <div className="border-l-2 border-black h-10 mt-0"></div>
+              <img src={Groupdimend} alt="Logo" className="w-5 mt-2.5" />
+            </div>
+          )}
+
+          {isDomain && <img src={logo} alt="Logo" className="w-12 mt-2" />}
+
+          {isRoot && (
+            <img src={logo2} alt="Logo2" className="w-36 object-contain" />
+          )}
         </div>
 
         {/* CENTER TITLE */}
@@ -85,11 +84,13 @@ const Header = () => {
             <a href="#">TRENDS</a>
           </div>
 
-          {isProspectArgumentPage ? <a href="#">
-            BRANDS
-          </a>:<a href="#" className="font-semibold">
-            BRANDS
-          </a> }
+          {isProspectArgumentPage ? (
+            <a href="#">BRANDS</a>
+          ) : (
+            <a href="#" className="font-semibold">
+              BRANDS
+            </a>
+          )}
           <a href="#">CAREERS</a>
         </nav>
 
