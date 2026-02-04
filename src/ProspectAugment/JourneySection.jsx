@@ -82,7 +82,7 @@ const JourneySection = () => {
 
           {/* ===== CENTERED WAVE + CONTENT WRAPPER ===== */}
           <div className="absolute top-0 left-0 w-full flex justify-center z-10">
-            <div className="relative w-full max-w-3xl ">
+            <div className="relative w-full max-w-2xl ">
               {/* ===== WAVE IMAGE (UNCHANGED) ===== */}
               <img src={waves} alt="Waves" className="w-full" />
 

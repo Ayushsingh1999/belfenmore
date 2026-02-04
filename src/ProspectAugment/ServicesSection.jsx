@@ -2,10 +2,10 @@
 import React from "react";
 
 // Images
-import financeImg from "../assets/Finance_img.png";
-import fmcgImg from "../assets/fmcg_img.png";
-import industrialImg from "../assets/industrial_img.png";
-import medicalImg from "../assets/medical_img.png";
+import financeImg from "../assets/Finance_1_img.png";
+import fmcgImg from "../assets/fmcg_1_img.png";
+import industrialImg from "../assets/industrial_1_img.png";
+import medicalImg from "../assets/medical_1_img.png";
 
 const services = [
   {
@@ -128,7 +128,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Desktop view */}
-          <div className="hidden md:flex flex-row items-center gap-0">
+          <div className="hidden md:flex flex-row items-center gap-0 ml-3">
             {!isBottomRow ? (
               <>
                 <img
@@ -137,17 +137,17 @@ const ServicesSection = () => {
                   className="
                     w-[131px] h-[138px]
                     object-cover flex-shrink-0
-                    border border-black/10
+                    border border-black
                   "
                 />
 
                 <div className="text-left">
                   <h3
-                    className="mb-2 ml-6"
+                    className="mb-2 ml-8"
                     style={{
                       fontFamily: "'Times Now', Times, serif",
                       fontWeight: 600,
-                      fontSize: "22px",
+                      fontSize: "20px",
                       lineHeight: "100%",
                       color: "#25241E",
                     }}
@@ -159,10 +159,10 @@ const ServicesSection = () => {
                     className="
                       font-['Cabinet_Grotesk_Variable']
                       mob-text font-normal text-[11px]
-                      leading-relaxed tracking-normal text-gray-700
-                      ml-6 max-w-[170px]
+                      leading-1 tracking-tighter text-gray-700
+                      ml-8 max-w-[120px]
                     "
-                    style={{ textAlign: "justify" }}
+                    style={{ textAlign: "left" }}
                   >
                     {service.descriptionDesktop}
                   </p>
@@ -176,7 +176,7 @@ const ServicesSection = () => {
                     style={{
                       fontFamily: "'Times Now', Times, serif",
                       fontWeight: 600,
-                      fontSize: "22px",
+                      fontSize: "20px",
                       lineHeight: "100%",
                       color: "#25241E",
                     }}
@@ -189,7 +189,7 @@ const ServicesSection = () => {
                       font-['Cabinet_Grotesk_Variable']
                       mob-text font-normal text-[11px]
                       leading-relaxed tracking-normal text-gray-700
-                      mr-6 max-w-[170px]
+                      mr-6 max-w-[120px]
                     "
                     style={{ textAlign: "justify" }}
                   >
@@ -203,7 +203,7 @@ const ServicesSection = () => {
                   className="
                     w-[131px] h-[138px]
                     object-cover flex-shrink-0
-                    border border-black/10
+                    border border-black
                   "
                 />
               </>

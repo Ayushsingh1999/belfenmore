@@ -146,13 +146,13 @@ const TextItem = ({
 const Middle = () => {
   // Example URLs - replace these with your actual URLs
   const linkUrls = {
-    group1: "https://example.com/group1",
-    group2: "https://example.com/group2",
-    group3: "https://example.com/group3",
-    group4: "https://example.com/group4",
-    group5: "https://example.com/group5",
-    group6: "https://example.com/group6",
-    group7: "https://example.com/group7"
+    group1: "https://www.youtube.com",
+    group2: "https://www.tesla.com/",
+    group3: "https://www.apple.com/",
+    group4: "https://www.reddit.com/",
+    group5: "https://x.com/",
+    group6: "https://www.freecodecamp.org/",
+    group7: "https://interpl.ai/"
   };
  
   return (

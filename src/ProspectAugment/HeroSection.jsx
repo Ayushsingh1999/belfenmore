@@ -99,7 +99,7 @@ const HeroSection = () => {
             style={{
               fontFamily: "'Times Now', Times, serif",
               fontWeight: 600,
-              fontSize: "22px",     // ⬇ tuned for 2xl width
+              fontSize: "28px",     // ⬇ tuned for 2xl width
               lineHeight: "100%",
               color: "#25241E",
             }}
@@ -134,6 +134,7 @@ const HeroSection = () => {
     textJustify: "inter-word",
     textAlignLast: "justify",
     hyphens: "auto",
+    color: "#32312B",
   }}
 >
   {feature.desktopDesc}
