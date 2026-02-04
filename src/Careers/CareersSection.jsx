@@ -5,170 +5,149 @@ import Img3 from "../assets/img3.png";
 import Img4 from "../assets/img4.png";
 import Img5 from "../assets/img5.png";
 import MobImage from "../assets/mobimage.png";
-import flower from "../assets/flower.png"; // make sure this is your flower image path
+import flower from "../assets/flower.png";
+import Articulate from "../assets/Articulate.png";
 
 const CareersSection = () => {
   return (
     <section className="w-full relative">
-
       {/* DESKTOP / LAPTOP / TABLET */}
-      <div className="hidden md:flex flex-col items-center justify-center text-center px-4 pt-28 min-h-screen">
-        {/* TOP IMAGE */}
-        <img src={Img1} alt="" className="w-[35px] h-[110px] md:w-[80px] mb-6" />
-
-        {/* JOIN OUR TEAM + IMG2 */}
-        <div className="relative flex items-center justify-center mt-6">
-          <p
-            className="absolute text-sm md:text-base"
-            style={{
-              left: "-54%",
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "ExtraLight",
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              color: "#32312B",
-            }}
-          >
+      <div className="hidden md:flex flex-col items-center justify-center text-center px-4 pt-2 min-h-screen">
+        
+        {/* ROW 1: Join our team of [Img2] Innovators & */}
+        <div className="relative flex items-center justify-center mt-2">
+          <p className="text-[#32312B] font-['Times_Now'] font-light text-[22px]">
             Join our team of
           </p>
-          <img src={Img2} alt="" className="w-[90px] md:w-[110px] -ml-10" />
-          <p
-            className="text-sm md:text-base ml-4 pl-5"
-            style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "italic",
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              color: "#32312B",
-            }}
-          >
+          <img src={Img1} alt="" className="w-[40px] h-[70px] mx-4 -translate-y-5" />
+          <p className="text-[#32312B] font-['Times_Now'] font-light italic text-[22px]">
             Innovators &
           </p>
         </div>
 
-        {/* IMG3 + TEXTS */}
-        <div className="relative flex items-center justify-center mt-10 inline-block">
-          <p
-            className="italic text-xs md:text-sm text-[#3A3A3A] absolute top-1 left-20"
-            style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "italic",
-              fontSize: "34px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            problem solving
+        {/* ROW 2: Problem solvers [Img3] where Passion meets Purpose. */}
+        <div className="relative flex items-center justify-center mt-4">
+          <p className="text-[#3A3A3A] font-['Times_Now'] font-normal text-[22px] mr-2">
+            Problem solvers
           </p>
-          <p
-            className="italic text-sm md:text-base text-[#3A3A3A] mr-10 relative left-[51px]"
-            style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "italic",
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            Collaborate with inspiring
-          </p>
-          <img src={Img3} alt="" className="w-[120px] md:w-[150px] translate-x-6" />
-          <p
-            className="italic text-sm md:text-base ml-[-81px]"
-            style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "italic",
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              color: "#32312B",
-            }}
-          >
+          <img src={Img2} alt="" className="w-[80px] md:w-[80px] h-[40px] mx-2" />
+          <p className="text-[#32312B] font-['Times_Now'] font-light italic text-[22px]">
             where Passion meets Purpose.
           </p>
         </div>
 
-        {/* IMG4 + RIGHT TEXT */}
-        <div className="relative flex items-center justify-center mt-12 w-full max-w-5xl">
-          <img src={Img4} alt="" className="w-[120px] md:w-[150px] translate-x-6 absolute right-[26%]" />
+        {/* ROW 3: Collaborate with inspiring [Img4] minds, Grow your Skills, */}
+        <div className="relative flex items-center justify-center mt-8">
+          <p className="text-[#32312B] font-['Times_Now'] font-light text-[22px] mr-2">
+            Collaborate with inspiring
+          </p>
+          <img src={Img3} alt="" className="w-[100%] md:w-[110px] mx-2" />
+          <p className="text-[#32312B] font-['Times_Now'] font-extralight text-[22px]">
+            minds, Grow your Skills,
+          </p>
+        </div>
+
+        {/* ROW 4: Shape impactful solutions [Img5] and build a */}
+        <div className="relative flex items-center justify-center mt-8">
+          <p className="text-[#3A3A3A] font-['Times_Now'] font-normal text-[22px] mr-2">
+            Shape impactful solutions
+          </p>
+          <img src={Img4} alt="" className="w-[46%] md:w-[150px] mx-2" />
+          <p className="text-[#32312B] font-['Times_Now'] font-light italic text-[22px]">
+            and build a
+          </p>
+        </div>
+
+        {/* ROW 5: meaningful future ______ you're proud of! */}
+        <div className="relative flex items-center justify-center mt-4">
+          <p className="text-[#32312B] font-['Times_Now'] font-light italic text-[22px] mr-2">
+            meaningful future
+          </p>
+          <img src={Img5} alt="" className="w-[37%] mx-2" />
+          <p className="text-[#32312B] font-['Times_Now'] font-light italic text-[22px]">
+            you're proud of!
+          </p>
+        </div>
+
+        {/* CAPITALISE SECTION FOR DESKTOP */}
+        <div className="w-full relative flex flex-col items-center justify-center py-28 px-4 md:py-32">
+          {/* SUB TEXT */}
           <p
-            className="text-xs md:text-sm text-[#3A3A3A] absolute -top-2 right-20"
+            className="text-center mt-6 md:-mt-20 text-[#4A4A4A]"
             style={{
-              fontFamily: "Times Now",
+              fontFamily: "'Times Now', serif",
               fontWeight: 250,
-              fontStyle: "normal",
-              fontSize: "34px",
+              fontStyle: "extraLight",
+              fontSize: "22px",
               lineHeight: "100%",
               letterSpacing: "0%",
             }}
           >
-            and bullda
+            Together, we shall
           </p>
-          <p
-            className="absolute right-[1%] italic text-sm md:text-base text-[#3A3A3A] text-left max-w-md"
+
+          {/* ARTICULATE IMAGE ON TOP */}
+          <div className="mb-12 w-full flex justify-center">
+            <img
+              src={Articulate}
+              alt="Articulate"
+              className="w-full object-contain"
+            />
+          </div>
+          
+          {/* LOGO TEXT WITH FLOWER CENTER */}
+          <div
+            className="mt-[-400px] flex items-center justify-center gap-3"
+            style={{ position: "absolute" }}
+          >
+            <p
+              className="italic"
+              style={{
+                fontFamily: "'Meie Script', cursive",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontSize: "47.46px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#32312B",
+              }}
+            >
+              Capitalise
+            </p>
+            <img src={flower} alt="Flower" className="w-10 md:w-10" />
+            <p
+              className="font-serif italic text-2xl md:text-3xl"
+              style={{
+                fontFamily: "'Meie Script', cursive",
+                fontWeight: 400,
+                fontStyle: "normal",
+                fontSize: "47.46px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#32312B",
+                marginLeft: "-31px",
+              }}
+            >
+              Capabilities
+            </p>
+          </div>
+          
+          {/* APPLY BUTTON */}
+          <button
+            className="absolute right-8 bg-[#FFD84D] px-4 py-2 hover:scale-105 transition-transform"
             style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "ExtraLight",
-              fontSize: "32px",
+              borderRadius: "5px",
+              fontFamily: "'Times Now', Times, serif",
+              fontWeight: 600,
+              fontStyle: "italic",
+              fontSize: "15px",
               lineHeight: "100%",
               letterSpacing: "0%",
               color: "#32312B",
             }}
           >
-            minds, Grow your Skills,
-          </p>
-        </div>
-
-        {/* IMG5 + TEXTS */}
-        <div className="relative flex items-center justify-center mt-10">
-          <p
-            className="italic text-xs md:text-sm text-[#3A3A3A] absolute top-1 left-20"
-            style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "italic",
-              fontSize: "34px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            Shapefimpact
-          </p>
-          <p
-            className="italic text-sm md:text-base text-[#3A3A3A] mr-10 relative left-[51px]"
-            style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "italic",
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            meaningful future
-          </p>
-          <img src={Img5} alt="" />
-          <p
-            className="italic text-sm md:text-base ml-4"
-            style={{
-              fontFamily: "Times Now",
-              fontWeight: 250,
-              fontStyle: "italic",
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            you’re proud of!
-          </p>
+            Apply now
+          </button>
         </div>
       </div>
 
@@ -247,7 +226,7 @@ const CareersSection = () => {
                width: "217px",
                height: "18px",
         }}>
-          meaningful future you’re proud of!
+          meaningful future you're proud of!
         </div>
 
         <div className="absolute top-[436.37px] left-[137.5px] text-[#32312B]"
@@ -255,7 +234,7 @@ const CareersSection = () => {
                fontFamily: "Times Now",
                fontWeight: 250,
                fontStyle: "ExtraLight",
-               fontSize: "15px",
+               fontSize: "12px",
                lineHeight: "100%",
                letterSpacing: "0%",
                width: "115px",

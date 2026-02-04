@@ -9,7 +9,6 @@ const Careers = () => {
   return (
     <>
     <CareersSection/>
-    <CapitaliseSection/>
     <UniqueSection/>
     <ChartCourseSection/>
     <JourneyCareerSection/>
