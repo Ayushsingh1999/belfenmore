@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/brands" element={<Home />} />
           <Route
             path="/prospect-augment"
             element={<ProspectArgument />}
