@@ -28,28 +28,29 @@ const JourneySection = () => {
         {/* BANNER WRAPPER */}
         <div className="relative w-full">
           {/* ===== BANNER IMAGE (EDITORIAL CREAM GRADIENT) ===== */}
-<div className="relative w-full h-[720px] overflow-hidden">
-  {/* Banner Image with 90% opacity */}
-  <img
-    src={banner}
-    alt="Banner"
-    className="
+          <div className="relative w-full h-[720px] overflow-hidden">
+            {/* Banner Image with 90% opacity */}
+            <img
+              src={banner}
+              alt="Banner"
+              className="
       w-full
       h-full
       object-cover
       opacity-90
     "
-  />
+            />
 
-  {/* Radial Blend Mode Effect */}
-  <div
-    className="absolute inset-0 pointer-events-none z-[1]"
-    style={{
-      background: "radial-gradient(circle at center, rgba(255, 253, 236, 0.2) 0%, rgba(255, 253, 236, 0.8) 100%)",
-      mixBlendMode: "luminosity"
-    }}
-  />
-</div>
+            {/* Radial Blend Mode Effect */}
+            <div
+              className="absolute inset-0 pointer-events-none z-[1]"
+              style={{
+                background:
+                  "radial-gradient(circle at center, rgba(255, 253, 236, 0.2) 0%, rgba(255, 253, 236, 0.8) 100%)",
+                mixBlendMode: "luminosity",
+              }}
+            />
+          </div>
 
           {/* ===== CENTERED WAVE + CONTENT WRAPPER ===== */}
           <div className="absolute top-0 left-0 w-full flex justify-center z-10">
@@ -60,17 +61,15 @@ const JourneySection = () => {
               {/* ===== JOURNEY TEXT ===== */}
               <h1
                 className="
-          absolute
-          -top-14
-          left-1/2
-          -translate-x-1/2
-          text-center
-          text-[#FFFDEC]
-          drop-shadow-[1px_1px_0_#000]
-          drop-shadow-[-1px_1px_0_#000]
-          drop-shadow-[1px_-1px_0_#000]
-          drop-shadow-[-1px_-1px_0_#000]
-        "
+    absolute
+    -top-14
+    left-1/2
+    -translate-x-1/2
+    text-center
+    text-[#FFFDEC]
+    drop-shadow-[1px_-1px_0_#000]  /* Bottom-right to top-right */
+    drop-shadow-[-1px_-1px_0_#000] /* Bottom-left to top-left */
+  "
                 style={{
                   fontFamily: "Meie Script",
                   fontSize: "85px",
@@ -134,27 +133,27 @@ const JourneySection = () => {
 
                   {/* CENTER TEXT */}
                   <div className="flex justify-center gap-2 text-center mt-16">
-<p
-  className="flex flex-col items-center font-light text-center"
-  style={{
-    fontFamily: "Times Now",
-    fontStyle: "italic",
-    fontSize: "11px",
-    lineHeight: "120%",
-    color: "#32312B",
-  }}
->
-  {/* Line 1 */}
-  <span className="max-w-[80%]">
-    Propel innovation and transformation together,
-  </span>
+                    <p
+                      className="flex flex-col items-center font-light text-center"
+                      style={{
+                        fontFamily: "Times Now",
+                        fontStyle: "italic",
+                        fontSize: "11px",
+                        lineHeight: "120%",
+                        color: "#32312B",
+                      }}
+                    >
+                      {/* Line 1 */}
+                      <span className="max-w-[80%]">
+                        Propel innovation and transformation together,
+                      </span>
 
-  {/* Line 2 */}
-  <span className="max-w-[95%]">
-    powered by our Intelligent Assets that shape industry trends and emerging technologies.
-  </span>
-</p>
-
+                      {/* Line 2 */}
+                      <span className="max-w-[95%]">
+                        powered by our Intelligent Assets that shape industry
+                        trends and emerging technologies.
+                      </span>
+                    </p>
                   </div>
 
                   {/* RIGHT COLUMN */}
@@ -281,7 +280,7 @@ const JourneySection = () => {
             <p className="font-['Cabinet_Grotesk_Variable'] font-medium text-[11px] mt-3 leading-[20px] uppercase text-[#32312B] mb-2">
               Solution Engineering
             </p>
-            <p className="font-['Cabinet_Grotesk_Variable'] font-medium text-[11px] mt-3 leading-[20px] uppercase text-[#32312B] mb-2" >
+            <p className="font-['Cabinet_Grotesk_Variable'] font-medium text-[11px] mt-3 leading-[20px] uppercase text-[#32312B] mb-2">
               Business Engineering
             </p>
           </div>
