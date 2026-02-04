@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout.jsx";
 import Home from "./pages/Home";
 import ProspectArgument from "./pages/ProspectArgument";
+import Careers from "./pages/Careers.jsx";
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
           <Route
             path="/prospect-augment"
             element={<ProspectArgument />}
+          />
+           <Route
+            path="/career"
+            element={<Careers />}
           />
         </Route>
       </Routes>
