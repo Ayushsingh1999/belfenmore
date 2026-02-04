@@ -46,7 +46,7 @@ const Header = () => {
           /* ===== PROSPECT ARGUMENT LOGO ===== */
           <div className="hidden md:flex items-start gap-3">
             <img src={logo} alt="Logo" className="w-12 mt-2" />
-            <div className="border-l-2 border-black h-10 mt-0"></div>
+            <div className="border-l-[1px] border-black h-8 mt-1"></div>
             <img src={Groupdimend} alt="Logo" className="w-5 mt-2.5" />
           </div>
         )}

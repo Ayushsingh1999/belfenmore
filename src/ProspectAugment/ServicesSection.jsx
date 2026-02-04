@@ -82,139 +82,141 @@ const ServicesSection = () => {
         </p>
       </div>
 
-{/* Services Grid Wrapper */}
-<div className="w-full flex justify-center">
-  {/* Services Grid (1000px constrained) */}
-  <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-2 mx-40">
-    {services.map((service, index) => {
-      const isBottomRow = index >= 2;
+      {/* Services Grid Wrapper */}
+      <div className="w-full flex justify-center">
+        {/* Services Grid (1000px constrained) */}
+        <div className="w-full max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-2 ml-28">
+          {services.map((service, index) => {
+            const isBottomRow = index >= 2;
 
-      return (
-        <div key={index} className="flex flex-col gap-4">
-          {/* Mobile view */}
-          <div className="w-full md:hidden flex flex-col gap-4">
-            <div className="relative w-full">
-              <img
-                src={service.img}
-                alt={service.title}
-                className="
+            return (
+              <div key={index} className="flex flex-col gap-4">
+                {/* Mobile view */}
+                <div className="w-full md:hidden flex flex-col gap-4">
+                  <div className="relative w-full">
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="
                   w-[88%] mx-auto
                   h-auto object-cover
                   border border-black/10
                 "
-              />
+                    />
 
-              <div className="absolute left-4 top-1/4 ml-5">
-                <h3
-                  className="mb-2"
-                  style={{
-                    fontFamily: "'Times Now', Times, serif",
-                    fontWeight: 600,
-                    fontSize: "30px",
-                    lineHeight: "100%",
-                    color: "#25241E",
-                    marginTop:
-                      service.title === "Industrial" ? "-47%" : "-62%",
-                  }}
-                >
-                  {service.title}
-                </h3>
+                    <div className="absolute left-4 top-1/4 ml-5">
+                      <h3
+                        className="mb-2"
+                        style={{
+                          fontFamily: "'Times Now', Times, serif",
+                          fontWeight: 600,
+                          fontSize: "30px",
+                          lineHeight: "100%",
+                          color: "#25241E",
+                          marginTop:
+                            service.title === "Industrial" ? "-47%" : "-62%",
+                        }}
+                      >
+                        {service.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p className="service-text" style={{ textAlign: "justify" }}>
+                    {service.descriptionMobile}
+                  </p>
+                </div>
+
+                {/* Desktop view */}
+                <div className="hidden md:flex flex-row items-center gap-2 ml-4">
+                  {!isBottomRow ? (
+                    <>
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        className="
+                    w-[138px] h-[138px]
+                    object-cover flex-shrink-0
+                    border border-black
+                  "
+                      />
+
+                      <div className="text-left">
+                        <h3
+                          className="mb-4 ml-[42px]"
+                          style={{
+                            fontFamily: "'Times Now', Times, serif",
+                            fontWeight: 600,
+                            fontSize: "20px",
+                            lineHeight: "100%",
+                            color: "#25241E",
+                          }}
+                        >
+                          {service.title}
+                        </h3>
+
+                        <p
+                          className="
+    font-['Cabinet_Grotesk_Variable']
+    mob-text font-normal text-[11px]
+    leading-[1.2]
+    tracking-[0.005em]
+    w-[120px]
+    text-justify
+    ml-[44px]
+  "
+                          style={{ color: "#32312B" }}
+                        >
+                          {service.descriptionDesktop}
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-left ml-1">
+                        <h3
+                          className="mb-4 mr-6"
+                          style={{
+                            fontFamily: "'Times Now', Times, serif",
+                            fontWeight: 600,
+                            fontSize: "20px",
+                            lineHeight: "100%",
+                            color: "#25241E",
+                          }}
+                        >
+                          {service.title}
+                        </h3>
+
+                        <p
+                          className="
+                      font-['Cabinet_Grotesk_Variable']
+                      mob-text font-normal text-[11px]
+                       leading-[1.2] tracking-[0.05em]
+                      mr-[22px] max-w-[110px]
+                    "
+                          style={{ textAlign: "justify", color: "#32312B" }}
+                        >
+                          {service.descriptionDesktop}
+                        </p>
+                      </div>
+
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        className="
+                    w-[138px] h-[138px]
+                    object-cover flex-shrink-0
+                    border border-black ml-7
+                  "
+                      />
+                    </>
+                  )}
+                </div>
               </div>
-            </div>
-
-            <p className="service-text" style={{ textAlign: "justify" }}>
-              {service.descriptionMobile}
-            </p>
-          </div>
-
-          {/* Desktop view */}
-          <div className="hidden md:flex flex-row items-center gap-0 ml-3">
-            {!isBottomRow ? (
-              <>
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="
-                    w-[131px] h-[138px]
-                    object-cover flex-shrink-0
-                    border border-black
-                  "
-                />
-
-                <div className="text-left">
-                  <h3
-                    className="mb-2 ml-8"
-                    style={{
-                      fontFamily: "'Times Now', Times, serif",
-                      fontWeight: 600,
-                      fontSize: "20px",
-                      lineHeight: "100%",
-                      color: "#25241E",
-                    }}
-                  >
-                    {service.title}
-                  </h3>
-
-                  <p
-                    className="
-                      font-['Cabinet_Grotesk_Variable']
-                      mob-text font-normal text-[11px]
-                      leading-1 tracking-tighter text-gray-700
-                      ml-8 max-w-[120px]
-                    "
-                    style={{ textAlign: "left" }}
-                  >
-                    {service.descriptionDesktop}
-                  </p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="text-left">
-                  <h3
-                    className="mb-2 mr-6"
-                    style={{
-                      fontFamily: "'Times Now', Times, serif",
-                      fontWeight: 600,
-                      fontSize: "20px",
-                      lineHeight: "100%",
-                      color: "#25241E",
-                    }}
-                  >
-                    {service.title}
-                  </h3>
-
-                  <p
-                    className="
-                      font-['Cabinet_Grotesk_Variable']
-                      mob-text font-normal text-[11px]
-                      leading-relaxed tracking-normal text-gray-700
-                      mr-6 max-w-[120px]
-                    "
-                    style={{ textAlign: "justify" }}
-                  >
-                    {service.descriptionDesktop}
-                  </p>
-                </div>
-
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="
-                    w-[131px] h-[138px]
-                    object-cover flex-shrink-0
-                    border border-black
-                  "
-                />
-              </>
-            )}
-          </div>
+            );
+          })}
         </div>
-      );
-    })}
-  </div>
-</div>
-
+      </div>
     </section>
   );
 };

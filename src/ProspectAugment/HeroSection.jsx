@@ -77,7 +77,7 @@ const HeroSection = () => {
   style={{ marginTop: "-4%" }}
 >
   {/* ===== SHARED WIDTH WRAPPER (IMAGE + TEXT) ===== */}
-  <div className="relative w-full max-w-2xl mx-auto">
+  <div className="relative w-full max-w-3xl mx-auto">
 
     {/* ===== HERO IMAGE ===== */}
     <img
@@ -87,45 +87,50 @@ const HeroSection = () => {
     />
 
     {/* ===== FEATURES (ALIGNED UNDER IMAGE WIDTH) ===== */}
-    <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left ml-3">
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-x-20 gap-[2.5rem] text-center md:text-left">
       {features.map((feature, index) => (
         <div
           key={index}
           className="flex flex-col items-center md:items-start"
         >
           {/* ===== TITLE ===== */}
-          <h3
-            className="flex items-center"
-            style={{
-              fontFamily: "'Times Now', Times, serif",
-              fontWeight: 600,
-              fontSize: "28px",     // ⬇ tuned for 2xl width
-              lineHeight: "100%",
-              color: "#25241E",
-            }}
-          >
-<img
-  src={e}
-  alt="Icon"
+<h3
+  className="flex items-center"
   style={{
-    height: "110px",
-    marginRight: "-30px", // pulls word closer like the image
-    marginTop: "-10px",    // lifts E to align optically
-    objectFit: "contain",
-    display: "block",
+    fontFamily: "'Times Now', Times, serif",
+    fontWeight: 600,
+    fontSize: "23px",
+    lineHeight: "100%",
+    color: "#25241E",
   }}
-/>
-            {feature.title}
-          </h3>
+>
+  <img
+    src={e}
+    alt="Icon"
+    style={{
+      height: "120px",
+      marginRight: "-30px",
+      marginTop: "-7px",
+      objectFit: "contain",
+      display: "block",
+    }}
+  />
+
+  <span className="leading-none translate-y-[10px] -translate-x-[9px]">
+    {feature.title}
+  </span>
+</h3>
+
 
           {/* ===== DESKTOP DESCRIPTION ===== */}
 <p
   className="
     hidden md:block
-    mt-3
+    mt-[-10px]
     font-normal
-    text-[13px]
-    leading-[1.6]
+    text-[12px]
+    leading-[1.2]
+    
     text-gray-700
     text-justify
   "
