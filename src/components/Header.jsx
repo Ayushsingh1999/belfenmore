@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/subtract.svg";
 import logo2 from "../assets/logo.png";
 import title from "../assets/web_main_title.png";
@@ -12,11 +12,19 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
+  const isRoot = location.pathname === "/";
+
+  const isSolve = location.pathname === "/solve";
+
   const isProspectArgumentPage = location.pathname === "/prospect-augment";
 
-  const isDomain = location.pathname === "/domain";
+  const isDomain = location.pathname === "/domains";
 
-  const isRoot = location.pathname === "/";
+ const isBrand = location.pathname === "/brands";
+
+ const isTrend = location.pathname === "/trends";
+
+ const isCareer = location.pathname === "/careers";
 
   return (
     <header
@@ -35,6 +43,7 @@ const Header = () => {
         `}
       >
         {/* LEFT LOGO (DESKTOP ONLY) */}
+        <Link to='/'>
         <div className="hidden md:flex items-start transition-all duration-300 ease-out">
           {isProspectArgumentPage && (
             <div className="hidden md:flex items-start gap-3">
@@ -44,14 +53,16 @@ const Header = () => {
             </div>
           )}
 
-          {isDomain && <img src={logo} alt="Logo" className="w-12 mt-2" />}
+          {(isDomain || isSolve || isRoot || isBrand || isCareer) && <img src={logo} alt="Logo" className="w-12 mt-2" />}
 
-          {isRoot && (
+          {/* {(isRoot || isBrand || isCareer) && (
             <img src={logo2} alt="Logo2" className="w-36 object-contain" />
-          )}
+          )} */}
         </div>
+        </Link>
 
         {/* CENTER TITLE */}
+        <Link to='/'>
         <div className="absolute left-1/2 -translate-x-1/2">
           <img
             src={title}
@@ -59,6 +70,7 @@ const Header = () => {
             className="w-36 md:w-40 object-contain"
           />
         </div>
+        </Link>
 
         {/* RIGHT MENU */}
         <nav
@@ -76,22 +88,22 @@ const Header = () => {
             font-['Plus_Jakarta_Sans']
           "
         >
-          <a href="#">DOMAINS</a>
-          <a href="#">SOLVE</a>
+          <Link to="/domains" className={isDomain ? "font-semibold" : ""}>DOMAINS</Link>
+          <Link to="/solve" className={isSolve ? "font-semibold" : ""}>SOLVE</Link>
 
           <div className="flex justify-end gap-2 items-center">
             <span className="bg-yellow-400 px-1 text-[9px]">New</span>
-            <a href="#">TRENDS</a>
+            <div style={{cursor: 'pointer'}} to="/trends" className={isTrend ? "font-semibold" : ""}>TRENDS</div>
           </div>
 
           {isProspectArgumentPage ? (
-            <a href="#">BRANDS</a>
+            <Link to="/brands" className={isBrand ? "font-semibold" : ""}>BRANDS</Link>
           ) : (
-            <a href="#" className="font-semibold">
+            <Link to="/brands" className={isBrand ? "font-semibold" : ""}>
               BRANDS
-            </a>
+            </Link>
           )}
-          <a href="#">CAREERS</a>
+          <Link to="/careers" className={isCareer ? "font-semibold" : ""}>CAREERS</Link>
         </nav>
 
         {/* MOBILE MENU ICON */}
@@ -118,18 +130,18 @@ const Header = () => {
             font-['Plus_Jakarta_Sans']
           "
         >
-          <a href="#">DOMAINS</a>
-          <a href="#">SOLVE</a>
+          <a href="#" className={isDomain ? "font-semibold" : ""}>DOMAINS</a>
+          <a href="#" className={isSolve ? "font-semibold" : ""}>SOLVE</a>
 
           <div className="flex justify-end gap-2 items-center">
             <span className="bg-yellow-400 px-1 text-[9px]">New</span>
-            <a href="#">TRENDS</a>
+            <a href="#" className={isTrend ? "font-semibold" : ""}>TRENDS</a>
           </div>
 
-          <a href="#" className="font-semibold">
+          <a href="#" className={isBrand ? "font-semibold" : ""}>
             BRANDS
           </a>
-          <a href="#">CAREERS</a>
+          <a href="#" className={isCareer ? "font-semibold" : ""}>CAREERS</a>
         </div>
       )}
     </header>

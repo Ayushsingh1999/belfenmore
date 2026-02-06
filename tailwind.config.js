@@ -11,6 +11,8 @@ export default {
       },
       fontFamily: {
         serifDisplay: ["Playfair Display", "serif"],
+        'meie-script': ['Meie Script', 'cursive'],
+        'times-new-roman': ['Times New Roman', 'serif'],
       },
     },
   },

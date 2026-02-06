@@ -3,6 +3,130 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.mob-text {
-  hyphens: auto;
+/* ONLY MOBILE */
+@media (max-width: 640px) {
+  .cap-img {
+    width: 100%;
+    height: 731px;
+    background-image: url("../src/assets/floweimg_home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .cap-text {
+    top: 20%;
+  }
+  .captext {
+    top: -4% !important;
+    left: 3% !important;
+  }
+  .core-ide {
+    margin-top: -15% !important;
+  }
+  .para-text {
+    line-height: 30px !important;
+  }
+  .main-conatiner {
+    position: relative !important;
+    left: 6% !important;
+  }
+  .Ignite {
+    margin-top: -12px!important;
+  }
+  .exl-section{
+        margin-top: 47%!important;
+
+  }
+  .Envision-text{
+    font-size: 35px!important;
+        margin-top: -17%!important;
+
+  }
+  .DELIVERY{
+        font-size: 27px!important;
+
+  }
+  .Artisan{
+    position: absolute!important;
+    top: 3.6%!important;
+  }
+  .effective {
+    width: 350px !important;
+    left: -44px !important;
+  }
+  .strv-text {
+    position: absolute !important;
+    top: 3.5% !important;
+  }
+  .bespoke{
+    margin-top: 0%!important;
+  }
+  .det-text {
+    margin-left: -50px !important;
+  }
+  .emp-text {
+    line-height: 25px !important;
+  }
+  .cor-para {
+    position: absolute !important;
+    top: 69% !important;
+  }
+  .main-section {
+    margin-top: 25% !important;
+  }
+  .iner-text {
+    margin-left: -26% !important;
+  }
+  .det-text-section {
+    position: absolute !important;
+    top: 1% !important;
+    left: -15% !important;
+  }
+  .para-text-code {
+    margin-top: 0px !important;
+    line-height: 23px !important;
+  }
+  .Frame2-img {
+    position: relative !important;
+    top: -15% !important;
+  }
+  .text-darktexts {
+    font-size: 38px !important;
+    margin-left: -2% !important;
+  }
+  .captext1 {
+    bottom: -1% !important;
+  }
+  .cap-img1 {
+    position: absolute;
+    background-image: url("../src/assets/floweimg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width: 912px) and (max-width: 912px) {
+  .SIGNATURE {
+    left: -23% !important;
+  }
+  .DELIVERY{
+        right: -23% !important;
+                top: 41%!important;
+
+
+  }
+  .core-ident-text{
+    font-size: 58px!important;
+    right: -75%!important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .SIGNATURE {
+    left: -20% !important;
+  }
+   .DELIVERY{
+        right: -20% !important;
+        top: 41%!important;
+
+  }
 }

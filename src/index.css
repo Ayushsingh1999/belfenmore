@@ -1,21 +1,28 @@
+/* Add these to your existing CSS file */
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ADD THESE CLASSES */
+.font-meie-script {
+  font-family: 'Meie Script', cursive;
+}
+
+.font-times-new-roman {
+  font-family: 'Times New Roman', serif;
+}
+
+.font-luxurious-script {
+  font-family: 'Luxurious Script', cursive;
+}
 
 body {
   margin: 0;
    -ms-overflow-style: none;     /* IE / Edge */
 }
 
-/* Hide vertical scrollbar but keep scrolling */
-html {
-  scrollbar-width: none;        /* Firefox */
-}
-
-
-body::-webkit-scrollbar {
-  display: none;                /* Chrome / Safari */
-}
 
 @font-face {
   font-family: "Times Now";
