@@ -3,7 +3,9 @@ import BgLeaf from "../assets/leaf.png";
 import Differentiate from "../assets/Differentiate.png";
 import Leaf1 from "../assets/leaf1.png";
 import Leaf2 from "../assets/leaf2.png";
+import B from "../assets/theBimage.png"
 import bleaf from "../assets/bleaf.png";
+import work from "../assets/workatBelfenmore.png";
 const UniqueSection = () => {
   return (
     <>
@@ -11,18 +13,18 @@ const UniqueSection = () => {
       <section className="w-full flex justify-center">
         <div className="max-w-[1200px] w-full">
           {/* 🔹 TOP IMAGE WITH CENTER TEXT */}
-          <div className="relative w-full mb-12 flex justify-center">
+          <div className="relative w-full mb-12 flex justify-center -translate-y-14">
             <img
               src={Differentiate}
               alt="What makes us unique"
-              className="w-full max-w-[700px] object-cover sm:max-w-[500px]"
+              className="w-full max-w-[450px] object-cover sm:max-w-[450px]"
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <h2
-                className="text-center text-[20px] sm:text-[30px] md:text-[50px]"
+                className="text-center text-[10px] sm:text-[60px] md:text-[40px]"
                 style={{
-                  fontFamily: "'Times Now', Times, serif",
-                  fontWeight: 400,
+                  fontFamily: "Times Now",
+                  fontWeight: 500,
                   color: "#32312B",
                   lineHeight: "100%",
                 }}
@@ -33,16 +35,16 @@ const UniqueSection = () => {
           </div>
 
           {/* 🔹 DESKTOP / TABLET LEAF + TEXT */}
-          <div className="hidden sm:grid grid-cols-1 lg:grid-cols-2 items-center gap-0">
+          <div className="hidden sm:grid grid-cols-1 lg:grid-cols-2 items-center gap-0 -translate-y-20">
             <div className="flex justify-center">
               <img
-                src={BgLeaf}
+                src={B}
                 alt="Decorative Leaf"
-                className="w-full max-w-[320px] lg:max-w-[380px]"
+                className="w-[700px] max-w-[700px] lg:max-w-[700px] translate-x-[270px]"
               />
             </div>
 
-            <div className="w-full italic" style={{ marginLeft: "-16%" }}>
+            {/* <div className="w-full italic" style={{ marginLeft: "-16%" }}>
               <div className="space-y-6">
                 <Item
                   title="Oldness"
@@ -61,7 +63,7 @@ const UniqueSection = () => {
                   desc="We create an inclusive environment where everyone feels valued"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* 🔹 MOBILE LAYOUT */}
@@ -152,7 +154,7 @@ const UniqueSection = () => {
       {/* ================= NEW BELOW SECTION ================= */}
       <section className="w-full flex flex-col justify-start relative overflow-hidden px-4 md:px-8 lg:px-16">
         {/* Background Leaves */}
-        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+        {/* <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <img
             src={Leaf2}
             alt="Leaf Left"
@@ -163,47 +165,28 @@ const UniqueSection = () => {
             alt="Leaf Right"
             className="absolute right-[10%] sm:right-[15%] md:right-[25%] w-[150px] sm:w-[300px] md:w-[400px] lg:w-[420px] rotate-[6deg]"
           />
-        </div>
+        </div> */}
 
         {/* Headings on top of images */}
-        <div className="relative z-20 flex flex-col items-center text-center">
-          <h1
-            className="text-[120px] sm:text-[140px] md:text-[220px] lg:text-[300px] leading-[0.9]"
-            style={{
-              fontFamily: "Edwardian Script ITC",
-              fontWeight: 400,
-              fontStyle: "Regular",
-              letterSpacing: "0%",
-              color: "#FFE95A",
-            }}
-          >
-            work at
-          </h1>
-
-          <h1
-            className="text-[120px] sm:text-[140px] md:text-[220px] lg:text-[300px] leading-[0.9]"
-            style={{
-              fontFamily: "Edwardian Script ITC",
-              fontWeight: 400,
-              fontStyle: "Regular",
-              letterSpacing: "0%",
-              color: "#FFE95A",
-            }}
-          >
-            bettermore
-          </h1>
+        <div className="relative z-20 flex flex-col items-center text-center translate-x-2 -translate-y-14">
+              <img
+                src={work}
+                alt="work at Belfenmore"
+                className="w-[700px] max-w-[700px] lg:max-w-[700px] -translate-x-10 translate-y-10"
+              />
         </div>
 
         {/* Paragraph below, right-aligned */}
-        <div className="relative z-20 md:absolute md:top-[65%] md:left-[30%] w-full md:w-[700px] px-4">
-          <p
+        <span className="relative z-20 md:absolute md:top-[65%] w-full md:w-[700px] px-4 translate-y-16 -translate-x-3">
+          <span
             className="font-light text-right md:text-right text-center"
             style={{
               fontFamily: "Times Now",
               fontWeight: 300,
               fontStyle: "Light",
-              fontSize: "16px",
-              lineHeight: "170%",
+              color: "#32312B",
+              fontSize: "11px",
+              lineHeight: "120%",
               letterSpacing: "0%",
               transform: "rotate(0deg)",
               opacity: 1,
@@ -215,14 +198,14 @@ const UniqueSection = () => {
             </span>
             <span className="block pl-0">
               critical thinking. We accelerate career beyond the ordinary
-              through
+              through cutting
             </span>
             <span className="block pl-0 md:pl-20">
-              cutting edge tools, bold opportunities, and ecosystem which
+              edge tools, bold opportunities, and ecosystem which
               champion your growth.
             </span>
-          </p>
-        </div>
+          </span>
+        </span>
       </section>
     </>
   );
@@ -247,7 +230,7 @@ const Item = ({ title, desc }) => {
       <p
         className="mt-3"
         style={{
-          fontFamily: "'Cabinet Grotesk Variable', sans-serif",
+          fontFamily: "Cabinet Grotesk Variable",
           fontWeight: 400,
           fontSize: "16px",
           lineHeight: "100%",
@@ -269,7 +252,7 @@ const ItemMobile = ({ title, desc }) => {
       {/* Added padding on all sides */}
       <h3
         style={{
-          fontFamily: "'Cabinet Grotesk Variable', sans-serif",
+          fontFamily: "Cabinet Grotesk Variable",
           fontWeight: 400,
           fontStyle: "Regular",
           fontSize: "21px",
@@ -284,7 +267,7 @@ const ItemMobile = ({ title, desc }) => {
       </h3>
       <p
         style={{
-          fontFamily: "'Cabinet Grotesk Variable', sans-serif",
+          fontFamily: "Cabinet Grotesk Variable",
           fontWeight: 400,
           fontStyle: "Regular",
           fontSize: "16px",

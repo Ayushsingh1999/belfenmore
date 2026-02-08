@@ -10,7 +10,7 @@ const CapitaliseSection = () => {
       <p
         className="text-center mt-6 md:-mt-20 text-[#4A4A4A]"
         style={{
-          fontFamily: "'Times Now', serif",
+          fontFamily: "Times Now",
           fontWeight: 250,
           fontStyle: "extraLight",
           fontSize: "22 px",
@@ -70,7 +70,7 @@ const CapitaliseSection = () => {
         className="absolute right-8 bg-[#FFD84D] px-4 py-2 hover:scale-105 transition-transform"
         style={{
           borderRadius: "5px",
-          fontFamily: "'Times Now', Times, serif",
+          fontFamily: "Times Now",
           fontWeight: 600,
           fontStyle: "italic",
           fontSize: "15px",

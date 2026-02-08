@@ -26,7 +26,7 @@ const ValueMapSection = () => {
                 font-bold italic text-[#32312B]
                 md:-left-[36%]
               "
-              style={{ fontFamily: "'Times New Roman', 'Times', serif", fontWeight: 'bold', fontStyle: 'italic' }}
+              style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
               Substantiate
             </h2>
@@ -44,17 +44,17 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px]">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0">
+            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
               Ground every decision in reliable, data-driven facts, revealing{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 the real forces
               </span>{" "}
               behind your challenges to understand what drives outcomes and act
               with{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 confidence and clarity.
               </span>
@@ -78,7 +78,7 @@ const ValueMapSection = () => {
                 font-bold italic text-[#32312B]
                 md:-right-[36%]
               "
-              style={{ fontFamily: "'Times New Roman', 'Times', serif", fontWeight: 'bold', fontStyle: 'italic' }}
+              style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
               Opportunity
             </h2>
@@ -96,17 +96,17 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px]">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0">
+            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
               Transform problems into{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 growth possibilities
               </span>{" "}
               by uncovering opportunities, reframing challenges, and creating innovative
               paths that turn obstacles into{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 lasting progress
               </span>
@@ -132,7 +132,7 @@ const ValueMapSection = () => {
                 font-bold italic text-[#32312B]
                 md:-left-[27%]
               "
-              style={{ fontFamily: "'Times New Roman', 'Times', serif", fontWeight: 'bold', fontStyle: 'italic' }}
+              style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
               Leverage
             </h2>
@@ -150,17 +150,17 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px]">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0">
+            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable"}}>
               Amplify{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 core strengths
               </span>{" "}
               into dynamic accelerators that drive impactful, continuous growth and
               momentum across opportunities and{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 changing paradigms.
               </span>
@@ -185,7 +185,7 @@ const ValueMapSection = () => {
                 font-bold italic text-[#32312B]
                 md:-right-[31%]
               "
-              style={{ fontFamily: "'Times New Roman', 'Times', serif", fontWeight: 'bold', fontStyle: 'italic' }}
+              style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
               Value-map
             </h2>
@@ -203,16 +203,16 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px]">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0">
+            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable"}}>
               Link organizational{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 goals and objectives
               </span>{" "}
               to action plans with measurable indicators to ensure{" "}
               <span
-                style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
               >
                 meaningful value creation
               </span>{" "}
@@ -229,7 +229,7 @@ const ValueMapSection = () => {
           <h2
             className="self-start text-[26px] leading-none text-[#32312B] mb-2 md:hidden"
             style={{ 
-              fontFamily: "'Times Now', 'Times New Roman', 'Times', serif", 
+              fontFamily: "Times Now", 
               fontWeight: 'bold', 
               fontStyle: 'italic' 
             }}
@@ -255,8 +255,8 @@ const ValueMapSection = () => {
             <h2
               className="hidden md:block text-[26px] leading-none text-[#32312B] md:mb-3 md:mr-4"
               style={{ 
-                fontFamily: "'Times Now', 'Times New Roman', 'Times', serif", 
-                fontWeight: 'bold', 
+                fontFamily: "Times Now", 
+                fontWeight: '800', 
                 fontStyle: 'italic',
                 flexShrink: 0 
               }}
@@ -266,16 +266,16 @@ const ValueMapSection = () => {
 
             {/* Paragraph - Takes remaining space, starts from heading end */}
             <div className="ml-[2%] flex items-start flex-1">
-              <p className="uppercase text-[10px] leading-[20px] font-light text-[#32312B] text-justify mt-4 md:mt-0 w-[40%]">
+              <p className="uppercase text-[10px] leading-[20px] font-light text-[#32312B] text-justify mt-4 md:mt-0 w-[40%]"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
                 <span
-                  style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                  style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
                 >
                   Device a plan
                 </span>{" "}
                 that thoroughly examines real forces to uncover growth possibilities by
                 leveraging core strengths and unifying goals and objectives into a{" "}
                 <span
-                  style={{ fontFamily: "'Cabinet Grotesk', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", fontWeight: 600 }}
+                  style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
                 >
                   decisive roadmap.
                 </span>

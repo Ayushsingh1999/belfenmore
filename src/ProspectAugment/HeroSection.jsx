@@ -97,7 +97,7 @@ const HeroSection = () => {
 <h3
   className="flex items-center"
   style={{
-    fontFamily: "'Times Now', Times, serif",
+    fontFamily: "Times Now",
     fontWeight: 600,
     fontSize: "23px",
     lineHeight: "100%",
