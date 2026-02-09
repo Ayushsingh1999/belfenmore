@@ -97,10 +97,10 @@ const Header = () => {
           <Link to="/domains" className={isDomain ? "font-semibold" : ""}>DOMAINS</Link>
           <Link to="/solve" className={isSolve ? "font-semibold" : ""}>SOLVE</Link>
 
-          <div className="flex justify-end gap-2 items-center">
+          {/* <div className="flex justify-end gap-2 items-center">
             <span className="bg-yellow-400 px-1 text-[9px]">New</span>
             <div style={{cursor: 'pointer'}} to="/trends" className={isTrend ? "font-semibold" : ""}>TRENDS</div>
-          </div>
+          </div> */}
 
           {isProspectArgumentPage ? (
             <Link to="/brands" className={isBrand ? "font-semibold" : ""}>BRANDS</Link>
@@ -139,10 +139,10 @@ const Header = () => {
           <a href="#" className={isDomain ? "font-semibold" : ""}>DOMAINS</a>
           <a href="#" className={isSolve ? "font-semibold" : ""}>SOLVE</a>
 
-          <div className="flex justify-end gap-2 items-center">
+          {/* <div className="flex justify-end gap-2 items-center">
             <span className="bg-yellow-400 px-1 text-[9px]">New</span>
             <a href="#" className={isTrend ? "font-semibold" : ""}>TRENDS</a>
-          </div>
+          </div> */}
 
           <a href="#" className={isBrand ? "font-semibold" : ""}>
             BRANDS
