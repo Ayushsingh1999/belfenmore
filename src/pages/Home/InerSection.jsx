@@ -5,21 +5,22 @@ import effective from "../../assets/effective_home.png";
 import Frame5 from "../../assets/Frame_Home_5.png";
 import Frame6 from "../../assets/Frame_Home_6.png";
 import Groups from "../../assets/Groups_Home.png";
+
 const InerSection = () => {
   return (
-    <div className="w-full min-h-screen overflow-hidden">
-      <section className="w-full py-20 px-6 md:px-16 flex justify-center relative main-section">
-        <div className="max-w-6xl w-full flex flex-col lg:flex-row md:flex-row items-start justify-center gap-10">
+    <div className="w-full min-h-screen overflow-hidden bg-[#fdf8ec]">
+      <section className="w-full py-8 px-3 md:px-8 flex justify-center relative main-section" style={{ marginTop: "2%" }}>
+        <div className="max-w-4xl w-full flex flex-col lg:flex-row md:flex-row items-start justify-center gap-6">
           {/* ================= MOBILE HEADING (Only Mobile) ================= */}
-          <div className="block lg:hidden md:hidden text-center w-full mb-6 det-text-section">
+          <div className="block lg:hidden md:hidden text-center w-full mb-3 det-text-section">
             <h2
-              className="text-[34px] font-bold leading-tight det-text"
+              className="text-[22px] font-bold leading-tight det-text"
               style={{ fontFamily: "Times Now", color: "#32312B" }}
             >
               Determine
             </h2>
             <h2
-              className="text-[34px] font-bold leading-tight"
+              className="text-[22px] font-bold leading-tight"
               style={{ fontFamily: "Times Now", color: "#32312B" }}
             >
               Determination
@@ -29,16 +30,16 @@ const InerSection = () => {
           {/* ================= IMAGE + ROTATE TEXT ================= */}
           <div className="relative flex flex-col items-center">
             {/* Image */}
-            <img src={Frame3} alt="Frame2" className="object-cover z-0 md:h-[370px] lg:h-[100%]"  />
+            <img src={Frame3} alt="Frame2" className="object-cover z-0 md:h-[240px] lg:h-[260px]" />
 
             {/* ================= ROTATE TEXT (Desktop Only) ================= */}
             <span
-              className="hidden lg:block   md:block absolute -left-51 top-1/2 -translate-y-1/2 -rotate-90 text-[#bdb8aa]"
+              className="hidden lg:block md:block absolute -left-32 top-1/2 -translate-y-1/2 -rotate-90 text-[#bdb8aa]"
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 300,
-                fontSize: "53px",
-                lineHeight: "100%",
+                fontSize: "34px",
+                lineHeight: "95%",
                 whiteSpace: "nowrap",
               }}
             >
@@ -47,12 +48,12 @@ const InerSection = () => {
 
             {/* ================= ROTATE TEXT (Mobile Bottom) ================= */}
             <span
-              className="block lg:hidden md:hidden iner-text mt-4 text-[#bdb8aa]"
+              className="block lg:hidden md:hidden iner-text mt-2 text-[#bdb8aa]"
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 300,
-                fontSize: "32px",
-                lineHeight: "100%",
+                fontSize: "22px",
+                lineHeight: "95%",
                 whiteSpace: "nowrap",
               }}
             >
@@ -61,7 +62,7 @@ const InerSection = () => {
 
             {/* ================= PARA (Mobile Below Rotate Text) ================= */}
             <p
-              className="block lg:hidden md:hidden emp-text mt-4 text-[14px] leading-[20px] text-[#32312B] text-justify max-w-[320px]"
+              className="block lg:hidden md:hidden emp-text mt-2 text-[11px] leading-[16px] text-[#32312B] text-justify max-w-[240px]"
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
               }}
@@ -73,18 +74,18 @@ const InerSection = () => {
           </div>
 
           {/* ================= DESKTOP TEXT PART (Same as Before) ================= */}
-          <div className="max-w-md text-right hidden lg:block md:block">
-            {/* Desktop Headings */}
+          <div className="max-w-xs text-right hidden lg:block md:block mr-[8%]">
+            {/* Desktop Headings - Moved to the right */}
             <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "55px",
-                lineHeight: "120%",
+                fontSize: "45px",
+                lineHeight: "50%",
                 color: "#32312B",
                 position: "absolute",
-                left: "46%",
-                top: "8%",
+                left: "45%", // Changed from 35% to 42% to move right
+                top: "7%",
               }}
               className="absolute z-20"
             >
@@ -95,12 +96,12 @@ const InerSection = () => {
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "55px",
-                lineHeight: "120%",
+                fontSize: "45px",
+                lineHeight: "110%",
                 color: "#32312B",
                 position: "absolute",
-                left: "46%",
-                top: "20%",
+                left: "45%", // Changed from 35% to 42% to move right
+                top: "16%",
               }}
               className="absolute z-20"
             >
@@ -112,14 +113,14 @@ const InerSection = () => {
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: "23px",
+                fontSize: "11px",
+                lineHeight: "18px",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "270px",
-                height: "152px",
-                marginTop: "37%",
-                marginLeft: "-10%",
+                width: "200px",
+                height: "auto",
+                marginTop: "38%",
+                marginLeft: "-8%", // Adjusted to align with new heading position
               }}
             >
               We empower organizations to discover their true ambitions and
@@ -130,21 +131,24 @@ const InerSection = () => {
         </div>
       </section>
 
-      <section className="w-full main-conatiner  py-20 px-6 md:px-16 flex justify-center relative">
-        <div className="max-w-6xl w-full flex flex-col lg:flex-row md:flex-row items-start justify-center gap-10">
+      {/* Gap between sections */}
+      <div className="h-6 md:h-8 lg:h-10"></div>
+
+      <section className="w-full main-conatiner py-8 px-3 md:px-8 flex justify-center relative">
+        <div className="max-w-4xl w-full flex flex-col lg:flex-row md:flex-row items-start justify-center gap-6">
           {/* Text Part */}
-          {/* Text Part */}
-          <div className="max-w-md text-right">
+          <div className="max-w-xs text-right">
             <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "55px",
-                lineHeight: "120%",
+                fontSize: "45px",
+                lineHeight: "110%",
                 letterSpacing: "0%",
                 color: "#32312B",
+                marginLeft: '1%'
               }}
-              className="mb-4 absolute z-20 Ignite"
+              className="mb-2 absolute z-20 Ignite"
             >
               Ignite...{" "}
             </h2>
@@ -154,14 +158,15 @@ const InerSection = () => {
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: "23px",
+                fontSize: "11px",
+                lineHeight: "18px",
                 letterSpacing: "0%",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "270px",
-                height: "152px",
-                marginTop: "28%",
+                width: "200px",
+                height: "auto",
+                marginTop: "30%",
+                marginLeft: '6%'
               }}
             >
               Courage, Momentum and Strategic Clarity We empower leaders to act
@@ -170,170 +175,173 @@ const InerSection = () => {
               sharpen direction, and drive alignment across the enterprise.
             </p>
           </div>
+          
           {/* Image + Vertical Text */}
           <div className="relative flex flex-col items-center">
             {/* Image */}
             <img
               src={Frame4}
               alt="Frame2"
-              className="w-[260px] md:w-[320px] object-cover z-0"
+              className="w-[200px] md:w-[230px] object-cover z-0"
             />
 
             {/* Curved Text */}
             <div
-              className="absolute bottom-1  effective -left-50 text-center"
+              className="absolute bottom-0 effective -left-[100%] text-center"
               style={{
-                width: "500px",
-                height: "39.388671875px",
+                width: "450px",
+                height: "30px",
                 opacity: 1,
                 transform: "rotate(0deg)",
               }}
             >
-              <img src={effective} />
+              <img src={effective} alt="Effective" className="w-full h-auto" />
             </div>
           </div>
         </div>
       </section>
-     <section className="w-full bg-[#FBF8EE] flex justify-center px-4 sm:px-6 md:px-10 py-12 exl-section">
-  <div className="max-w-6xl w-full relative">
 
-    {/* ================= ROTATED TEXT (Desktop Only) ================= */}
-    <span
-      className="hidden SIGNATURE  md:block absolute md:text-[62px] md:top-[36%] md:-left-[26%] 
- lg:text-[62px] lg:top-[39%] lg:-left-[16.6%] -translate-y-1/2 -rotate-90 text-[#bdb8aa]"
-      style={{
-        fontFamily: "Times Now",
-        fontWeight: 300,
-        // fontSize: "62px",
-        lineHeight: "100%",
-        textAlign: "right",
-        whiteSpace: "nowrap",
-        // left: "-16.6%",
-        // top: "39%",
-      }}
-    >
-      SIGNATURE
-    </span>
+      {/* Gap between sections */}
+      <div className="h-6 md:h-8 lg:h-10"></div>
 
-    <span
-      className="hidden DELIVERY md:block absolute md:text-[70px] md:top-[37%] md:-right-[27%] lg:text-[72px] lg:top-[40%] lg:-right-[17.6%]  -translate-y-1/2 rotate-90 text-[#bdb8aa]"
-      style={{
-        fontFamily: "Times Now",
-        fontWeight: 300,
-        // fontSize: "72px",
-        lineHeight: "100%",
-        textAlign: "right",
-        whiteSpace: "nowrap",
-        // right: "-17.6%",
-        // top: "40%",
-      }}
-    >
-      DELIVERY
-    </span>
+      <section className="w-full bg-[#fdf8ec] flex justify-center px-3 sm:px-4 md:px-6 py-6 exl-section">
+        <div className="max-w-3xl w-full relative">
+          {/* ================= ROTATED TEXT (Desktop Only) ================= */}
+          <span
+            className="hidden SIGNATURE md:block absolute md:text-[40px] md:top-[36%] md:-left-[18%] lg:text-[38px] lg:top-[42%] lg:-left-[9%] -translate-y-1/2 -rotate-90 text-[#bdb8aa]"
+            style={{
+              fontFamily: "Times Now",
+              fontWeight: 300,
+              lineHeight: "95%",
+              textAlign: "right",
+              whiteSpace: "nowrap",
+            }}
+          >
+            SIGNATURE
+          </span>
 
-    {/* ================= HEADING (Mobile Left, Desktop Same) ================= */}
-    <h2
-      style={{
-        fontFamily: "Times Now",
-        fontWeight: 700,
-        // fontSize: "55px",
-        lineHeight: "120%",
-        letterSpacing: "0%",
-        color: "#32312B",
-      }}
-      className=" Envision-text
-        absolute 
-        top-6 sm:top-8 md:-top-5  lg:-top-8 lg:text-[55px]
-        left-4 md:left-1/2 md:text-[40px]
-        md:-translate-x-1/2
-        z-20 
-        text-left md:text-center
-      "
-    >
-      Envision Excellence
-    </h2>
+          <span
+            className="hidden DELIVERY md:block absolute md:text-[44px] md:top-[37%] md:-right-[19%] lg:text-[43px] lg:top-[42%] lg:-right-[7%] -translate-y-1/2 rotate-90 text-[#bdb8aa]"
+            style={{
+              fontFamily: "Times Now",
+              fontWeight: 300,
+              lineHeight: "95%",
+              textAlign: "right",
+              whiteSpace: "nowrap",
+            }}
+          >
+            DELIVERY
+          </span>
 
-    {/* ================= IMAGE CONTAINER ================= */}
-    <div className="relative w-full border border-[#BDBAAE] overflow-hidden">
-      <img
-        src={Frame5}
-        alt="Forest"
-        className="w-full h-[180px] z-0 sm:h-[240px] md:h-[340px] lg:h-[340px] object-cover"
-      />
-    </div>
+          {/* ================= HEADING (Mobile Left, Desktop Same) ================= */}
+          <h2
+            style={{
+              fontFamily: "Times Now",
+              fontWeight: 700,
+              lineHeight: "110%",
+              letterSpacing: "0%",
+              color: "#32312B",
+            }}
+            className="Envision-text
+              absolute 
+              top-[2%] sm:top-[2%] md:top-[2%] lg:top-[2%] lg:text-[40px]
+              left-3 md:left-1/2 md:text-[40px]
+              md:-translate-x-1/2
+              z-20 
+              text-left md:text-center
+            "
+          >
+            Envision Excellence
+          </h2>
 
-    {/* ================= MOBILE SIGNATURE DELIVERY BELOW IMAGE ================= */}
-    <h3
-      className="block md:hidden text-center DELIVERY  mt-6"
-      style={{
-        fontFamily: "Times Now",
-        fontWeight: 300,
-        fontSize: "34px",
-        color: "#d8d3c7",
-        letterSpacing: "2px",
-      }}
-    >
-      SIGNATURE DELIVERY
-    </h3>
+          {/* ================= IMAGE CONTAINER ================= */}
+          <div className="relative w-[85%] border border-[#BDBAAE] overflow-hidden ml-12 mt-8">
+            <img
+              src={Frame5}
+              alt="Forest"
+              className="w-full h-[120px] z-0 sm:h-[160px] md:h-[220px] lg:h-[220px] object-cover"
+            />
+          </div>
 
-    {/* ================= PARAGRAPH (Mobile Center, Desktop Same) ================= */}
-    <p
-      className="
-        max-w-8xl mx-auto mt-2        text-start md:text-start
-        text-20 sm:text-base
-        font-body text-[#4B4A45]
-        leading-relaxed px-2 
-      "
-    >
-      We enable organizations to see the future more intuitively and
-      design pathways to reach it with precision, creativity, and purpose.
-      By combining strategic insight, thoughtful innovation, and a deep
-      understanding of evolving challenges, we help teams navigate
-      complexity, make confident decisions, and move toward their
-      long-term vision with clarity and meaningful impact.
-    </p>
-  </div>
-</section>
+          {/* ================= MOBILE SIGNATURE DELIVERY BELOW IMAGE ================= */}
+          <h3
+            className="block md:hidden text-center DELIVERY mt-3"
+            style={{
+              fontFamily: "Times Now",
+              fontWeight: 300,
+              fontSize: "24px",
+              color: "#d8d3c7",
+              letterSpacing: "1px",
+            }}
+          >
+            SIGNATURE DELIVERY
+          </h3>
 
-      <section className="w-full py-20 px-6 md:px-16 flex justify-center relative main-conatiner">
-        <div className="max-w-6xl w-full flex flex-col lg:flex-row md:flex-row items-start justify-center gap-10">
-          {/* Text Part */}
-          {/* Text Part */}
+          {/* ================= PARAGRAPH (Mobile Center, Desktop Same) ================= */}
+          <p
+            className="
+              max-w-2xl mx-auto mt-2 text-start md:text-start
+              text-[11px] sm:text-[13px]
+              font-body text-[#4B4A45]
+              leading-relaxed px-1
+            "
+            style={{
+              fontFamily: "Cabinet Grotesk Variable",
+              lineHeight: "18px",
+              width:"100%"
+            }}
+          >
+            We enable organizations to see the future more intuitively and
+            design pathways to reach it with precision, creativity, and purpose.
+            By combining strategic insight, thoughtful innovation, and a deep
+            understanding of evolving challenges, we help teams navigate
+            complexity, make confident decisions, and move toward their
+            long-term vision with clarity and meaningful impact.
+          </p>
+        </div>
+      </section>
 
+      {/* Gap between sections */}
+      <div className="h-6 md:h-8 lg:h-10"></div>
+
+      <section className="w-full py-8 px-3 md:px-8 flex justify-center relative main-conatiner">
+        <div className="max-w-4xl w-full flex flex-col lg:flex-row md:flex-row items-start justify-center gap-6">
           {/* Image + Vertical Text */}
           <div className="relative flex flex-col items-center">
             {/* Image */}
             <img
               src={Frame6}
               alt="Frame6"
-              className="w-[260px] md:w-[320px] object-cover z-0"
+              className="w-[250px] md:w-[250px] object-cover z-0"
             />
 
             {/* Curved Text */}
             <div
-              className="absolute -bottom-18 effective  -right-20 text-center"
+              className="absolute -bottom-[13%] effective -right-[73%] text-center"
               style={{
-                width: "400px",
-                height: "95px",
+                width: "450px",
+                height: "75px",
                 opacity: 1,
                 transform: "rotate(0deg)",
               }}
             >
-              <img src={Groups} />
+              <img src={Groups} alt="Groups" className="w-full h-auto" />
             </div>
           </div>
 
-          <div className="max-w-md text-right">
+          {/* Text Part */}
+          <div className="max-w-xs text-right">
             <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "55px",
-                lineHeight: "120%",
+                fontSize: "45px",
+                lineHeight: "110%",
                 letterSpacing: "0%",
                 color: "#32312B",
+                marginLeft: "-1%",
               }}
-              className="mb-4 absolute z-20 Artisan"
+              className="mb-2 absolute z-20 Artisan"
             >
               Artisan...{" "}
             </h2>
@@ -342,14 +350,15 @@ const InerSection = () => {
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: "19px",
+                fontSize: "11px",
+                lineHeight: "16px",
                 letterSpacing: "0%",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "270px",
-                height: "152px",
-                marginTop: "28%",
+                width: "200px",
+                height: "auto",
+                marginTop: "25%",
+                marginLeft: "-7%",   
               }}
             >
               We create bespoke, handcrafted solutions tailored, elegant, and
@@ -359,6 +368,9 @@ const InerSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Bottom gap */}
+      <div className="h-8 md:h-12 lg:h-16"></div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import cloudBg from "./assets/middle_section_img1.png";
 import middle_cloud_2 from "./assets/middle_cloud_2.png";
 import sun_beech from "./assets/beech_sun_image.png";
- 
+
 import middle_section_img1_txt_1 from "./assets/middle_section_img1_txt_1.png";
 import middle_section_img1_txt_2 from "./assets/middle_section_heading_txt_2.png";
 import middle_section_img1_txt_3 from "./assets/middle_section_heading_txt_3.png";
@@ -9,7 +9,7 @@ import middle_section_img1_txt_4 from "./assets/middle_section_heading_txt_4_1.p
 import middle_section_img1_txt_5 from "./assets/middle_section_heading_txt_4.png";
 import middle_section_img1_txt_6 from "./assets/middle_section_heading_txt_5.png";
 import middle_section_img1_txt_7 from "./assets/middle_section_img1_txt_7.png";
- 
+
 import t2 from "./assets/t2.png";
 import t3 from "./assets/t3.png";
 import t4 from "./assets/t4.png";
@@ -18,12 +18,12 @@ import t6 from "./assets/t6.png";
 
 // Import Link if using React Router
 // import { Link } from 'react-router-dom';
- 
+
 /* 🔥 LOGICAL Z-INDEX PATTERN */
 const Z_INDEX = {
   // Background elements
   SUN: 5,
- 
+
   // Text on clouds = CLOUD_z-index + 1 (text sits just above its cloud)
   TEXT_MAIN_1: 11,
   TEXT_MAIN_2: 19, // done
@@ -32,37 +32,38 @@ const Z_INDEX = {
   TEXT_MAIN_5: 23, // done
   TEXT_MAIN_6: 24,
   TEXT_MAIN_7: 62,
- 
- 
+
   // Cloud images (increasing with each cloud)
   CLOUD_BG: 10,
- 
+
   // Middle clouds - increment by 10 each time
   CLOUD_1: 20,  // done
   CLOUD_2: 30,  // done
   CLOUD_3: 40,  // done
   CLOUD_4: 50,  // done
   CLOUD_5: 60,  // done
- 
+
   // Description text = TEXT_MAIN_z-index + 2 (description above main text)
   TEXT_DESC_2: 23,  // done
   TEXT_DESC_3: 33,  // done
   TEXT_DESC_4: 43,  // done
   TEXT_DESC_5: 53,  //done
   TEXT_DESC_6: 63,  //done
-   
+  
   // Container
   CONTAINER: 100
 };
- 
-/* 🔥 FIXED MASKED + BLEND IMAGE - SEPARATE MASK AND IMAGE */
+
+/* 🔥 UPDATED: SINGLE COMPONENT THAT HANDLES FLIP PROPERLY */
 const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10 }) => {
   return (
-    <div className={`relative w-full ${className}`}>
-      {/* Cream background masked by image - NEVER flipped */}
+    <div className={`relative w-full ${className}`} style={{ zIndex }}>
+      {/* Cream background with mask - apply transform here too */}
       <div
         className="absolute inset-0 bg-[#FFFDEC]"
         style={{
+          height: "100%",
+          width: "100%",
           maskImage: `url(${src})`,
           WebkitMaskImage: `url(${src})`,
           maskSize: "100% auto",
@@ -71,23 +72,25 @@ const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10 }) =>
           WebkitMaskRepeat: "no-repeat",
           maskPosition: "center",
           WebkitMaskPosition: "center",
+          transform: flip ? "scaleX(-1)" : "none",
+          transformOrigin: "center"
         }}
       />
      
-      {/* Original image with blend mode - Only image gets flipped */}
+      {/* Original image with blend mode - apply same transform */}
       <img
         src={src}
         alt=""
         className="relative w-full h-auto mix-blend-luminosity"
         style={{
-          zIndex,
-          transform: flip ? "scaleX(-1)" : "none"
+          transform: flip ? "scaleX(-1)" : "none",
+          transformOrigin: "center"
         }}
       />
     </div>
   );
 };
- 
+
 /* 🔥 TEXT ITEM COMPONENT */
 const TextItem = ({
   src,
@@ -115,7 +118,7 @@ const TextItem = ({
       <img src={src} alt="" className="w-full" />
     </div>
   );
- 
+
   // Wrap with link if href is provided
   if (href) {
     return (
@@ -129,7 +132,7 @@ const TextItem = ({
       </a>
     );
   }
- 
+
   // Wrap with clickable div if onClick is provided
   if (onClick) {
     return (
@@ -141,10 +144,10 @@ const TextItem = ({
       </div>
     );
   }
- 
+
   return content;
 };
- 
+
 const Middle = () => {
   // Updated URLs - Cloud 2 (group3) now points to /prospect-augment
   const linkUrls = {
@@ -156,7 +159,7 @@ const Middle = () => {
     group6: "https://www.freecodecamp.org/",
     group7: "https://interpl.ai/"
   };
- 
+
   return (
     <section className="relative w-full pointer-events-none overflow-x-hidden -mt-[45vh]" style={{ zIndex: Z_INDEX.CONTAINER }}>
       {/* CONTAINER FOR ALL CLOUDS */}
@@ -175,7 +178,7 @@ const Middle = () => {
             href={linkUrls.group1}
           />
         </div>
- 
+
         {/* STACKED CLOUDS SECTION */}
         <div className="relative">
          
@@ -202,7 +205,7 @@ const Middle = () => {
               href={linkUrls.group2}
             />
           </div>
- 
+
           {/* CLOUD 2 of 5 - RIGHT (text group 3: t3) */}
           <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_2 }}>
             <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_2} />
@@ -214,7 +217,7 @@ const Middle = () => {
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_MAIN_3}
-              href={linkUrls.group3} // Now points to /prospect-augment
+              href={linkUrls.group3}
             />
             <TextItem
               src={t3}
@@ -223,10 +226,10 @@ const Middle = () => {
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
               zIndex={Z_INDEX.TEXT_DESC_3}
-              href={linkUrls.group3} // Now points to /prospect-augment
+              href={linkUrls.group3}
             />
           </div>
- 
+
           {/* CLOUD 3 of 5 - LEFT (text group 4: t4) */}
           <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_3 }}>
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_3} />
@@ -250,14 +253,14 @@ const Middle = () => {
               href={linkUrls.group4}
             />
           </div>
- 
-          {/* CLOUD 4 of 5 - RIGHT (text group 5: t5) */}
+
+          {/* CLOUD 4 of 5 - RIGHT (text group 5: t5) - MISSING IN YOUR CODE */}
           <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_4 }}>
             <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_4} />
             {/* RIGHT: Text group 5 */}
             <TextItem
               src={middle_section_img1_txt_5}
-              top="13%"
+              top="15%"
               position="right"
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
@@ -266,7 +269,7 @@ const Middle = () => {
             />
             <TextItem
               src={t5}
-              top="32%"
+              top="30%"
               position="right"
               rightValue="32%"
               width="clamp(160px,16vw,200px)"
@@ -274,7 +277,7 @@ const Middle = () => {
               href={linkUrls.group5}
             />
           </div>
- 
+
           {/* CLOUD 5 of 5 - LEFT + CENTER (text group 6: t6 + centered text) */}
           <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_5 }}>
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_5} />
@@ -308,14 +311,14 @@ const Middle = () => {
             />
           </div>
         </div>
- 
+
         {/* SUN / BEECH */}
         <div className="relative -mt-[20px]" style={{ zIndex: Z_INDEX.SUN }}>
-          <img src={sun_beech} flip={false} zIndex={Z_INDEX.SUN} />
+          <img src={sun_beech} alt="Sun/Beech" className="w-full" />
         </div>
       </div>
     </section>
   );
 };
- 
+
 export default Middle;
