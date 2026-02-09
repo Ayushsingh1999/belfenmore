@@ -24,7 +24,7 @@ const Footer = () => {
               transition-all
             "
             style={{
-              fontFamily: "Cabinet Grotesk Variable, sans-serif",
+              fontFamily: "Cabinet Grotesk Variable",
               fontVariationSettings: '"wght" 400',
             }}
           >
@@ -200,7 +200,7 @@ const Footer = () => {
               tracking-[0]
               mb-2
             "
-            style={{ fontFamily: "Times Now, Times, serif" }}
+            style={{ fontFamily: "Times Now" }}
           >
             Threadality Technology’s
           </div>

@@ -83,7 +83,7 @@ const Hero = () => {
 >
   <h6
     style={{
-      fontFamily: "'Times Now', Times, serif", // Google Fonts equivalent
+      fontFamily: "Times Now", // Google Fonts equivalent
       fontWeight: 300, // Light weight (closest to SemiLight)
       fontStyle: "normal",
       fontSize: "12px",

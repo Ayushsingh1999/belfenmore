@@ -1,14 +1,61 @@
 import React from "react";
 import waves from "../assets/waves.png";
-import We from "../assets/We.png";
-import journey from "../assets/journey.png";
-import banner from "../assets/banner.png";
+import banner from "../assets/wave_banner.jpeg";
 
 const JourneySection = () => {
+  
+  const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10, opacity = 100 }) => {
+    return (
+      <div className={`relative w-full ${className}`}>
+        {/* Cream background masked by image - NEVER flipped */}
+        <div
+          className="absolute inset-0 bg-[#FFFDEC]"
+          style={{
+            maskImage: `url(${src})`,
+            WebkitMaskImage: `url(${src})`,
+            maskSize: "100% auto",
+            WebkitMaskSize: "100% auto",
+            maskRepeat: "no-repeat",
+            WebkitMaskRepeat: "no-repeat",
+            maskPosition: "center",
+            WebkitMaskPosition: "center",
+          }}
+        />
+       
+        {/* White-ish shadow effect - stronger on sides, fades to center */}
+        <div 
+          className="absolute inset-0"
+style={{
+  background: `
+    radial-gradient(circle at center, 
+      rgba(255, 253, 236, 0) 0%, 
+      rgba(255, 253, 236, 1) 100%
+    )
+  `,
+  mixBlendMode: "luminosity",
+  zIndex: zIndex + 1
+}}
+        />
+        
+        {/* Original image with blend mode - Only image gets flipped */}
+        <img
+          src={src}
+          alt=""
+          className="relative w-full h-auto mix-blend-luminosity"
+          style={{
+            zIndex,
+            transform: flip ? "scaleX(-1)" : "none",
+            opacity: `${opacity}%`
+          }}
+        />
+      </div>
+    );
+  };
+
   return (
     <section className="relative w-full overflow-hidden">
       {/* ================= DESKTOP DESIGN ================= */}
-      <div className="hidden md:block mt-20">
+      <div className="hidden md:block mt-36">
         {/* TOP HEADING */}
         <div className="flex flex-col items-center mb-0">
           <h3
@@ -27,34 +74,34 @@ const JourneySection = () => {
 
         {/* BANNER WRAPPER */}
         <div className="relative w-full">
-          {/* ===== BANNER IMAGE (EDITORIAL CREAM GRADIENT) ===== */}
+          {/* ===== BANNER IMAGE WITH MaskedBlendImage EFFECT ===== */}
           <div className="relative w-full h-[720px] overflow-hidden">
-            {/* Banner Image with 90% opacity */}
-            <img
-              src={banner}
-              alt="Banner"
-              className="
-      w-full
-      h-full
-      object-cover
-      opacity-90
-    "
-            />
-
-            {/* Radial Blend Mode Effect */}
-            <div
-              className="absolute inset-0 pointer-events-none z-[1]"
+            {/* Top gradient fade */}
+            <div 
+              className="absolute top-0 left-0 w-full h-48 z-20 pointer-events-none"
               style={{
-                background:
-                  "radial-gradient(circle at center, rgba(255, 253, 236, 0.2) 0%, rgba(255, 253, 236, 0.8) 100%)",
-                mixBlendMode: "luminosity",
+                background: "linear-gradient(to bottom, #FFFDEC 0%, transparent 100%)"
+              }}
+            />
+            
+            <MaskedBlendImage 
+              src={banner}
+              className="w-full h-[1000px] -translate-y-28"
+              opacity={60}
+            />
+            
+            {/* Bottom gradient fade */}
+            <div 
+              className="absolute bottom-0 left-0 w-full h-48 z-20 pointer-events-none"
+              style={{
+                background: "linear-gradient(to top, #FFFDEC 0%, transparent 100%)"
               }}
             />
           </div>
 
           {/* ===== CENTERED WAVE + CONTENT WRAPPER ===== */}
-          <div className="absolute top-0 left-0 w-full flex justify-center z-10">
-            <div className="relative w-full max-w-3xl ">
+          <div className="absolute top-0 left-0 w-full flex justify-center z-30">
+            <div className="relative w-full max-w-2xl ">
               {/* ===== WAVE IMAGE (UNCHANGED) ===== */}
               <img src={waves} alt="Waves" className="w-full" />
 
@@ -67,8 +114,7 @@ const JourneySection = () => {
     -translate-x-1/2
     text-center
     text-[#FFFDEC]
-    drop-shadow-[1px_-1px_0_#000]  /* Bottom-right to top-right */
-    drop-shadow-[-1px_-1px_0_#000] /* Bottom-left to top-left */
+    drop-shadow-[0.6px_-0.6px_0_#32312B]  /* Bottom-right to top-right */
   "
                 style={{
                   fontFamily: "Meie Script",
@@ -80,132 +126,126 @@ const JourneySection = () => {
               </h1>
 
               {/* ===== CONTENT UNDER WAVE (ALIGNED WIDTH) ===== */}
-              <div className="mt-6">
-                <div className="grid grid-cols-3 gap-0 text-gray-700">
-                  {/* LEFT COLUMN */}
-                  <div className="space-y-6 text-sm tracking-wide text-left">
-                    <div>
-                      <h4
-                        className="
-    uppercase
-    text-[14px]
-  "
-                        style={{
-                          fontFamily: "Times Now, Times, serif",
-                          fontWeight: 400,
-                          color: "#9E9B8F",
-                        }}
-                      >
-                        Domain Tech
-                      </h4>
+<div className="mt-6">
+  <div className="grid grid-cols-3 gap-0 text-gray-700" style={{gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr)"}}>
+    {/* LEFT COLUMN */}
+    <div className="space-y-6 text-sm tracking-wide text-left">
+      <div>
+        <h4
+          className="uppercase text-[14px]"
+          style={{
+            fontFamily: "Times Now",
+            fontWeight: 400,
+            color: "#9E9B8F",
+          }}
+        >
+          Domain Tech
+        </h4>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
-                        Solution Engineering
-                      </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px]  uppercase text-[#32312B]">
-                        Business Engineering
-                      </p>
-                    </div>
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
+          Solution Engineering
+        </p>
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
+          Business Engineering
+        </p>
+      </div>
 
-                    <div>
-                      <h4
-                        className="
-    uppercase
-    text-[14px]
-  "
-                        style={{
-                          fontFamily: "Times Now, Times, serif",
-                          fontWeight: 400,
-                          color: "#9E9B8F",
-                        }}
-                      >
-                        Tech Ops
-                      </h4>
+      <div>
+        <h4
+          className="uppercase text-[14px]"
+          style={{
+            fontFamily: "Times Now",
+            fontWeight: 400,
+            color: "#9E9B8F",
+          }}
+        >
+          Tech Ops
+        </h4>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
-                        Site Reliability
-                      </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px]  uppercase text-[#32312B]">
-                        Security & Compliance
-                      </p>
-                    </div>
-                  </div>
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
+          Site Reliability
+        </p>
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
+          Security & Compliance
+        </p>
+      </div>
+    </div>
 
-                  {/* CENTER TEXT */}
-                  <div className="flex justify-center gap-2 text-center mt-16">
-                    <p
-                      className="flex flex-col items-center font-light text-center"
-                      style={{
-                        fontFamily: "Times Now",
-                        fontStyle: "italic",
-                        fontSize: "11px",
-                        lineHeight: "120%",
-                        color: "#32312B",
-                      }}
-                    >
-                      {/* Line 1 */}
-                      <span className="max-w-[80%]">
-                        Propel innovation and transformation together,
-                      </span>
+    {/* CENTER COLUMN - Gets 1.5x more space */}
+    <div className="flex justify-center items-start px-2 mt-[60px]">
+      <div className="text-center w-full">
+        <div
+          className="flex flex-col items-center font-light text-center"
+          style={{
+            fontFamily: "Times Now",
+            fontStyle: "italic",
+            fontSize: "11px",
+            lineHeight: "80%",
+            color: "#32312B",
+          }}
+        >
+          {/* Line 1 */}
+          <span className="block mb-1 whitespace-nowrap">
+            Propel innovation and transformation together,
+          </span>
 
-                      {/* Line 2 */}
-                      <span className="max-w-[95%]">
-                        powered by our Intelligent Assets that shape industry
-                        trends and emerging technologies.
-                      </span>
-                    </p>
-                  </div>
+          {/* Line 2 with adjusted text */}
+          <span className="block mb-1 whitespace-nowrap">
+            powered by our Intelligent Assets shaping industry
+          </span>
 
-                  {/* RIGHT COLUMN */}
-                  <div className="space-y-6 text-sm tracking-wide text-right">
-                    <div>
-                      <h4
-                        className="
-    uppercase
-    text-[14px]
-  "
-                        style={{
-                          fontFamily: "Times Now, Times, serif",
-                          fontWeight: 400,
-                          color: "#9E9B8F",
-                        }}
-                      >
-                        Business Ops
-                      </h4>
+          {/* Line 3 */}
+          <span className="block whitespace-nowrap">
+            trends and emerging technologies.
+          </span>
+        </div>
+      </div>
+    </div>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
-                        Customer Journey
-                      </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
-                        Product Design
-                      </p>
-                    </div>
+    {/* RIGHT COLUMN */}
+    <div className="space-y-6 text-sm tracking-wide text-right">
+      <div>
+        <h4
+          className="uppercase text-[14px]"
+          style={{
+            fontFamily: "Times Now",
+            fontWeight: 400,
+            color: "#9E9B8F",
+          }}
+        >
+          Business Ops
+        </h4>
 
-                    <div>
-                      <h4
-                        className="
-    uppercase
-    text-[14px]
-  "
-                        style={{
-                          fontFamily: "Times Now, Times, serif",
-                          fontWeight: 400,
-                          color: "#9E9B8F",
-                        }}
-                      >
-                        Emerging Tech
-                      </h4>
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
+          Customer Journey
+        </p>
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
+          Product Design
+        </p>
+      </div>
 
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
-                        AI Engineering
-                      </p>
-                      <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
-                        AI Architecture
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div>
+        <h4
+          className="uppercase text-[14px]"
+          style={{
+            fontFamily: "Times Now",
+            fontWeight: 400,
+            color: "#9E9B8F",
+          }}
+        >
+          Emerging Tech
+        </h4>
+
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] mt-2 uppercase text-[#32312B]">
+          AI Engineering
+        </p>
+        <p className="font-['Cabinet_Grotesk_Variable'] text-[10px] uppercase text-[#32312B]">
+          AI Architecture
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
@@ -214,16 +254,33 @@ const JourneySection = () => {
       {/* ================= MOBILE DESIGN ================= */}
       <div className="block md:hidden">
         <div className="relative w-full flex flex-col items-center">
-          {/* Banner Image */}
-
-          <img
-            src={banner}
-            alt="Banner"
-            className="w-full h-[400px] object-cover"
-          />
+          {/* Banner Image with MaskedBlendImage effect */}
+          <div className="relative w-full h-[400px]">
+            {/* Top gradient fade */}
+            <div 
+              className="absolute top-0 left-0 w-full h-24 z-20 pointer-events-none"
+              style={{
+                background: "linear-gradient(to bottom, #FFFDEC 0%, transparent 90%)"
+              }}
+            />
+            
+            <MaskedBlendImage 
+              src={banner}
+              className="w-full h-full object-cover"
+              opacity={20}
+            />
+            
+            {/* Bottom gradient fade */}
+            <div 
+              className="absolute bottom-0 left-0 w-full h-24 z-20 pointer-events-none"
+              style={{
+                background: "linear-gradient(to top, #FFFDEC 0%, transparent 90%)"
+              }}
+            />
+          </div>
 
           {/* Wave Image at the bottom of banner (slightly taller) */}
-          <div className="absolute bottom-0 w-full flex justify-center">
+          <div className="absolute bottom-0 w-full flex justify-center z-30">
             <img
               src={waves}
               alt="Waves"
@@ -233,7 +290,7 @@ const JourneySection = () => {
 
           {/* "WE ARE PART OF YOUR" Text over Wave */}
           <h3
-            className="absolute bottom-16 w-full text-center translate-y-6"
+            className="absolute bottom-16 w-full text-center translate-y-6 z-40"
             style={{
               fontFamily: "Times Now",
               fontWeight: 250,
@@ -248,7 +305,7 @@ const JourneySection = () => {
 
           {/* "Journey" Text below */}
           <h1
-            className="absolute bottom-8 w-full text-center"
+            className="absolute bottom-8 w-full text-center z-40"
             style={{
               fontFamily: "Meie Script",
               fontWeight: 400,

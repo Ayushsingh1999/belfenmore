@@ -12,7 +12,7 @@ const CareersSection = () => {
   return (
     <section className="w-full relative">
       {/* DESKTOP / LAPTOP / TABLET */}
-      <div className="hidden md:flex flex-col items-center justify-center text-center px-4 pt-2 min-h-screen">
+      <div className="hidden md:flex flex-col items-center justify-center text-center pt-2 min-h-screen">
         
         {/* ROW 1: Join our team of [Img2] Innovators & */}
         <div className="relative flex items-center justify-center mt-2">
@@ -26,7 +26,7 @@ const CareersSection = () => {
         </div>
 
         {/* ROW 2: Problem solvers [Img3] where Passion meets Purpose. */}
-        <div className="relative flex items-center justify-center mt-4">
+        <div className="relative flex items-center justify-center mt-1">
           <p className="text-[#3A3A3A] font-['Times_Now'] font-normal text-[22px] mr-2">
             Problem solvers
           </p>
@@ -43,7 +43,10 @@ const CareersSection = () => {
           </p>
           <img src={Img3} alt="" className="w-[100%] md:w-[110px] mx-2" />
           <p className="text-[#32312B] font-['Times_Now'] font-extralight text-[22px]">
-            minds, Grow your Skills,
+            minds, Grow your 
+          </p>
+           <p className="text-[#32312B] font-['Times_Now'] font-extralight italic text-[22px] ml-2">
+            Skills,
           </p>
         </div>
 
@@ -52,8 +55,8 @@ const CareersSection = () => {
           <p className="text-[#3A3A3A] font-['Times_Now'] font-normal text-[22px] mr-2">
             Shape impactful solutions
           </p>
-          <img src={Img4} alt="" className="w-[46%] md:w-[150px] mx-2" />
-          <p className="text-[#32312B] font-['Times_Now'] font-light italic text-[22px]">
+          <img src={Img4} alt="" className="w-[46%] md:w-[120px] mx-2" />
+          <p className="text-[#32312B] font-['Times_Now'] font-light text-[22px]">
             and build a
           </p>
         </div>
@@ -70,12 +73,12 @@ const CareersSection = () => {
         </div>
 
         {/* CAPITALISE SECTION FOR DESKTOP */}
-        <div className="w-full relative flex flex-col items-center justify-center py-28 px-4 md:py-32">
+        <div className="w-full relative flex flex-col items-center justify-center py-28  md:py-32">
           {/* SUB TEXT */}
           <p
             className="text-center mt-6 md:-mt-20 text-[#4A4A4A]"
             style={{
-              fontFamily: "'Times Now', serif",
+              fontFamily: "Times Now",
               fontWeight: 250,
               fontStyle: "extraLight",
               fontSize: "22px",
@@ -132,22 +135,21 @@ const CareersSection = () => {
             </p>
           </div>
           
-          {/* APPLY BUTTON */}
-          <button
-            className="absolute right-8 bg-[#FFD84D] px-4 py-2 hover:scale-105 transition-transform"
-            style={{
-              borderRadius: "5px",
-              fontFamily: "'Times Now', Times, serif",
-              fontWeight: 600,
-              fontStyle: "italic",
-              fontSize: "15px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              color: "#32312B",
-            }}
-          >
-            Apply now
-          </button>
+{/* APPLY BUTTON FIXED BOTTOM RIGHT */}
+<button
+  className="fixed bottom-4 right-4 z-50 bg-[#FFE95A] py-1.5 hover:scale-105 transition-transform"
+  style={{
+    borderRadius: "5px",
+    fontFamily: "Times Now",
+    fontWeight: 600,
+    fontStyle: "italic",
+    fontSize: "13px",
+    color: "#32312B",
+    width: "95px",
+  }}
+>
+  Apply now
+</button>
         </div>
       </div>
 

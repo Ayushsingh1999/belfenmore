@@ -37,9 +37,9 @@ const CloudSection = () => {
               className="w-[200px] h-[200px] object-cover mb-1"
             />
 
-            <div className="mt-5 relative flex items-center">
+            <div className="mt-3 relative flex items-center translate-x-1">
               <span
-                className="absolute -left-4 -top-1 text-[15px] font-light" // Changed to -left-1
+                className="absolute -left-3.5 -top-1 text-[15px] font-light" // Changed to -left-1
                 style={{ fontFamily: "Cabinet Grotesk Variable", color: "#32312B" }}
               >
                 {item.id}.
@@ -66,7 +66,7 @@ const CloudSection = () => {
               className="w-[200px] h-[200px] object-cover mb-1"
             />
 
-            <div className="mt-5 relative flex items-center">
+            <div className="mt-3 relative flex items-center">
               <span
                 className="absolute -left-4 -top-1 text-[15px] font-light" // Changed to -left-1
                 style={{ fontFamily: "Cabinet Grotesk Variable", color: "#32312B" }}
