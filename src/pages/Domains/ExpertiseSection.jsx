@@ -17,12 +17,12 @@ const ExpertiseSection = () => {
         {/* TOP TEXT - REDUCED SIZE & WIDTH */}
         <div className="mt-[40px] md:col-span-2 flex justify-center mb-8">
           <p
-            className="mb-20 mt-2 w-[380px] text-center italic max-w-2xl text-[8px] sm:text-[12px] lg:text-[14px] md:text-[12px]"
+            className="mb-20 mt-2 w-[380px] text-center italic max-w-2xl text-[12px] sm:text-[12px] lg:text-[14px] md:text-[12px]"
             style={{
               fontFamily: "Times Now",
               fontWeight: 500,
               fontStyle: "SemiLight Italic",
-              lineHeight: "27px",
+              lineHeight: "16px",
               letterSpacing: "0%",
               textAlign: "center",
               color: "#32312B",
@@ -237,7 +237,7 @@ const ExpertiseSection = () => {
                   {["Design", "Roadmap", "P&L", "Strategy"].map((item) => (
                     <button
                       key={item}
-                      className="px-2 py-1 border border-gray-400 rounded-full"
+                      className="px-2 py-1 border rounded-full border-[#32312B]/40"
                       style={{
                         fontFamily: "Cabinet Grotesk Variable",
                         fontWeight: 400,
@@ -280,7 +280,7 @@ const ExpertiseSection = () => {
                   ].map((item) => (
                     <span
                       key={item}
-                      className="px-2 py-1 border border-gray-400 rounded-full"
+                      className="px-2 py-1 border rounded-full border-[#32312B]/40"
                       style={{
                         fontFamily: "Cabinet Grotesk Variable",
                         fontWeight: 400,
@@ -323,7 +323,7 @@ const ExpertiseSection = () => {
                   ].map((item) => (
                     <span
                       key={item}
-                      className="px-2 py-1 border border-gray-400 rounded-full"
+                      className="px-2 py-1 border rounded-full border-[#32312B]/40"
                       style={{
                         fontFamily: "Cabinet Grotesk Variable",
                         fontWeight: 400,
@@ -366,7 +366,7 @@ const ExpertiseSection = () => {
                   ].map((item) => (
                     <span
                       key={item}
-                      className="px-2 py-1 border border-gray-400 rounded-full"
+                      className="px-2 py-1 border rounded-full border-[#32312B]/40"
                       style={{
                         fontFamily: "Cabinet Grotesk Variable",
                         fontWeight: 400,

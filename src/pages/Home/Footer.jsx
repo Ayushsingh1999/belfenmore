@@ -20,7 +20,7 @@ const Footer = () => {
           <h2
             className="uppercase tracking-wide"
             style={{
-              fontFamily: "Times New Roman",
+              fontFamily: "Times Now",
               fontSize: "clamp(18px, 3vw, 26px)",
               fontWeight: 400,
             }}

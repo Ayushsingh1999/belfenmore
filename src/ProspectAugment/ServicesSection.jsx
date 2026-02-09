@@ -47,6 +47,7 @@ const ServicesSection = () => {
       className=" mx-auto max-w-2xl mainsection my-40 translate-y-40 max-h-[120%]"
       style={{ marginTop: "-18%" }}
     >
+
       {/* Header */}
       <div className="text-center mb-16">
         <h1
@@ -115,7 +116,10 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <p className="service-text px-4" style={{ textAlign: "justify" }}>
+                <p
+                  className="service-text px-4"
+                  style={{ textAlign: "justify" }}
+                >
                   {service.descriptionMobile}
                 </p>
               </div>
@@ -165,7 +169,7 @@ const ServicesSection = () => {
                     {/* Right column items (Industrial, Medical) */}
                     <div className="flex-1 min-w-0 text-right mr-6">
                       <h3
-                        className="mb-2 mr-12"
+                        className={`mb-2 ${service.title === "Medical" ? "mr-[60px]" : "mr-12"}`}
                         style={{
                           fontFamily: "Times Now",
                           fontWeight: 600,
@@ -179,13 +183,13 @@ const ServicesSection = () => {
 
                       <p
                         className="
-                          font-['Cabinet_Grotesk_Variable']
-                          font-normal text-[11px]
-                          leading-[1.3]
-                          tracking-[0.05em]
-                          text-justify
-                          pl-2
-                        "
+                            font-['Cabinet_Grotesk_Variable']
+                            font-normal text-[11px]
+                            leading-[1.3]
+                            tracking-[0.05em]
+                            text-justify
+                            pl-2
+                          "
                         style={{ color: "#32312B" }}
                       >
                         {service.descriptionDesktop}

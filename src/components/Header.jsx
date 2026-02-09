@@ -48,12 +48,18 @@ const Header = () => {
           {isProspectArgumentPage && (
             <div className="hidden md:flex items-start gap-3">
               <img src={logo} alt="Logo" className="w-12 mt-2" />
-              <div className="border-l-2 border-black h-10 mt-0"></div>
+              <div className="border-l border-black h-6 mt-2.5"></div>
               <img src={Groupdimend} alt="Logo" className="w-5 mt-2.5" />
             </div>
           )}
 
-          {(isDomain || isSolve || isRoot || isBrand || isCareer) && <img src={logo} alt="Logo" className="w-12 mt-2" />}
+            {isBrand && (
+            <div className="hidden md:flex items-start gap-3">
+              <img src={logo2} alt="Logo" className="w-36 mt-0" />
+            </div>
+          )}
+
+          {(isDomain || isSolve || isRoot || isCareer) && <img src={logo} alt="Logo" className="w-12 mt-0" />}
 
           {/* {(isRoot || isBrand || isCareer) && (
             <img src={logo2} alt="Logo2" className="w-36 object-contain" />

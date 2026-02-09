@@ -55,7 +55,7 @@ style={{
   return (
     <section className="relative w-full overflow-hidden">
       {/* ================= DESKTOP DESIGN ================= */}
-      <div className="hidden md:block mt-20">
+      <div className="hidden md:block mt-36">
         {/* TOP HEADING */}
         <div className="flex flex-col items-center mb-0">
           <h3
@@ -86,7 +86,7 @@ style={{
             
             <MaskedBlendImage 
               src={banner}
-              className="w-full h-full"
+              className="w-full h-[1000px] -translate-y-28"
               opacity={60}
             />
             

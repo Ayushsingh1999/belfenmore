@@ -22,11 +22,13 @@ const TailoredSection = () => {
         {/* Paragraph */}
         <p
           className="mt-6 max-w-[310px] text-center 
-          text-[#32312B] font-times-new-roman font-extralight 
-          text-[7px] sm:text-[10px] md:text-[11px] leading-[19px]"
+          text-[#32312B]  font-extralight
+          text-[5px] sm:text-[10px] md:text-[11px] leading-[13px] tracking-[0.003em]"
+
+          style={{fontFamily:"Times Now"}}
         >
           Our approach is to{" "}
-          <span className="font-semibold">
+          <span className="font-semibold"  style={{fontFamily:"Times Now"}}>
             SOLVE
           </span>{" "}
           — a structured yet flexible methodology that blends insight,

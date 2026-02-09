@@ -24,7 +24,7 @@ const ValueMapSection = () => {
                 rotate-0 md:-rotate-90
                 text-[20px] md:text-[24px]
                 font-bold italic text-[#32312B]
-                md:-left-[36%]
+                md:-left-[32.5%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -37,13 +37,13 @@ const ValueMapSection = () => {
               className="
                 w-[240px] h-[240px]
                 md:w-[200px] md:h-[200px]
-                object-cover border border-[#32312B]
+                object-cover border-[#3A3931]/60
               "
             />
           </div>
 
           {/* Paragraph - Aligned perfectly with image */}
-          <div className="flex items-center justify-center h-full md:w-[160px]">
+          <div className="flex items-center justify-center h-full md:w-[160px] -translate-x-1">
             <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
               Ground every decision in reliable, data-driven facts, revealing{" "}
               <span
@@ -63,7 +63,7 @@ const ValueMapSection = () => {
         </div>
 
         {/* ================= ROW 2 ================= */}
-        <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6">
+        <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 translate-x-5">
 
           <div className="ml-[6%] relative flex flex-col md:flex-row items-start md:items-center justify-center">
 
@@ -76,7 +76,7 @@ const ValueMapSection = () => {
                 rotate-0 md:rotate-90
                 text-[20px] md:text-[24px]
                 font-bold italic text-[#32312B]
-                md:-right-[36%]
+                md:-right-[32.5%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -89,7 +89,7 @@ const ValueMapSection = () => {
               className="
                 w-[240px] h-[240px]
                 md:w-[200px] md:h-[200px]
-                object-cover border border-[#32312B]
+                object-cover border-[#3A3931]/60
               "
             />
           </div>
@@ -130,7 +130,7 @@ const ValueMapSection = () => {
                 rotate-0 md:-rotate-90
                 text-[20px] md:text-[24px]
                 font-bold italic text-[#32312B]
-                md:-left-[27%]
+                md:-left-[25%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -143,7 +143,7 @@ const ValueMapSection = () => {
               className="
                 w-[240px] h-[240px]
                 md:w-[200px] md:h-[200px]
-                object-cover border border-[#32312B]
+                object-cover border-[#3A3931]/60
               "
             />
           </div>
@@ -170,7 +170,7 @@ const ValueMapSection = () => {
         </div>
 
         {/* ================= ROW 4 ================= */}
-        <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6">
+        <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 translate-x-5">
 
           <div className="ml-[6%] relative flex flex-col md:flex-row items-start md:items-center justify-center">
 
@@ -183,7 +183,7 @@ const ValueMapSection = () => {
                 rotate-0 md:rotate-90
                 text-[20px] md:text-[24px]
                 font-bold italic text-[#32312B]
-                md:-right-[31%]
+                md:-right-[29%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -196,7 +196,7 @@ const ValueMapSection = () => {
               className="
                 w-[240px] h-[240px]
                 md:w-[200px] md:h-[200px]
-                object-cover border border-[#32312B]
+                object-cover border-[#3A3931]/60
               "
             />
           </div>
@@ -239,7 +239,7 @@ const ValueMapSection = () => {
 
           {/* Image Container */}
           <div className="flex justify-center w-full">
-            <div className="p-2 border border-[#32312B] max-w-[430px] w-full">
+            <div className="p-2 border border-[#32312B] max-w-[478px] w-full">
               <img
                 src={Frame}
                 alt="Encapsulate"
