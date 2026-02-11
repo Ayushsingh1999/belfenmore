@@ -34,7 +34,7 @@ const InerSection = () => {
 
             {/* ================= ROTATE TEXT (Desktop Only) ================= */}
             <span
-              className="hidden lg:block md:block absolute -left-32 top-1/2 -translate-y-1/2 -rotate-90 text-[#bdb8aa]"
+              className="hidden lg:block md:block absolute -left-[129px] top-1/2 -translate-y-1/2 -rotate-90 text-[#32312B]/20"
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 300,
@@ -80,14 +80,14 @@ const InerSection = () => {
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "45px",
+                fontSize: "44px",
                 lineHeight: "50%",
                 color: "#32312B",
                 position: "absolute",
-                left: "45%", // Changed from 35% to 42% to move right
+                left: "44%", // Changed from 35% to 42% to move right
                 top: "7%",
               }}
-              className="absolute z-20"
+              className="absolute z-20 -translate-y-1"
             >
               Determine
             </h2>
@@ -96,11 +96,11 @@ const InerSection = () => {
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "45px",
+                fontSize: "44px",
                 lineHeight: "110%",
                 color: "#32312B",
                 position: "absolute",
-                left: "45%", // Changed from 35% to 42% to move right
+                left: "44%", // Changed from 35% to 42% to move right
                 top: "16%",
               }}
               className="absolute z-20"
@@ -113,13 +113,13 @@ const InerSection = () => {
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
-                fontSize: "11px",
-                lineHeight: "18px",
+                fontSize: "9px",
+                lineHeight: "13px",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "200px",
+                width: "170px",
                 height: "auto",
-                marginTop: "38%",
+                marginTop: "45%",
                 marginLeft: "-8%", // Adjusted to align with new heading position
               }}
             >
@@ -142,7 +142,7 @@ const InerSection = () => {
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "45px",
+                fontSize: "44px",
                 lineHeight: "110%",
                 letterSpacing: "0%",
                 color: "#32312B",
@@ -158,14 +158,14 @@ const InerSection = () => {
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
-                fontSize: "11px",
-                lineHeight: "18px",
-                letterSpacing: "0%",
+                fontSize: "9px",
+                lineHeight: "14px",
+                letterSpacing: "-0%",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "200px",
+                width: "170px",
                 height: "auto",
-                marginTop: "30%",
+                marginTop: "35%",
                 marginLeft: '6%'
               }}
             >
@@ -187,7 +187,7 @@ const InerSection = () => {
 
             {/* Curved Text */}
             <div
-              className="absolute bottom-0 effective -left-[100%] text-center"
+              className="absolute bottom-0 effective -left-[93%] text-center"
               style={{
                 width: "450px",
                 height: "30px",
@@ -208,7 +208,7 @@ const InerSection = () => {
         <div className="max-w-3xl w-full relative">
           {/* ================= ROTATED TEXT (Desktop Only) ================= */}
           <span
-            className="hidden SIGNATURE md:block absolute md:text-[40px] md:top-[36%] md:-left-[18%] lg:text-[38px] lg:top-[42%] lg:-left-[9%] -translate-y-1/2 -rotate-90 text-[#bdb8aa]"
+            className="hidden SIGNATURE md:block absolute md:text-[40px] md:top-[30%] md:-left-[18%] lg:text-[38px] lg:top-[47%] lg:-left-[69px] -translate-y-1/2 -rotate-90 text-[#32312B]/20"
             style={{
               fontFamily: "Times Now",
               fontWeight: 300,
@@ -221,7 +221,7 @@ const InerSection = () => {
           </span>
 
           <span
-            className="hidden DELIVERY md:block absolute md:text-[44px] md:top-[37%] md:-right-[19%] lg:text-[43px] lg:top-[42%] lg:-right-[7%] -translate-y-1/2 rotate-90 text-[#bdb8aa]"
+            className="hidden DELIVERY md:block absolute md:text-[44px] md:top-[37%] md:-right-[19%] lg:text-[43px] lg:top-[47%] lg:-right-[50px] -translate-y-1/2 rotate-90 text-[#32312B]/20"
             style={{
               fontFamily: "Times Now",
               fontWeight: 300,
@@ -244,8 +244,8 @@ const InerSection = () => {
             }}
             className="Envision-text
               absolute 
-              top-[2%] sm:top-[2%] md:top-[2%] lg:top-[2%] lg:text-[40px]
-              left-3 md:left-1/2 md:text-[40px]
+              top-[2%] sm:top-[2%] md:top-[2%] lg:top-[2%] lg:text-[44px]
+              left-3 md:left-1/2 md:text-[40px] font-bold
               md:-translate-x-1/2
               z-20 
               text-left md:text-center
@@ -281,14 +281,15 @@ const InerSection = () => {
           <p
             className="
               max-w-2xl mx-auto mt-2 text-start md:text-start
-              text-[11px] sm:text-[13px]
-              font-body text-[#4B4A45]
+              text-[9px] sm:text-[9px]
+              font-body text-[#32312B]
               leading-relaxed px-1
             "
             style={{
               fontFamily: "Cabinet Grotesk Variable",
-              lineHeight: "18px",
-              width:"100%"
+              lineHeight: "14px",
+              width:"100%",
+              justifyContent : "center"
             }}
           >
             We enable organizations to see the future more intuitively and
@@ -335,7 +336,7 @@ const InerSection = () => {
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "45px",
+                fontSize: "44px",
                 lineHeight: "110%",
                 letterSpacing: "0%",
                 color: "#32312B",
@@ -350,14 +351,14 @@ const InerSection = () => {
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
-                fontSize: "11px",
-                lineHeight: "16px",
+                fontSize: "9px",
+                lineHeight: "13px",
                 letterSpacing: "0%",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "200px",
+                width: "160px",
                 height: "auto",
-                marginTop: "25%",
+                marginTop: "36%",
                 marginLeft: "-7%",   
               }}
             >

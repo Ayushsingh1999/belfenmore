@@ -109,22 +109,22 @@ const CareersSection = () => {
                 fontFamily: "'Meie Script', cursive",
                 fontWeight: 400,
                 fontStyle: "normal",
-                fontSize: "47.46px",
+                fontSize: "42px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#32312B",
               }}
             >
-              Capitalise
+              Capitalize
             </p>
-            <img src={flower} alt="Flower" className="w-10 md:w-10" />
+            <img src={flower} alt="Flower" className="w-16 md:w-16" />
             <p
               className="font-serif italic text-2xl md:text-3xl"
               style={{
                 fontFamily: "'Meie Script', cursive",
                 fontWeight: 400,
                 fontStyle: "normal",
-                fontSize: "47.46px",
+                fontSize: "42px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#32312B",
@@ -258,7 +258,7 @@ const CareersSection = () => {
               color: "#32312B",
             }}
           >
-            Capitalise
+            Capitalize
           </p>
           <img src={flower} alt="Flower" className="w-7" />
           <p
