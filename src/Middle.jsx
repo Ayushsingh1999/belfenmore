@@ -44,11 +44,11 @@ const Z_INDEX = {
   CLOUD_5: 60,  // done
 
   // Description text = TEXT_MAIN_z-index + 2 (description above main text)
-  TEXT_DESC_2: 23,  // done
-  TEXT_DESC_3: 33,  // done
-  TEXT_DESC_4: 43,  // done
-  TEXT_DESC_5: 53,  //done
-  TEXT_DESC_6: 63,  //done
+  TEXT_DESC_2: 100,  // done
+  TEXT_DESC_3: 100,  // done
+  TEXT_DESC_4: 100,  // done
+  TEXT_DESC_5: 100,  //done
+  TEXT_DESC_6: 100,  //done
   
   // Container
   CONTAINER: 100
@@ -57,7 +57,7 @@ const Z_INDEX = {
 /* 🔥 UPDATED: SINGLE COMPONENT THAT HANDLES FLIP PROPERLY */
 const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10 }) => {
   return (
-    <div className={`relative w-full ${className}`} style={{ zIndex }}>
+    <div className={`relative w-full ${className}`}>
       {/* Cream background with mask - apply transform here too */}
       <div
         className="absolute inset-0 bg-[#FFFDEC]"
@@ -83,6 +83,7 @@ const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10 }) =>
         alt=""
         className="relative w-full h-auto mix-blend-luminosity"
         style={{
+          zIndex,
           transform: flip ? "scaleX(-1)" : "none",
           transformOrigin: "center"
         }}
@@ -161,7 +162,7 @@ const Middle = () => {
   };
 
   return (
-    <section className="relative w-full pointer-events-none overflow-x-hidden -mt-[45vh]" style={{ zIndex: Z_INDEX.CONTAINER }}>
+    <section className="relative w-full pointer-events-none overflow-x-hidden -mt-[48vh]" style={{ zIndex: Z_INDEX.CONTAINER }}>
       {/* CONTAINER FOR ALL CLOUDS */}
       <div className="relative w-full max-w-[2000px] mx-auto">
        
