@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div
       className="
-        relative w-full overflow-hidden bg-[#fdf9ed]
+        relative w-full overflow-hidden
         min-h-[60vh] md:h-screen md:-top-20
         ipad-screen
       "
