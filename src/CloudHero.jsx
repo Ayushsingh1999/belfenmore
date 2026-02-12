@@ -5,11 +5,11 @@ import cloud from "../src/assets/middle_section_img1.png"
 
 const letters = [
   { char: "E", z: "z-10", space: 1.2 },
-  { char: "n", z: "z-10", space: 0.75 },
-  { char: "c", z: "z-50", space: 0.7 },
-  { char: "h", z: "z-50", space: 0.8 },
-  { char: "a", z: "z-50", space: 0.9 },
-  { char: "n", z: "z-50", space: 0.85 },
+  { char: "n", z: "z-30", space: 0.77 },
+  { char: "c", z: "z-50", space: 0.62 },
+  { char: "h", z: "z-50", space: 0.77 },
+  { char: "a", z: "z-50", space: 0.82 },
+  { char: "n", z: "z-50", space: 0.77 },
   { char: "t", z: "z-50", space: 1.0 },
 ];
 
@@ -29,7 +29,7 @@ const CloudHero = () => {
         className="absolute top-[6%] left-0 w-[142%] z-10"
       />
       {/* ENCHANT LETTERS */}
-      <div className="absolute top-[30%] left-[5%]">
+      <div className="absolute top-[30%] left-[-10%]">
         {letters.map(({ char, z, space }, index) => {
           const left = offset;
           offset += BASE_SPACING * space;
@@ -38,16 +38,18 @@ const CloudHero = () => {
             <span
               key={index}
               className={`
-                absolute
-                ${z}
-                font-['Luxurious_Script']
-                font-normal
-                text-[420px] sm:text-[480px] md:text-[560px] 2xl:text-[720px]
-                leading-none
-                text-[#F6F0E4]
-                opacity-85
-                drop-shadow-[0_8px_12px_rgba(0,0,0,0.08)]
-                select-none
+              absolute
+${z}
+font-['Luxurious_Script']
+font-normal
+text-[420px] sm:text-[480px] md:text-[560px] 2xl:text-[720px]
+leading-none
+bg-gradient-to-b from-[#FBF9E8] to-[#F0EFE54D]/30
+[-webkit-background-clip:text]
+[background-clip:text]
+[-webkit-text-fill-color:transparent]
+text-transparent
+px-[200px]
               `}
               style={{ left }}
             >
