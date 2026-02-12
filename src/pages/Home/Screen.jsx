@@ -5,7 +5,9 @@ import Frame2 from "../../assets/Frame_Home_2.png";
 import built from "../../assets/built_home.png";
 import Capitalize from "../../assets/Capitalize_Home.png";
 import Capabilities from "../../assets/Capabilities_Home.png";
-import BuilttoStrive from "../../assets/buildtolast.svg"
+import BuilttoStrive from "../../assets/buildtolast.svg";
+import Consulting_Craftmanship from "../../assets/Consulting_Craftsmanship.svg";
+import Strive from "../../assets/Strive.svg"
 
 const Screen = () => {
   return (
@@ -94,7 +96,7 @@ const Screen = () => {
           {/* ================= TEXT PART ================= */}
           <div className="max-w-xs text-right relative">
             {/* ===== Heading ===== */}
-            <h2
+            {/* <h2
               style={{
                 position: "relative",
                 left: "25%",
@@ -110,7 +112,13 @@ const Screen = () => {
               "
             >
               Consulting <br /> Craftsmanship
-            </h2>
+            </h2> */}
+
+            <img
+  src={Consulting_Craftmanship}
+  alt="consulting craftmanship"
+  className="absolute z-30 translate-x-[96px] -translate-y-[8px]"
+/>
 
             {/* ===== Paragraph (Desktop + iPad) ===== */}
             <p
@@ -119,8 +127,8 @@ const Screen = () => {
                 fontWeight: 400,
                 fontSize: "9px",
                 lineHeight: "12px",
-                marginTop: "12px",
-                marginLeft: "0px",
+                marginTop: "-3px",
+                marginLeft: "1px",
                 marginRight: "1px",
                 width: "280px"
               }}
@@ -128,7 +136,7 @@ const Screen = () => {
                 text-darktext
                 hidden md:block
                 -translate-x-[12px]
-                -translate-y-[5px]
+                translate-y-[100px]
               "
             >
               We deliver consulting as a craft — precise, disciplined, and
@@ -139,7 +147,7 @@ const Screen = () => {
           </div>
 
           {/* ================= IMAGE + TEXT GROUP ================= */}
-          <div className="relative flex flex-col md:flex-row items-start md:items-center">
+          <div className="relative flex flex-col md:flex-row items-start md:items-center z-0">
             {/* ===== Image ===== */}
             <img
               src={Frame2}
@@ -220,7 +228,7 @@ const Screen = () => {
 
           {/* Text Part */}
           <div className="max-w-xs text-right">
-            <h2
+            {/* <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
@@ -233,7 +241,9 @@ const Screen = () => {
               className="mb-2 absolute z-20 strv-text"
             >
               Strive...
-            </h2>
+            </h2> */}
+
+            <img src={Strive} alt="strive" className="object-cover h-[5vh] translate-y-2 -translate-x-4" />
 
             <p
               className="para-text-code"
@@ -241,13 +251,13 @@ const Screen = () => {
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
                 fontSize: "9px",
-                lineHeight: "13px",
+                lineHeight: "12px",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "190px",
+                width: "170px",
                 height: "auto",
-                marginTop: "30%",
-                marginLeft: "-7%",
+                marginTop: "14%",
+                marginLeft: "-9%",
               }}
             >
               to Elevate Thinking, Transform Action, and Institutionalise

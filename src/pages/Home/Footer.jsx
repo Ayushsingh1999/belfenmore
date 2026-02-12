@@ -6,12 +6,12 @@ import logo from "../../assets/threadlity_logo.svg"
 
 const Footer = () => {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#fdf8ec]">
+    <footer className="relative w-full overflow-hidden bg-[#fdf8ec] pt-[132px]">
       {/* Background Image */}
       <img
         src={footerimg}
         alt="Footer Background"
-        className="w-full h-[420px] sm:h-[500px] md:h-[600px] lg:h-[700px] object-cover"
+        className="w-[1920px] h-[420px] sm:h-[500px] md:h-[600px] lg:h-[660px]"
       />
 
       {/* Overlay */}
@@ -21,7 +21,7 @@ const Footer = () => {
   className="relative w-[550px] h-[140px] max-w-5xl px-4 py-8 
   text-center text-[#F9F7F0] rounded-[10px] 
   backdrop-blur-[1px] 
-  bg-[rgba(48,38,27,0.25)] 
+  bg-[rgba(48,38,27,0.4)] 
   border border-white/10 
   shadow-lg"
 >

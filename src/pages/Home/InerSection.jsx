@@ -2,9 +2,14 @@ import React from "react";
 import Frame3 from "../../assets/Frame_Home_3.png";
 import Frame4 from "../../assets/Frame_Home_4.png";
 import effective from "../../assets/effective_home.png";
+import Forest from "../../assets/tree_img1.png";
 import Frame5 from "../../assets/Frame_Home_5.png";
 import Frame6 from "../../assets/Frame_Home_6.png";
 import Groups from "../../assets/Groups_Home.png";
+import Determine_Determination from "../../assets/Determine_Determination.svg";
+import ignite from "../../assets/ignite.svg";
+import Envision_Excellence from "../../assets/Envision_Excellence.svg";
+import Artisan from "../../assets/Artisan.svg"
 
 const InerSection = () => {
   return (
@@ -30,15 +35,15 @@ const InerSection = () => {
           {/* ================= IMAGE + ROTATE TEXT ================= */}
           <div className="relative flex flex-col items-center">
             {/* Image */}
-            <img src={Frame3} alt="Frame2" className="object-cover z-0 md:h-[240px] lg:h-[260px]" />
+            <img src={Frame3} alt="Frame2" className="object-cover z-0 md:h-[240px] lg:h-[260px] translate-x-12 translate-y-5" />
 
             {/* ================= ROTATE TEXT (Desktop Only) ================= */}
             <span
-              className="hidden lg:block md:block absolute -left-[129px] top-1/2 -translate-y-1/2 -rotate-90 text-[#32312B]/20"
+              className="hidden lg:block md:block absolute -left-[94px] top-1/2 translate-y-1 -rotate-90 text-[#32312B]/20"
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 300,
-                fontSize: "34px",
+                fontSize: "37.5px",
                 lineHeight: "95%",
                 whiteSpace: "nowrap",
               }}
@@ -76,7 +81,7 @@ const InerSection = () => {
           {/* ================= DESKTOP TEXT PART (Same as Before) ================= */}
           <div className="max-w-xs text-right hidden lg:block md:block mr-[8%]">
             {/* Desktop Headings - Moved to the right */}
-            <h2
+            {/* <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
@@ -106,7 +111,11 @@ const InerSection = () => {
               className="absolute z-20"
             >
               Determination
-            </h2>
+            </h2> */}
+
+            <img src={Determine_Determination} alt="Determine Determination" className="-translate-x-[144px] translate-y-[2px] h-[13vh]" />
+
+            
 
             {/* Desktop Paragraph */}
             <p
@@ -117,10 +126,10 @@ const InerSection = () => {
                 lineHeight: "13px",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "170px",
+                width: "150px",
                 height: "auto",
-                marginTop: "45%",
-                marginLeft: "-8%", // Adjusted to align with new heading position
+                marginTop: "6%",
+                marginLeft: "12%", // Adjusted to align with new heading position
               }}
             >
               We empower organizations to discover their true ambitions and
@@ -132,13 +141,13 @@ const InerSection = () => {
       </section>
 
       {/* Gap between sections */}
-      <div className="h-6 md:h-8 lg:h-10"></div>
+      <div className="h-8 md:h-8 lg:h-16"></div>
 
       <section className="w-full main-conatiner py-8 px-3 md:px-8 flex justify-center relative">
         <div className="max-w-4xl w-full flex flex-col lg:flex-row md:flex-row items-start justify-center gap-6">
           {/* Text Part */}
           <div className="max-w-xs text-right">
-            <h2
+            {/* <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
@@ -151,7 +160,9 @@ const InerSection = () => {
               className="mb-2 absolute z-20 Ignite"
             >
               Ignite...{" "}
-            </h2>
+            </h2> */}
+
+            <img src={ignite} alt="ignite" className="h-[6.5vh] translate-x-3"/>
 
             <p
               className="cor-para"
@@ -165,8 +176,8 @@ const InerSection = () => {
                 textAlign: "justify",
                 width: "170px",
                 height: "auto",
-                marginTop: "35%",
-                marginLeft: '6%'
+                marginTop: "4.5%",
+                marginLeft: '8%'
               }}
             >
               Courage, Momentum and Strategic Clarity We empower leaders to act
@@ -187,7 +198,7 @@ const InerSection = () => {
 
             {/* Curved Text */}
             <div
-              className="absolute bottom-0 effective -left-[93%] text-center"
+              className="absolute bottom-0 effective -left-[93%] text-center translate-y-5"
               style={{
                 width: "450px",
                 height: "30px",
@@ -195,7 +206,7 @@ const InerSection = () => {
                 transform: "rotate(0deg)",
               }}
             >
-              <img src={effective} alt="Effective" className="w-full h-auto" />
+              <img src={effective} alt="Effective" className="w-full h-auto -translate-y-2" />
             </div>
           </div>
         </div>
@@ -234,7 +245,7 @@ const InerSection = () => {
           </span>
 
           {/* ================= HEADING (Mobile Left, Desktop Same) ================= */}
-          <h2
+          {/* <h2
             style={{
               fontFamily: "Times Now",
               fontWeight: 700,
@@ -252,12 +263,14 @@ const InerSection = () => {
             "
           >
             Envision Excellence
-          </h2>
+          </h2> */}
+
+          <img src={Envision_Excellence} alt="Envision Excellence" className=" h-[5vh] translate-x-44 translate-y-3 absolute z-10" />
 
           {/* ================= IMAGE CONTAINER ================= */}
-          <div className="relative w-[85%] border border-[#BDBAAE] overflow-hidden ml-12 mt-8">
+          <div className="relative w-[85%] border border-[#3a3931] overflow-hidden ml-12 mt-8">
             <img
-              src={Frame5}
+              src={Forest}
               alt="Forest"
               className="w-full h-[120px] z-0 sm:h-[160px] md:h-[220px] lg:h-[220px] object-cover"
             />
@@ -332,7 +345,7 @@ const InerSection = () => {
 
           {/* Text Part */}
           <div className="max-w-xs text-right">
-            <h2
+            {/* <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
@@ -345,7 +358,9 @@ const InerSection = () => {
               className="mb-2 absolute z-20 Artisan"
             >
               Artisan...{" "}
-            </h2>
+            </h2> */}
+
+            <img src={Artisan} alt="Artisan" className="-translate-x-[14px] translate-y-[4px] h-[5vh]" />
 
             <p className="bespoke"
               style={{
@@ -356,9 +371,9 @@ const InerSection = () => {
                 letterSpacing: "0%",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "160px",
+                width: "170px",
                 height: "auto",
-                marginTop: "36%",
+                marginTop: "12%",
                 marginLeft: "-7%",   
               }}
             >
