@@ -46,7 +46,7 @@ const CapitaliseSection = () => {
             color: "#32312B",
           }}
         >
-          Capitalise
+          Capitalize
         </p>
         <img src={flower} alt="Flower" className="w-10 md:w-10" />
         <p

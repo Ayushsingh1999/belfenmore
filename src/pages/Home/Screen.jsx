@@ -1,9 +1,13 @@
 import Frame1 from "../../assets/Frame_Home_1.png";
-import Purpose from "../../assets/Purpose_Home.png";
+import Frame from "../../assets/Frame_2.png"
+import Purpose from "../../assets/Purpose.svg";
 import Frame2 from "../../assets/Frame_Home_2.png";
 import built from "../../assets/built_home.png";
 import Capitalize from "../../assets/Capitalize_Home.png";
 import Capabilities from "../../assets/Capabilities_Home.png";
+import BuilttoStrive from "../../assets/buildtolast.svg";
+import Consulting_Craftmanship from "../../assets/Consulting_Craftsmanship.svg";
+import Strive from "../../assets/Strive.svg"
 
 const Screen = () => {
   return (
@@ -87,29 +91,34 @@ const Screen = () => {
       </section>
 
       {/* ================= Frame2 + Text Section ================= */}
-      <section className="w-full py-8 px-4 md:px-8 flex justify-center relative main-conatiner" style={{ marginTop: "-34%", marginLeft: "5%"  }}>
+      <section className="w-full py-8 px-4 md:px-8 flex justify-center relative main-conatiner translate-x-4" style={{ marginTop: "-30%", marginLeft: "5%"  }}>
         <div className="max-w-4xl w-full flex flex-col md:flex-row items-start justify-center ">
           {/* ================= TEXT PART ================= */}
           <div className="max-w-xs text-right relative">
             {/* ===== Heading ===== */}
-            <h2
+            {/* <h2
               style={{
                 position: "relative",
-                left: "49%",
+                left: "25%",
                 fontFamily: "Times Now",
-                fontWeight: 700,
                 lineHeight: "110%",
                 color: "#32312B",
               }}
               className="
-                text-darktext mb-2 z-20
+                font-black mb-2 z-20
                 absolute md:static
                 text-left md:text-right
-                text-[50px] md:text-[50px]
+                text-[44px] md:text-[44px] 
               "
             >
               Consulting <br /> Craftsmanship
-            </h2>
+            </h2> */}
+
+            <img
+  src={Consulting_Craftmanship}
+  alt="consulting craftmanship"
+  className="absolute z-30 translate-x-[96px] -translate-y-[8px]"
+/>
 
             {/* ===== Paragraph (Desktop + iPad) ===== */}
             <p
@@ -117,15 +126,17 @@ const Screen = () => {
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
                 fontSize: "9px",
-                lineHeight: "14px",
-                marginTop: "12px",
-                marginLeft: "0px",
-                marginRight: "-30px",
+                lineHeight: "12px",
+                marginTop: "-3px",
+                marginLeft: "1px",
+                marginRight: "1px",
                 width: "280px"
               }}
               className="
                 text-darktext
                 hidden md:block
+                -translate-x-[12px]
+                translate-y-[100px]
               "
             >
               We deliver consulting as a craft — precise, disciplined, and
@@ -136,7 +147,7 @@ const Screen = () => {
           </div>
 
           {/* ================= IMAGE + TEXT GROUP ================= */}
-          <div className="relative flex flex-col md:flex-row items-start md:items-center">
+          <div className="relative flex flex-col md:flex-row items-start md:items-center z-0">
             {/* ===== Image ===== */}
             <img
               src={Frame2}
@@ -144,17 +155,18 @@ const Screen = () => {
               className="
                 w-[180px] md:w-[200px] lg:w-[220px]
                 object-cover z-0 mt-0
+                -translate-x-2
               "
             />
 
             {/* ===== CORE IDENTITY (Desktop + iPad same) ===== */}
             <span
               className="
-                text-[#bdb8aa]
+                text-[#32312b]/20
                 static mt-2 md:mt-0 rotate-0
-                md:absolute md:-right-32 md:top-1/2 lg:-right-35 lg:top-1/2
+                md:absolute md:-right-32 md:top-1/2 lg:-right-[147.5px] lg:top-1/2
                 md:-translate-y-1/2 md:rotate-90
-                text-[22px] md:text-[28px] lg:text-[32px] core-ident-text
+                text-[22px] md:text-[34px] lg:text-[38px] core-ident-text
                 text-left
               "
               style={{
@@ -195,32 +207,32 @@ const Screen = () => {
           <div className="relative flex flex-col items-center">
             {/* Image */}
             <img
-              src={Frame2}
+              src={Frame}
               alt="Frame2"
               className="w-[220px] md:w-[240px] object-cover z-0"
             />
 
             {/* Curved Text */}
             <div
-              className="absolute bottom-0 -left-4 text-center"
+              className="absolute bottom-0 -left-4 text-center "
               style={{
-                width: "260px",
-                height: "20px",
+                width: "255px",
+                height: "15px",
                 opacity: 1,
                 transform: "rotate(0deg)",
               }}
             >
-              <img src={built} alt="Built" className="w-full h-auto" />
+              <img src={BuilttoStrive} alt="Built" className="w-full h-auto -translate-y-3" />
             </div>
           </div>
 
           {/* Text Part */}
           <div className="max-w-xs text-right">
-            <h2
+            {/* <h2
               style={{
                 fontFamily: "Times Now",
                 fontWeight: 700,
-                fontSize: "50px",
+                fontSize: "44px",
                 lineHeight: "110%",
                 marginLeft: "-1%",
                 letterSpacing: "0%",
@@ -229,22 +241,23 @@ const Screen = () => {
               className="mb-2 absolute z-20 strv-text"
             >
               Strive...
-            </h2>
+            </h2> */}
+
+            <img src={Strive} alt="strive" className="object-cover h-[5vh] translate-y-2 -translate-x-4" />
 
             <p
               className="para-text-code"
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
-                fontSize: "11px",
-                lineHeight: "16px",
-                letterSpacing: "0%",
+                fontSize: "9px",
+                lineHeight: "12px",
                 color: "#32312B",
                 textAlign: "justify",
-                width: "190px",
+                width: "170px",
                 height: "auto",
-                marginTop: "28%",
-                marginLeft: "-5%",
+                marginTop: "14%",
+                marginLeft: "-9%",
               }}
             >
               to Elevate Thinking, Transform Action, and Institutionalise

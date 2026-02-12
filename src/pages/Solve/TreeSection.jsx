@@ -6,13 +6,13 @@ const TreeSection = () => {
     <section className="relative flex flex-col items-center justify-start overflow-hidden mt-[5%] px-4 pt-0">
 
       {/* ================= TEXT CONTENT ================= */}
-      <div className="relative z-10 max-w-[399px] text-center mt-4 mb-2 translate-y-6">
+      <div className="relative z-10 max-w-[401px] text-center mt-4 mb-2 translate-y-6">
         <p
           className="
             italic
             font-light
             text-[3px]
-            leading-[13px]
+            leading-[14px]
             sm:text-[10px]
             md:text-[12px]
             leading-[20px]

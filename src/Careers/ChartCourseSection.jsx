@@ -55,14 +55,14 @@ const stack = [
           <p
             style={{
               fontFamily: "'Cabinet Grotesk Variable",
-              fontSize: "21px",
+              fontSize: "22px",
               fontWeight: 300,
               color: "#32312B",
               lineHeight: "120%",
-              width: "165px",
+              width: "180px",
               textAlign: "left",
             }}
-            className="sm:text-[11px]"
+            className="sm:text-[18px]"
           >
             Executive Leader
           </p>
@@ -103,7 +103,7 @@ const stack = [
         style={{
           fontFamily: "Cabinet Grotesk Variable",
           fontWeight: 300,
-          fontSize: "20px",
+          fontSize: "18px",
           color: "#32312B",
         }}
       >

@@ -21,9 +21,9 @@ const TailoredSection = () => {
 
         {/* Paragraph */}
         <p
-          className="mt-6 max-w-[310px] text-center 
-          text-[#32312B]  font-extralight
-          text-[5px] sm:text-[10px] md:text-[11px] leading-[13px] tracking-[0.003em]"
+          className="mt-6 max-w-[330px] text-center 
+          text-[#32312B]  font-light
+          text-[20px] sm:text-[10px] md:text-[12px] leading-[16px] tracking-[0.003em]"
 
           style={{fontFamily:"Times Now"}}
         >

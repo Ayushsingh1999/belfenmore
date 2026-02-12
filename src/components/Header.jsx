@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/subtract.svg";
 import logo2 from "../assets/logo.png";
 import title from "../assets/web_main_title.png";
-import Groupdimend from "../assets/Groupdimend.png";
+import diamond from "../assets/diamond.svg";
 
 const HEADER_HEIGHT = 130;
 const EDGE_PADDING = "p-4";
@@ -48,8 +48,8 @@ const Header = () => {
           {isProspectArgumentPage && (
             <div className="hidden md:flex items-start gap-3">
               <img src={logo} alt="Logo" className="w-12 mt-2" />
-              <div className="border-l border-black h-6 mt-2.5"></div>
-              <img src={Groupdimend} alt="Logo" className="w-5 mt-2.5" />
+              <div className="border-l border-black h-6 mt-2.5 -translate-x-[3px]"></div>
+              <img src={diamond} alt="Logo" className="w-5 mt-2.5" />
             </div>
           )}
 

@@ -22,9 +22,9 @@ const ValueMapSection = () => {
                 -mb-2 md:mb-0
                 text-left md:text-center
                 rotate-0 md:-rotate-90
-                text-[20px] md:text-[24px]
+                text-[20px] md:text-[26px]
                 font-bold italic text-[#32312B]
-                md:-left-[32.5%]
+                md:-left-[35.5%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -44,7 +44,7 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px] -translate-x-1">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
+            <p className="uppercase text-[11px] leading-[19px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
               Ground every decision in reliable, data-driven facts, revealing{" "}
               <span
                 style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
@@ -74,9 +74,9 @@ const ValueMapSection = () => {
                 -mb-2 md:mb-0
                 text-left md:text-center
                 rotate-0 md:rotate-90
-                text-[20px] md:text-[24px]
+                text-[20px] md:text-[26px]
                 font-bold italic text-[#32312B]
-                md:-right-[32.5%]
+                md:-right-[35.5%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -96,7 +96,7 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px]">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
+            <p className="uppercase text-[11px] leading-[19px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
               Transform problems into{" "}
               <span
                 style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
@@ -128,9 +128,9 @@ const ValueMapSection = () => {
                 -mb-2 md:mb-0
                 text-left md:text-center
                 rotate-0 md:-rotate-90
-                text-[20px] md:text-[24px]
+                text-[20px] md:text-[26px]
                 font-bold italic text-[#32312B]
-                md:-left-[25%]
+                md:-left-[27.5%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -150,7 +150,7 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px]">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable"}}>
+            <p className="uppercase text-[11px] leading-[19px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable"}}>
               Amplify{" "}
               <span
                 style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
@@ -181,9 +181,9 @@ const ValueMapSection = () => {
                 -mb-2 md:mb-0
                 text-left md:text-center
                 rotate-0 md:rotate-90
-                text-[20px] md:text-[24px]
+                text-[20px] md:text-[26px]
                 font-bold italic text-[#32312B]
-                md:-right-[29%]
+                md:-right-[31%]
               "
               style={{ fontFamily: "Times Now", fontWeight: 'bold', fontStyle: 'italic' }}
             >
@@ -203,7 +203,7 @@ const ValueMapSection = () => {
 
           {/* Paragraph - Aligned perfectly with image */}
           <div className="flex items-center justify-center h-full md:w-[160px]">
-            <p className="uppercase text-[10px] leading-[18px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable"}}>
+            <p className="uppercase text-[11px] leading-[19px] text-[#32312B] font-light text-justify w-full mt-4 md:mt-0"    style={{ fontFamily: "Cabinet Grotesk Variable"}}>
               Link organizational{" "}
               <span
                 style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
@@ -238,25 +238,26 @@ const ValueMapSection = () => {
           </h2>
 
           {/* Image Container */}
-          <div className="flex justify-center w-full">
-            <div className="p-2 border border-[#32312B] max-w-[478px] w-full">
-              <img
-                src={Frame}
-                alt="Encapsulate"
-                className="w-full object-cover"
-              />
-            </div>
-          </div>
+<div className="flex justify-center w-full">
+  <div className="p-2 border border-[#32312B] max-w-[460px] w-[60%] ml-[15px]">
+    <img
+      src={Frame}
+      alt="Encapsulate"
+      className="w-full object-cover"
+    />
+  </div>
+</div>
+
 
           {/* Desktop / Laptop / iPad layout below image */}
           <div className="ml-[25%] flex flex-col md:flex-row w-full max-w-[900px] mt-3 md:mt-4">
 
             {/* Heading for desktop (hidden on mobile) - Takes minimal space */}
             <h2
-              className="hidden md:block text-[26px] leading-none text-[#32312B] md:mb-3 md:mr-4"
+              className="hidden md:block text-[26px] leading-none text-[#32312B] md:mb-3 md:mr-4 -translate-x-1"
               style={{ 
                 fontFamily: "Times Now", 
-                fontWeight: '800', 
+                fontWeight: '800',
                 fontStyle: 'italic',
                 flexShrink: 0 
               }}
@@ -266,9 +267,9 @@ const ValueMapSection = () => {
 
             {/* Paragraph - Takes remaining space, starts from heading end */}
             <div className="ml-[2%] flex items-start flex-1">
-              <p className="uppercase text-[10px] leading-[20px] font-light text-[#32312B] text-justify mt-4 md:mt-0 w-[40%]"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
+              <p className="uppercase text-[11px] leading-[19px] font-light text-[#32312B] text-justify mt-4 md:mt-0 w-[40%]"    style={{ fontFamily: "Cabinet Grotesk Variable" }}>
                 <span
-                  style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 600 }}
+                  style={{ fontFamily: "Cabinet Grotesk Variable", fontWeight: 500 }}
                 >
                   Device a plan
                 </span>{" "}
