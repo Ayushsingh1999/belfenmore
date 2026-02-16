@@ -255,7 +255,7 @@ const Journey = () => {
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "90px",
+                  top: "85px",
                   left: "0",
                   zIndex: 30,
                   width: "170px",
@@ -274,7 +274,7 @@ const Journey = () => {
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "50px",
+                  top: "45px",
                   left: "12px",
                   zIndex: 40,
                 }}
