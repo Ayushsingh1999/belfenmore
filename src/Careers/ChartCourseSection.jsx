@@ -1,5 +1,6 @@
 import React from "react";
-import f1 from "../assets/f1.png";
+// import f1 from "../assets/f1.png";
+import f1 from "../assets/grouped_flower.png"
 import f2 from "../assets/f2.png";
 import f3 from "../assets/f3.png";
 import f4 from "../assets/f4.png";
@@ -26,11 +27,11 @@ const stack = [
     >
       {/* ===== TOP CENTER HEADING ===== */}
       <div className="text-center relative ">
-        <img
+        {/* <img
           src={faImage}
           alt="fa"
-          className="absolute left-1/2 -translate-x-1/2 top-[80px] h-[100px] w-auto pointer-events-none z-10 translate-y-3 -translate-x-[90px]"
-        />
+          className="absolute left-1/2 -translate-x-1/2 top-[80px] h-[100px] w-auto pointer-events-none z-10 translate-y-3 -translate-x-[91px]"
+        /> */}
 
         {/* H2: Chart your */}
         <h2
@@ -71,7 +72,7 @@ const stack = [
       {/* ===== CONTENT GRID ===== */}
       <div className="relative z-20 max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3  items-stretch -mt-32 translate-x-[12px] ">
         {/* LEFT TEXT — HIDE ON MOBILE */}
-        <div className="hidden sm:flex justify-center lg:justify-end items-end w-[19%] translate-y-[170px] translate-x-[390px]">
+        <div className="hidden sm:flex justify-center lg:justify-end items-end w-[19%] translate-y-[110px] translate-x-[390px]">
           <p
             style={{
               fontFamily: "Times Now",
@@ -92,7 +93,7 @@ const stack = [
 
         {/* CENTER STACK IMAGES */}
 {/* CENTER STACK IMAGES */}
-<div className="flex flex-col items-center relative translate-y-[165px] -translate-x-3.5">
+<div className="flex flex-col items-center relative translate-y-[107px] -translate-x-3.5">
   {stack.map((item, i) =>
     item.img ? (
       <img key={i} src={item.img} className="w-[180px] object-cover " />
