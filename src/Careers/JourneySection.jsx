@@ -84,8 +84,8 @@ const Journey = () => {
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "100px",
-                  left: "0",
+                  top: "85px",
+                  left: "-9px",
                   zIndex: 30,
                   width: "170px",
                 }}
@@ -97,14 +97,14 @@ const Journey = () => {
               <p
                 style={{
                   fontFamily: "Times Now",
-                  fontWeight: 200,
-                  fontSize: "35px",
+                  fontWeight: "lighter",
+                  fontSize: "33px",
                   lineHeight: "26px",
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "60px",
-                  left: "-9px",
+                  top: "45px",
+                  left: "-15px",
                   zIndex: 40,
                 }}
               >
@@ -115,7 +115,7 @@ const Journey = () => {
                 style={{
                   fontFamily: "Luxurious Script",
                   fontWeight: 400,
-                  fontSize: "90px",
+                  fontSize: "82px",
                   lineHeight: "100%",
                   color: "#FFE95A",
                   position: "relative",
@@ -142,7 +142,7 @@ const Journey = () => {
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "100px",
+                  top: "87px",
                   left: "0",
                   zIndex: 30,
                   width: "170px",
@@ -156,12 +156,12 @@ const Journey = () => {
                 style={{
                   fontFamily: "Times Now",
                   fontWeight: 200,
-                  fontSize: "35px",
+                  fontSize: "33px",
                   lineHeight: "26px",
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "55px",
+                  top: "46px",
                   left: "-26px",
                   zIndex: 40,
                 }}
@@ -173,7 +173,7 @@ const Journey = () => {
                 style={{
                   fontFamily: "Luxurious Script",
                   fontWeight: 400,
-                  fontSize: "90px",
+                  fontSize: "82px",
                   lineHeight: "100%",
                   color: "#FFE95A",
                   position: "relative",
@@ -197,7 +197,7 @@ const Journey = () => {
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "100px",
+                  top: "90px",
                   left: "0",
                   zIndex: 30,
                   width: "170px",
@@ -228,7 +228,7 @@ const Journey = () => {
                 style={{
                   fontFamily: "Luxurious Script",
                   fontWeight: 400,
-                  fontSize: "90px",
+                  fontSize: "82px",
                   lineHeight: "100%",
                   color: "#FFE95A",
                   position: "relative",
@@ -255,7 +255,7 @@ const Journey = () => {
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "100px",
+                  top: "85px",
                   left: "0",
                   zIndex: 30,
                   width: "170px",
@@ -269,13 +269,13 @@ const Journey = () => {
                 style={{
                   fontFamily: "Times Now",
                   fontWeight: 200,
-                  fontSize: "35px",
+                  fontSize: "32px",
                   lineHeight: "26px",
                   textTransform: "uppercase",
                   color: "#32312B",
                   position: "absolute",
-                  top: "50px",
-                  left: "14px",
+                  top: "45px",
+                  left: "12px",
                   zIndex: 40,
                 }}
                 className="translate-x-10"
@@ -287,7 +287,7 @@ const Journey = () => {
                 style={{
                   fontFamily: "Luxurious Script",
                   fontWeight: 400,
-                  fontSize: "90px",
+                  fontSize: "82px",
                   lineHeight: "100%",
                   color: "#FFE95A",
                   position: "relative",

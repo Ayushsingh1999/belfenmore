@@ -7,6 +7,7 @@ import Img5 from "../assets/img5.png";
 import MobImage from "../assets/mobimage.png";
 import flower from "../assets/flower.png";
 import Articulate from "../assets/Articulate.png";
+import Capitalize_Capabilities from "../assets/Capitalize_Capabilities.png"
 
 const CareersSection = () => {
   return (
@@ -89,6 +90,10 @@ const CareersSection = () => {
             Together, we shall
           </p>
 
+          <div>
+            <img src={Capitalize_Capabilities} alt="Capitalize Capabilities"  className="h-[9vh] translate-x-3 translate-y-32" />
+          </div> 
+
           {/* ARTICULATE IMAGE ON TOP */}
           <div className="mb-12 w-full flex justify-center">
             <img
@@ -99,7 +104,7 @@ const CareersSection = () => {
           </div>
           
           {/* LOGO TEXT WITH FLOWER CENTER */}
-          <div
+          {/* <div
             className="mt-[-400px] flex items-center justify-center gap-3"
             style={{ position: "absolute" }}
           >
@@ -133,23 +138,27 @@ const CareersSection = () => {
             >
               Capabilities
             </p>
-          </div>
+          </div> */}
+
+
           
 {/* APPLY BUTTON FIXED BOTTOM RIGHT */}
 <button
-  className="fixed bottom-4 right-4 z-50 bg-[#FFE95A] py-1.5 hover:scale-105 transition-transform"
+  className="fixed bottom-4 right-4 z-50 bg-[#FFE95A] py-1.5"
   style={{
-    borderRadius: "5px",
+    borderRadius: "4.5px",
     fontFamily: "Times Now",
     fontWeight: 600,
     fontStyle: "italic",
     fontSize: "13px",
     color: "#32312B",
     width: "95px",
+    border: "1px solid #32312B",
   }}
 >
   Apply now
 </button>
+
         </div>
       </div>
 

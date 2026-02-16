@@ -12,14 +12,12 @@ const TreeSection = () => {
             italic
             font-light
             text-[3px]
-            leading-[14px]
             sm:text-[10px]
             md:text-[12px]
-            leading-[20px]
             text-[#32312B]
           "
 
-          style={{fontFamily:"Times Now"}}
+          style={{fontFamily:"Times Now",lineHeight:"120%"}}
         >
           We transform insights into actionable strategies, unlocking hidden
           potential, driving measurable impact, and fostering sustainable growth

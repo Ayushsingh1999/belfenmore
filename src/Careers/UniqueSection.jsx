@@ -79,6 +79,8 @@ const UniqueSection = () => {
                   fontFamily: "'Petit Formal Script', cursive",
                   fontWeight: 700,
                   color: "#32312B",
+                  borderColor:"#32312B",
+                  borderWidth:"1px"
                 }}
               >
                 Apply Now
