@@ -1,7 +1,6 @@
 import React from "react";
-import layer1 from "../src/assets/image_885.png";
-import layer2 from "../src/assets/image_886.png";
-import cloud from "../src/assets/middle_section_img1.png"
+import layer1 from "../src/assets/image_885_updated.webp";
+import layer2 from "../src/assets/image_886_updated.webp";
 
 const letters = [
   { char: "E", z: "z-10", space: 1.2 },

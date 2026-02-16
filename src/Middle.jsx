@@ -1,6 +1,6 @@
-import cloudBg from "./assets/middle_section_img1.png";
-import middle_cloud_2 from "./assets/middle_cloud_2.png";
-import sun_beech from "./assets/beech_sun_image.png";
+import cloudBg from "./assets/middle_section_img1_updated.webp";
+import middle_cloud_2 from "./assets/middle_cloud_2_updated.webp";
+import sun_beech from "./assets/beech_sun_image_updated.webp";
 
 import middle_section_img1_txt_1 from "./assets/middle_section_img1_txt_1.png";
 import middle_section_img1_txt_2 from "./assets/middle_section_heading_txt_2.png";

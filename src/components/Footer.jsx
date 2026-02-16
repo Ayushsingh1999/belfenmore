@@ -1,5 +1,5 @@
 import logo from "../assets/Subtract.svg";
-import grassGroupwithLogo from "../assets/grasswithlogo.png"
+import grassGroupwithLogo from "../assets/grasswithlogo_updated.webp"
 
 const Footer = () => {
   return (

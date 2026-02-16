@@ -2,7 +2,6 @@ import Frame1 from "../../assets/Frame_Home_1.png";
 import Frame from "../../assets/Frame_2.png"
 import Purpose from "../../assets/Purpose.svg";
 import Frame2 from "../../assets/Frame_Home_2.png";
-import built from "../../assets/built_home.png";
 import Capitalize from "../../assets/Capitalize_Home.png";
 import Capabilities from "../../assets/Capabilities_Home.png";
 import BuilttoStrive from "../../assets/buildtolast.svg";
