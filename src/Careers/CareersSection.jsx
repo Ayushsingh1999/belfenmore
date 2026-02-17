@@ -63,7 +63,7 @@ const CareersSection = () => {
         </div>
 
         {/* ROW 5: meaningful future ______ you're proud of! */}
-        <div className="relative flex items-center justify-center mt-4">
+        <div className="relative flex items-center justify-center mt-8">
           <p className="text-[#32312B] font-['Times_Now'] font-light italic text-[22px] mr-2">
             meaningful future
           </p>
@@ -74,7 +74,7 @@ const CareersSection = () => {
         </div>
 
         {/* CAPITALISE SECTION FOR DESKTOP */}
-        <div className="w-full relative flex flex-col items-center justify-center py-28  md:py-32">
+        <div className="w-full relative flex flex-col items-center justify-center pt-28  md:pt-32">
           {/* SUB TEXT */}
           <p
             className="text-center mt-6 md:-mt-20 text-[#4A4A4A]"
@@ -90,12 +90,10 @@ const CareersSection = () => {
             Together, we shall
           </p>
 
-          <div>
-            <img src={Capitalize_Capabilities} alt="Capitalize Capabilities"  className="h-[9vh] translate-x-3 translate-y-32" />
-          </div> 
+            <img src={Capitalize_Capabilities} alt="Capitalize Capabilities"  className="h-[62px] translate-x-3 translate-y-4 z-10" />
 
           {/* ARTICULATE IMAGE ON TOP */}
-          <div className="mb-12 w-full flex justify-center">
+          <div className=" w-full flex justify-center -translate-y-28">
             <img
               src={Articulate}
               alt="Articulate"
@@ -143,7 +141,7 @@ const CareersSection = () => {
 
           
 {/* APPLY BUTTON FIXED BOTTOM RIGHT */}
-<button
+{/* <button
   className="fixed bottom-4 right-4 z-50 bg-[#FFE95A] py-1.5"
   style={{
     borderRadius: "4.5px",
@@ -157,7 +155,7 @@ const CareersSection = () => {
   }}
 >
   Apply now
-</button>
+</button> */}
 
         </div>
       </div>

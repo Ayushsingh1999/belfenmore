@@ -4,6 +4,8 @@ import logo from "../assets/subtract.svg";
 import logo2 from "../assets/logo.png";
 import title from "../assets/web_main_title.png";
 import diamond from "../assets/diamond.svg";
+import logo_prospect_augment from "../assets/prospect_augment.svg"
+import logo_Stontonne from "../assets/Strontonne.svg"
 
 const HEADER_HEIGHT = 130;
 const EDGE_PADDING = "p-4";
@@ -55,7 +57,12 @@ const Header = () => {
 
             {isBrand && (
             <div className="hidden md:flex items-start gap-3">
-              <img src={logo2} alt="Logo" className="w-36 mt-0" />
+              <img src={logo} alt="Logo" className="w-12 mt-0" />
+              <div className="border-l border-black h-14 -translate-x-[3px] -translate-y-[1px] "></div>
+              <div className="flex  flex-col translate-y-7 -translate-x-1">
+              <img src={logo_prospect_augment} alt="Logo" className="w-20" />
+              <img src={logo_Stontonne} alt="Logo" className="w-14 mt-2.5" />
+              </div>
             </div>
           )}
 

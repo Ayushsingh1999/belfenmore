@@ -66,7 +66,7 @@ const CapitaliseSection = () => {
         </p>
       </div>
       {/* APPLY BUTTON */}
-      <button
+      {/* <button
         className="absolute right-8 bg-[#FFD84D] px-4 py-2 hover:scale-105 transition-transform"
         style={{
           borderRadius: "5px",
@@ -80,7 +80,7 @@ const CapitaliseSection = () => {
         }}
       >
         Apply now
-      </button>
+      </button> */}
     </section>
   );
 };
