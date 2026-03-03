@@ -3,7 +3,7 @@ import Illuminate from "../../assets/Illuminate.png";
 
 const Hero = () => {
   return (
-    <section className="relative mt-[-4%] w-full min-h-screen overflow-hidden flex flex-col items-center mob-domain">
+    <section className="relative mt-[-4%] w-full min-h-screen  2xl:min-h-0 overflow-hidden flex flex-col items-center mob-domain">
       {/* DOMAIN (BEHIND TREE) - SMALLER */}
       <h2
         className="absolute top-[10%] z-0 text-center w-full"

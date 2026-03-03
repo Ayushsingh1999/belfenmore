@@ -113,7 +113,7 @@ const InerSection = () => {
               Determination
             </h2> */}
 
-            <img src={Determine_Determination} alt="Determine Determination" className="-translate-x-[144px] translate-y-[2px] h-[13vh]" />
+            <img src={Determine_Determination} alt="Determine Determination" className="-translate-x-[144px] translate-y-[2px] h-[13vh] 2xl:h-[8vh]" />
 
             
 
@@ -162,10 +162,10 @@ const InerSection = () => {
               Ignite...{" "}
             </h2> */}
 
-            <img src={ignite} alt="ignite" className="h-[6.5vh] translate-x-3"/>
+            <img src={ignite} alt="ignite" className="h-[6.5vh] 2xl:h-[4vh] 2xl:translate-y-2 translate-x-3"/>
 
             <p
-              className="cor-para"
+              className="cor-para mt-[4.5%] 2xl:mt-[8%]"
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
@@ -176,7 +176,6 @@ const InerSection = () => {
                 textAlign: "justify",
                 width: "170px",
                 height: "auto",
-                marginTop: "4.5%",
                 marginLeft: '8%'
               }}
             >
@@ -206,7 +205,7 @@ const InerSection = () => {
                 transform: "rotate(0deg)",
               }}
             >
-              <img src={effective} alt="Effective" className="w-full h-auto -translate-y-2" />
+              <img src={effective} alt="Effective" className="w-full h-auto -translate-y-2 2xl:-translate-x-2" />
             </div>
           </div>
         </div>
@@ -265,7 +264,7 @@ const InerSection = () => {
             Envision Excellence
           </h2> */}
 
-          <img src={Envision_Excellence} alt="Envision Excellence" className=" h-[5vh] translate-x-44 translate-y-3 absolute z-10" />
+          <img src={Envision_Excellence} alt="Envision Excellence" className=" h-[5vh] translate-x-44 translate-y-3 absolute z-10 2xl:translate-x-[140px] 2xl:w-[60%] 2xl:-translate-y-[2px]" />
 
           {/* ================= IMAGE CONTAINER ================= */}
           <div className="relative w-[85%] border border-[#3a3931] overflow-hidden ml-12 mt-8">
@@ -360,7 +359,7 @@ const InerSection = () => {
               Artisan...{" "}
             </h2> */}
 
-            <img src={Artisan} alt="Artisan" className="-translate-x-[14px] translate-y-[4px] h-[5vh]" />
+            <img src={Artisan} alt="Artisan" className="-translate-x-[14px] translate-y-[4px] h-[5vh] 2xl:h-[3vh]" />
 
             <p className="bespoke"
               style={{

@@ -13,7 +13,7 @@ const UniqueSection = () => {
       <section className="w-full flex justify-center">
         <div className="max-w-[1200px] w-full">
           {/* 🔹 TOP IMAGE WITH CENTER TEXT */}
-          <div className="relative w-full mb-12 flex justify-center -translate-y-14">
+          <div className="relative w-full mb-12 flex justify-center -translate-y-14 2xl:-translate-y-[150px]">
             <img
               src={Differentiate}
               alt="What makes us unique"
@@ -35,7 +35,7 @@ const UniqueSection = () => {
           </div>
 
           {/* 🔹 DESKTOP / TABLET LEAF + TEXT */}
-          <div className="hidden sm:grid grid-cols-1 lg:grid-cols-2 items-center gap-0 -translate-y-20">
+          <div className="hidden sm:grid grid-cols-1 lg:grid-cols-2 items-center gap-0 -translate-y-20 2xl:-translate-y-[160px]">
             <div className="flex justify-center">
               <img
                 src={B}

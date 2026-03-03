@@ -90,10 +90,10 @@ const CareersSection = () => {
             Together, we shall
           </p>
 
-            <img src={Capitalize_Capabilities} alt="Capitalize Capabilities"  className="h-[62px] translate-x-3 translate-y-4 z-10" />
+            <img src={Capitalize_Capabilities} alt="Capitalize Capabilities"  className="h-[62px] translate-x-3 translate-y-4 z-10 2xl:h-[75px]" />
 
           {/* ARTICULATE IMAGE ON TOP */}
-          <div className=" w-full flex justify-center -translate-y-28">
+          <div className=" w-full flex justify-center -translate-y-28 2xl:-translate-y-[152px]">
             <img
               src={Articulate}
               alt="Articulate"
