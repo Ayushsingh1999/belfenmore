@@ -43,16 +43,16 @@ const stack = [
           }}
           className="absolute left-[10%] top-[20%] text-[38px] sm:text-[38px] xs:text-[38px] 
                      sm:left-[42%] sm:top-[3%] 
-                     xs:left-[29%] xs:top-[20%] translate-x-4"
+                     xs:left-[29%] xs:top-[20%] translate-x-4 2xl:translate-x-14"
         >
           Chart your
         </h2>
 
         {/* H1: Course */}
-        <img src ={course} alt="course" className="w-[300px] h-[90px] translate-x-[490px] translate-y-[23px] "/>
+        <img src ={course} alt="course" className="w-[300px] h-[90px] translate-x-[490px] translate-y-[23px] 2xl:translate-x-[700px]"/>
       </div>
 
-          <div className="translate-x-[560px] translate-y-[1px] z-100">
+          <div className="translate-x-[560px] translate-y-[1px] z-100 2xl:translate-x-[784px]">
           <p
             style={{
               fontFamily: "'Cabinet Grotesk Variable",

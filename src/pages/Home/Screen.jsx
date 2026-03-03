@@ -78,7 +78,7 @@ const Screen = () => {
 
       {/* ================= Purpose Section ================= */}
       <section
-        className="relative w-full h-100 md:h-[450px] lg:h-[550px] flex items-center justify-center hidden md:block"
+        className="relative w-full h-100 md:h-[450px] lg:h-[550px] 2xl:h-[650px] 2xl:h-[750px] flex items-center justify-center hidden md:block"
         style={{ marginBottom: "-17%" }}
       >
         <img
@@ -242,10 +242,10 @@ const Screen = () => {
               Strive...
             </h2> */}
 
-            <img src={Strive} alt="strive" className="object-cover h-[5vh] translate-y-2 -translate-x-4" />
+            <img src={Strive} alt="strive" className="object-cover h-[5vh] 2xl:h-[3vh]  2xl:translate-y-1 translate-y-2 -translate-x-4" />
 
             <p
-              className="para-text-code"
+              className="para-text-code mt-[14%] 2xl:mt-[11%]"
               style={{
                 fontFamily: "Cabinet Grotesk Variable",
                 fontWeight: 400,
@@ -255,7 +255,6 @@ const Screen = () => {
                 textAlign: "justify",
                 width: "170px",
                 height: "auto",
-                marginTop: "14%",
                 marginLeft: "-9%",
               }}
             >

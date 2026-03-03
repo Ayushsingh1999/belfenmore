@@ -44,8 +44,7 @@ const services = [
 const ServicesSection = () => {
   return (
     <section
-      className=" mx-auto max-w-2xl mainsection my-40 translate-y-40 max-h-[120%]"
-      style={{ marginTop: "-18%" }}
+      className=" mx-auto max-w-2xl mainsection mt-[-18%] my-40 translate-y-40 max-h-[120%] 2xl:mt-[-18%]"
     >
 
       {/* Header */}

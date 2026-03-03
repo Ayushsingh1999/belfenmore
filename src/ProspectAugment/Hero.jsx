@@ -9,8 +9,7 @@ const Hero = () => {
     <div
       className="
         relative w-full overflow-hidden
-        min-h-[60vh] md:h-screen md:-top-20
-        ipad-screen
+        min-h-[60vh] md:h-screen md:-top-20 2xl:-translate-y-[100px]
       "
     >
       {/* BIG YELLOW AUGMENT */}
@@ -25,6 +24,8 @@ const Hero = () => {
     object-contain
     -translate-y-20
     md:-translate-y-30
+    2xl:-translate-y-[120px]
+    2xl:h-[500px]
   "
 />
       </div>
@@ -34,7 +35,7 @@ const Hero = () => {
         <img
           src={Prospect_Augument_img}
           alt="Prospect Augument"
-          className="w-[500px] mx-auto relative z-40 translate-y-48"
+          className="w-[500px] mx-auto relative z-40 translate-y-[130px]  2xl:w-[600px] 2xl:translate-y-64"
         />
 
         <img
@@ -52,10 +53,10 @@ const Hero = () => {
         />
 
         <div
-          className="absolute bottom-0 left-0 w-full  h-[105%]  z-30"
+          className="absolute bottom-0 left-0 w-full  h-[105%]  z-30  2xl:h-[100%]"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(255,255,255,0) 30%, #fdf9ed 100%)",
+              "linear-gradient(to bottom, rgba(255,253,236,0) 30%, #fffdec 100%)",
           }}
         />
       </div>
