@@ -19,7 +19,8 @@ const NatureHero = () => {
         style={{ fontFamily: "'Luxurious Script', cursive" }}
         className="
           absolute
-          top-[60%]
+          top-[80%]        /* pushed further down on mobile */
+          sm:top-[60%]     /* original desktop position */
           left-1/2
           -translate-x-1/2
           -translate-y-1/2
