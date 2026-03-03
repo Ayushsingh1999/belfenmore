@@ -1,34 +1,39 @@
 const TailoredSection = () => {
   return (
-    <section className="w-full flex justify-center items-center py-0 px-4">
+    <section className="w-full flex justify-center items-center py-4 px-4 sm:py-0">
       <div className="max-w-[600px] text-center flex flex-col items-center">
         
         {/* Heading Line 1 */}
         <h1
-          className="text-[#32312B] font-meie-script font-normal 
-          text-[20px] sm:text-[38px] md:text-[42px] leading-none"
+          className="w-full text-[#32312B] font-meie-script font-normal 
+          text-[22px] sm:text-[38px] md:text-[42px] 
+          leading-tight sm:leading-none"
         >
           Tailored, personalized & curated
         </h1>
 
         {/* Heading Line 2 */}
         <h2
-          className="text-[#32312B] font-meie-script font-normal 
-          text-[20px] sm:text-[42px] md:text-[42px] leading-none mt-1"
+          className="w-full text-[#32312B] font-meie-script font-normal 
+          text-[22px] sm:text-[42px] md:text-[42px] 
+          leading-tight sm:leading-none mt-3 sm:mt-1"
         >
           solutioning
         </h2>
 
         {/* Paragraph */}
         <p
-          className="mt-6 max-w-[330px] text-center 
-          text-[#32312B]  font-light
-          text-[20px] sm:text-[10px] md:text-[12px] leading-[16px] tracking-[0.003em]"
-
-          style={{fontFamily:"Times Now"}}
+          className="mt-14 sm:mt-6 max-w-[260px] sm:max-w-[330px] text-center 
+          text-[#32312B] font-light
+          text-[11px] sm:text-[10px] md:text-[12px] 
+          leading-[18px] sm:leading-[16px] tracking-[0.003em]"
+          style={{ fontFamily: "Times Now" }}
         >
           Our approach is to{" "}
-          <span className="font-semibold"  style={{fontFamily:"Times Now"}}>
+          <span
+            className="font-semibold"
+            style={{ fontFamily: "Times Now" }}
+          >
             SOLVE
           </span>{" "}
           — a structured yet flexible methodology that blends insight,
