@@ -1,7 +1,7 @@
+import React, { useEffect, useState } from "react";
 import cloudBg from "./assets/middle_section_img1_updated.webp";
 import middle_cloud_2 from "./assets/middle_cloud_2_updated.webp";
 import sun_beech from "./assets/beech_sun_image_updated.webp";
-
 import middle_section_img1_txt_1 from "./assets/middle_section_img1_txt_1.png";
 import middle_section_img1_txt_2 from "./assets/middle_section_heading_txt_2.png";
 import middle_section_img1_txt_3 from "./assets/middle_section_heading_txt_3.png";
@@ -9,314 +9,335 @@ import middle_section_img1_txt_4 from "./assets/middle_section_heading_txt_4_1.p
 import middle_section_img1_txt_5 from "./assets/middle_section_heading_txt_4.png";
 import middle_section_img1_txt_6 from "./assets/middle_section_heading_txt_5.png";
 import middle_section_img1_txt_7 from "./assets/middle_section_img1_txt_7.png";
-
 import t2 from "./assets/t2.png";
 import t3 from "./assets/t3.png";
 import t4 from "./assets/t4.png";
 import t5 from "./assets/t5.png";
 import t6 from "./assets/t6.png";
 
-// Import Link if using React Router
-// import { Link } from 'react-router-dom';
+const SCREEN_CONFIG = {
 
-/* 🔥 LOGICAL Z-INDEX PATTERN */
+  // ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
+  mobile: {
+    sectionTopOffset:  "-48vh",
+    cloud1StackOffset: "-400px",
+    cloudStackOffset:  "-180px",
+    sunOffset:         "-20px",
+
+    txt1_top: "32%", txt1_w: "clamp(200px,20vw,240px)",
+
+    txt2_top: "15%",  txt2_lv: "32%",  txt2_w: "clamp(160px,16vw,200px)",
+    desc2_top: "30%", desc2_lv: "32%", desc2_w: "clamp(160px,16vw,200px)",
+
+    txt3_top: "15%",  txt3_rv: "32%",  txt3_w: "clamp(160px,16vw,200px)",
+    desc3_top: "30%", desc3_rv: "32%", desc3_w: "clamp(160px,16vw,200px)",
+
+    txt4_top: "15%",  txt4_lv: "32%",  txt4_w: "clamp(160px,16vw,200px)",
+    desc4_top: "30%", desc4_lv: "32%", desc4_w: "clamp(160px,16vw,200px)",
+
+    txt5_top: "15%",  txt5_rv: "32%",  txt5_w: "clamp(160px,16vw,200px)",
+    desc5_top: "30%", desc5_rv: "32%", desc5_w: "clamp(160px,16vw,200px)",
+
+    txt6_top: "13%",  txt6_lv: "32%",  txt6_w: "clamp(160px,16vw,200px)",
+    desc6_top: "30%", desc6_lv: "32%", desc6_w: "clamp(160px,16vw,200px)",
+
+    txt7_top: "75%", txt7_w: "clamp(200px,20vw,240px)",
+  },
+
+  // ── TABLET — 768 × 1024 ──────────────────────────────────────────────────
+  tablet: {
+    sectionTopOffset:  "-48vh",
+    cloud1StackOffset: "-400px",
+    cloudStackOffset:  "-180px",
+    sunOffset:         "-20px",
+
+    txt1_top: "32%", txt1_w: "clamp(200px,20vw,240px)",
+
+    txt2_top: "15%",  txt2_lv: "32%",  txt2_w: "clamp(160px,16vw,200px)",
+    desc2_top: "30%", desc2_lv: "32%", desc2_w: "clamp(160px,16vw,200px)",
+
+    txt3_top: "15%",  txt3_rv: "32%",  txt3_w: "clamp(160px,16vw,200px)",
+    desc3_top: "30%", desc3_rv: "32%", desc3_w: "clamp(160px,16vw,200px)",
+
+    txt4_top: "15%",  txt4_lv: "32%",  txt4_w: "clamp(160px,16vw,200px)",
+    desc4_top: "30%", desc4_lv: "32%", desc4_w: "clamp(160px,16vw,200px)",
+
+    txt5_top: "15%",  txt5_rv: "32%",  txt5_w: "clamp(160px,16vw,200px)",
+    desc5_top: "30%", desc5_rv: "32%", desc5_w: "clamp(160px,16vw,200px)",
+
+    txt6_top: "13%",  txt6_lv: "32%",  txt6_w: "clamp(160px,16vw,200px)",
+    desc6_top: "30%", desc6_lv: "32%", desc6_w: "clamp(160px,16vw,200px)",
+
+    txt7_top: "75%", txt7_w: "clamp(200px,20vw,240px)",
+  },
+
+  // ── LAPTOP — 1280 × 800  (MacBook 13" · ThinkPad 16") ───────────────────
+  laptop: {
+    sectionTopOffset:  "-48vh",
+    cloud1StackOffset: "-400px",
+    cloudStackOffset:  "-180px",
+    sunOffset:         "-20px",
+
+    txt1_top: "32%", txt1_w: "clamp(200px,20vw,240px)",
+
+    txt2_top: "15%",  txt2_lv: "32%",  txt2_w: "clamp(160px,16vw,200px)",
+    desc2_top: "30%", desc2_lv: "32%", desc2_w: "clamp(160px,16vw,200px)",
+
+    txt3_top: "15%",  txt3_rv: "32%",  txt3_w: "clamp(160px,16vw,200px)",
+    desc3_top: "30%", desc3_rv: "32%", desc3_w: "clamp(160px,16vw,200px)",
+
+    txt4_top: "15%",  txt4_lv: "32%",  txt4_w: "clamp(160px,16vw,200px)",
+    desc4_top: "30%", desc4_lv: "32%", desc4_w: "clamp(160px,16vw,200px)",
+
+    txt5_top: "15%",  txt5_rv: "32%",  txt5_w: "clamp(160px,16vw,200px)",
+    desc5_top: "30%", desc5_rv: "32%", desc5_w: "clamp(160px,16vw,200px)",
+
+    txt6_top: "13%",  txt6_lv: "32%",  txt6_w: "clamp(160px,16vw,200px)",
+    desc6_top: "30%", desc6_lv: "32%", desc6_w: "clamp(160px,16vw,200px)",
+
+    txt7_top: "75%", txt7_w: "clamp(200px,20vw,240px)",
+  },
+
+  // ── DESKTOP — 1536 × 864  YOUR THINKPAD 14" REFERENCE — DO NOT TOUCH ────
+  // also covers MacBook 14" (1512) and MacBook 16" (1728)
+  desktop: {
+    sectionTopOffset:  "-48vh",
+    cloud1StackOffset: "-400px",
+    cloudStackOffset:  "-180px",
+    sunOffset:         "-20px",
+
+    txt1_top: "32%", txt1_w: "320px",       // ↑ was clamp(200px,20vw,240px)
+
+    txt2_top: "15%",  txt2_lv: "32%",  txt2_w: "280px",   // ↑ was clamp(160px,16vw,200px)
+    desc2_top: "30%", desc2_lv: "32%", desc2_w: "280px",  // ↑
+
+    txt3_top: "15%",  txt3_rv: "32%",  txt3_w: "280px",   // ↑
+    desc3_top: "30%", desc3_rv: "32%", desc3_w: "280px",  // ↑
+
+    txt4_top: "15%",  txt4_lv: "32%",  txt4_w: "280px",   // ↑
+    desc4_top: "30%", desc4_lv: "32%", desc4_w: "280px",  // ↑
+
+    txt5_top: "15%",  txt5_rv: "32%",  txt5_w: "280px",   // ↑
+    desc5_top: "30%", desc5_rv: "32%", desc5_w: "280px",  // ↑
+
+    txt6_top: "13%",  txt6_lv: "32%",  txt6_w: "280px",   // ↑
+    desc6_top: "30%", desc6_lv: "32%", desc6_w: "280px",  // ↑
+
+    txt7_top: "75%", txt7_w: "320px",       // ↑ was clamp(200px,20vw,240px)
+  },
+
+  // ── ULTRAWIDE — 1920 × 1080  (ThinkPad 13") ─────────────────────────────
+  ultrawide: {
+    sectionTopOffset:  "-48vh",
+    cloud1StackOffset: "-400px",
+    cloudStackOffset:  "-180px",
+    sunOffset:         "-20px",
+
+    txt1_top: "32%", txt1_w: "400px",       // ↑ was clamp(200px,20vw,240px)
+
+    txt2_top: "15%",  txt2_lv: "32%",  txt2_w: "350px",   // ↑ was clamp(160px,16vw,200px)
+    desc2_top: "30%", desc2_lv: "32%", desc2_w: "350px",  // ↑
+
+    txt3_top: "15%",  txt3_rv: "32%",  txt3_w: "350px",   // ↑
+    desc3_top: "30%", desc3_rv: "32%", desc3_w: "350px",  // ↑
+
+    txt4_top: "15%",  txt4_lv: "32%",  txt4_w: "350px",   // ↑
+    desc4_top: "30%", desc4_lv: "32%", desc4_w: "350px",  // ↑
+
+    txt5_top: "15%",  txt5_rv: "32%",  txt5_w: "350px",   // ↑
+    desc5_top: "30%", desc5_rv: "32%", desc5_w: "350px",  // ↑
+
+    txt6_top: "13%",  txt6_lv: "32%",  txt6_w: "350px",   // ↑
+    desc6_top: "30%", desc6_lv: "32%", desc6_w: "350px",  // ↑
+
+    txt7_top: "75%", txt7_w: "400px",       // ↑ was clamp(200px,20vw,240px)
+  },
+};
+
 const Z_INDEX = {
-  // Background elements
-  SUN: 5,
-
-  // Text on clouds = CLOUD_z-index + 1 (text sits just above its cloud)
+  SUN:        5,
   TEXT_MAIN_1: 11,
-  TEXT_MAIN_2: 19, // done
-  TEXT_MAIN_3: 21, // done
+  TEXT_MAIN_2: 19,
+  TEXT_MAIN_3: 21,
   TEXT_MAIN_4: 22,
-  TEXT_MAIN_5: 23, // done
+  TEXT_MAIN_5: 23,
   TEXT_MAIN_6: 24,
   TEXT_MAIN_7: 62,
-
-  // Cloud images (increasing with each cloud)
-  CLOUD_BG: 10,
-
-  // Middle clouds - increment by 10 each time
-  CLOUD_1: 20,  // done
-  CLOUD_2: 30,  // done
-  CLOUD_3: 40,  // done
-  CLOUD_4: 50,  // done
-  CLOUD_5: 60,  // done
-
-  // Description text = TEXT_MAIN_z-index + 2 (description above main text)
-  TEXT_DESC_2: 100,  // done
-  TEXT_DESC_3: 100,  // done
-  TEXT_DESC_4: 100,  // done
-  TEXT_DESC_5: 100,  //done
-  TEXT_DESC_6: 100,  //done
-  
-  // Container
-  CONTAINER: 49
+  CLOUD_BG:   10,
+  CLOUD_1:    20,
+  CLOUD_2:    30,
+  CLOUD_3:    40,
+  CLOUD_4:    50,
+  CLOUD_5:    60,
+  TEXT_DESC_2: 100,
+  TEXT_DESC_3: 100,
+  TEXT_DESC_4: 100,
+  TEXT_DESC_5: 100,
+  TEXT_DESC_6: 100,
+  CONTAINER:  49,
 };
 
-/* 🔥 UPDATED: SINGLE COMPONENT THAT HANDLES FLIP PROPERLY */
-const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10 }) => {
-  return (
-    <div className={`relative w-full ${className}`}>
-      {/* Cream background with mask - apply transform here too */}
-      <div
-        className="absolute inset-0 bg-[#FFFDEC]"
-        style={{
-          height: "100%",
-          width: "100%",
-          maskImage: `url(${src})`,
-          WebkitMaskImage: `url(${src})`,
-          maskSize: "100% auto",
-          WebkitMaskSize: "100% auto",
-          maskRepeat: "no-repeat",
-          WebkitMaskRepeat: "no-repeat",
-          maskPosition: "center",
-          WebkitMaskPosition: "center",
-          transform: flip ? "scaleX(-1)" : "none",
-          transformOrigin: "center"
-        }}
-      />
-     
-      {/* Original image with blend mode - apply same transform */}
-      <img
-        src={src}
-        alt=""
-        className="relative w-full h-auto mix-blend-luminosity"
-        style={{
-          zIndex,
-          transform: flip ? "scaleX(-1)" : "none",
-          transformOrigin: "center"
-        }}
-      />
-    </div>
-  );
-};
+function useBreakpoint() {
+  const getKey = (w) => {
+    if (w < 640)  return "mobile";
+    if (w < 1024) return "tablet";
+    if (w < 1440) return "laptop";
+    if (w < 1920) return "desktop";
+    return "ultrawide";
+  };
+  const [key, setKey] = useState(() => getKey(window.innerWidth));
+  useEffect(() => {
+    const handler = () => setKey(getKey(window.innerWidth));
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+  return key;
+}
 
-/* 🔥 TEXT ITEM COMPONENT */
-const TextItem = ({
-  src,
-  top,
-  position = "center",
-  leftValue = "15%",
-  rightValue = "15%",
-  width = "clamp(160px,16vw,200px)",
-  className = "",
-  zIndex = 65,
-  href, // New prop for link URL
-  onClick // New prop for click handler
-}) => {
+const MaskedBlendImage = ({ src, className = "", flip = false, zIndex = 10 }) => (
+  <div className={`relative w-full ${className}`}>
+    <div
+      className="absolute inset-0 bg-[#FFFDEC]"
+      style={{
+        height: "100%", width: "100%",
+        maskImage: `url(${src})`, WebkitMaskImage: `url(${src})`,
+        maskSize: "100% auto",    WebkitMaskSize: "100% auto",
+        maskRepeat: "no-repeat",  WebkitMaskRepeat: "no-repeat",
+        maskPosition: "center",   WebkitMaskPosition: "center",
+        transform: flip ? "scaleX(-1)" : "none",
+        transformOrigin: "center",
+      }}
+    />
+    <img
+      src={src} alt=""
+      className="relative w-full h-auto mix-blend-luminosity"
+      style={{ zIndex, transform: flip ? "scaleX(-1)" : "none", transformOrigin: "center" }}
+    />
+  </div>
+);
+
+const TextItem = ({ src, top, position = "center", leftValue = "15%", rightValue = "15%",
+  width = "clamp(160px,16vw,200px)", className = "", zIndex = 65, href, onClick }) => {
   const content = (
-    <div className={`absolute ${className}`}
+    <div
+      className={`absolute ${className}`}
       style={{
         top,
-        left: position === "left" ? leftValue : position === "center" ? "50%" : "auto",
-        right: position === "right" ? rightValue : "auto",
+        left:      position === "left"   ? leftValue  : position === "center" ? "50%" : "auto",
+        right:     position === "right"  ? rightValue : "auto",
         transform: position === "center" ? "translateX(-50%)" : "none",
         width,
         zIndex,
-        cursor: href || onClick ? 'pointer' : 'default'
-      }}>
+        cursor: href || onClick ? "pointer" : "default",
+      }}
+    >
       <img src={src} alt="" className="w-full" />
     </div>
   );
-
-  // Wrap with link if href is provided
-  if (href) {
-    return (
-      <a
-        href={href}
-        target={href.startsWith('http') ? "_blank" : "_self"}
-        rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-        className="pointer-events-auto"
-      >
-        {content}
-      </a>
-    );
-  }
-
-  // Wrap with clickable div if onClick is provided
-  if (onClick) {
-    return (
-      <div
-        onClick={onClick}
-        className="pointer-events-auto cursor-pointer"
-      >
-        {content}
-      </div>
-    );
-  }
-
+  if (href) return (
+    <a href={href} target={href.startsWith("http") ? "_blank" : "_self"}
+      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      className="pointer-events-auto">{content}</a>
+  );
+  if (onClick) return (
+    <div onClick={onClick} className="pointer-events-auto cursor-pointer">{content}</div>
+  );
   return content;
 };
 
 const Middle = () => {
-  // Updated URLs - Cloud 2 (group3) now points to /prospect-augment
+  const bpKey = useBreakpoint();
+  const cfg   = SCREEN_CONFIG[bpKey];
+
   const linkUrls = {
     group1: "https://www.youtube.com",
     group2: "/prospect-augment",
-    group3: "https://www.tesla.com/", 
+    group3: "https://www.tesla.com/",
     group4: "https://www.reddit.com/",
     group5: "https://x.com/",
     group6: "https://www.freecodecamp.org/",
-    group7: "https://interpl.ai/"
+    group7: "https://interpl.ai/",
   };
 
   return (
-    <section className="relative w-full pointer-events-none overflow-x-hidden -mt-[48vh]" style={{ zIndex: Z_INDEX.CONTAINER }}>
-      {/* CONTAINER FOR ALL CLOUDS */}
+    <section
+      className="relative w-full pointer-events-none overflow-x-hidden"
+      style={{ zIndex: Z_INDEX.CONTAINER, marginTop: cfg.sectionTopOffset }}
+    >
+      {/* ── DEV LABEL — delete before going live ────────────────────────── */}
+      <div
+        style={{
+          position: "fixed", bottom: 8, right: 12,
+          background: "rgba(0,0,0,0.6)", color: "#fff",
+          fontSize: 11, padding: "3px 8px", borderRadius: 4,
+          zIndex: 9999, fontFamily: "monospace", pointerEvents: "none",
+        }}
+      >
+        {bpKey} · {typeof window !== "undefined" ? window.innerWidth : ""}px
+      </div>
+      {/* ─────────────────────────────────────────────────────────────────── */}
+
       <div className="relative w-full max-w-[2000px] mx-auto">
-       
-        {/* FIRST CLOUD (big cloud) */}
+
+        {/* BIG CLOUD (group 1) */}
         <div className="relative w-full" style={{ zIndex: Z_INDEX.CLOUD_BG }}>
           <MaskedBlendImage src={cloudBg} flip={false} zIndex={Z_INDEX.CLOUD_BG} />
-          {/* CENTERED: First text */}
           <TextItem
             src={middle_section_img1_txt_1}
-            top="32%"
+            top={cfg.txt1_top}
             position="center"
-            width="clamp(200px,20vw,240px)"
+            width={cfg.txt1_w}
             zIndex={Z_INDEX.TEXT_MAIN_1}
             href={linkUrls.group1}
           />
         </div>
 
-        {/* STACKED CLOUDS SECTION */}
+        {/* STACKED CLOUDS */}
         <div className="relative">
-         
-          {/* CLOUD 1 of 5 - LEFT (text group 2: t2) */}
-          <div className="relative -mt-[clamp(400px,40vw,470px)]" style={{ zIndex: Z_INDEX.CLOUD_1 }}>
+
+          {/* CLOUD 1 — LEFT (group 2) */}
+          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_1, marginTop: cfg.cloud1StackOffset }}>
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_1} />
-            {/* LEFT: Text group 2 */}
-            <TextItem
-              src={middle_section_img1_txt_2}
-              top="15%"
-              position="left"
-              leftValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_MAIN_2}
-              href={linkUrls.group2}
-            />
-            <TextItem
-              src={t2}
-              top="30%"
-              position="left"
-              leftValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_DESC_2}
-              href={linkUrls.group2}
-            />
+            <TextItem src={middle_section_img1_txt_2} top={cfg.txt2_top}  position="left" leftValue={cfg.txt2_lv}  width={cfg.txt2_w}  zIndex={Z_INDEX.TEXT_MAIN_2} href={linkUrls.group2} />
+            <TextItem src={t2}                        top={cfg.desc2_top} position="left" leftValue={cfg.desc2_lv} width={cfg.desc2_w} zIndex={Z_INDEX.TEXT_DESC_2} href={linkUrls.group2} />
           </div>
 
-          {/* CLOUD 2 of 5 - RIGHT (text group 3: t3) */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_2 }}>
+          {/* CLOUD 2 — RIGHT (group 3) */}
+          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_2, marginTop: cfg.cloudStackOffset }}>
             <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_2} />
-            {/* RIGHT: Text group 3 */}
-            <TextItem
-              src={middle_section_img1_txt_3}
-              top="15%"
-              position="right"
-              rightValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_MAIN_3}
-              href={linkUrls.group3}
-            />
-            <TextItem
-              src={t3}
-              top="30%"
-              position="right"
-              rightValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_DESC_3}
-              href={linkUrls.group3}
-            />
+            <TextItem src={middle_section_img1_txt_3} top={cfg.txt3_top}  position="right" rightValue={cfg.txt3_rv}  width={cfg.txt3_w}  zIndex={Z_INDEX.TEXT_MAIN_3} href={linkUrls.group3} />
+            <TextItem src={t3}                        top={cfg.desc3_top} position="right" rightValue={cfg.desc3_rv} width={cfg.desc3_w} zIndex={Z_INDEX.TEXT_DESC_3} href={linkUrls.group3} />
           </div>
 
-          {/* CLOUD 3 of 5 - LEFT (text group 4: t4) */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_3 }}>
+          {/* CLOUD 3 — LEFT (group 4) */}
+          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_3, marginTop: cfg.cloudStackOffset }}>
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_3} />
-            {/* LEFT: Text group 4 */}
-            <TextItem
-              src={middle_section_img1_txt_4}
-              top="15%"
-              position="left"
-              leftValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_MAIN_4}
-              href={linkUrls.group4}
-            />
-            <TextItem
-              src={t4}
-              top="30%"
-              position="left"
-              leftValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_DESC_4}
-              href={linkUrls.group4}
-            />
+            <TextItem src={middle_section_img1_txt_4} top={cfg.txt4_top}  position="left" leftValue={cfg.txt4_lv}  width={cfg.txt4_w}  zIndex={Z_INDEX.TEXT_MAIN_4} href={linkUrls.group4} />
+            <TextItem src={t4}                        top={cfg.desc4_top} position="left" leftValue={cfg.desc4_lv} width={cfg.desc4_w} zIndex={Z_INDEX.TEXT_DESC_4} href={linkUrls.group4} />
           </div>
 
-          {/* CLOUD 4 of 5 - RIGHT (text group 5: t5) - MISSING IN YOUR CODE */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_4 }}>
+          {/* CLOUD 4 — RIGHT (group 5) */}
+          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_4, marginTop: cfg.cloudStackOffset }}>
             <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_4} />
-            {/* RIGHT: Text group 5 */}
-            <TextItem
-              src={middle_section_img1_txt_5}
-              top="15%"
-              position="right"
-              rightValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_MAIN_5}
-              href={linkUrls.group5}
-            />
-            <TextItem
-              src={t5}
-              top="30%"
-              position="right"
-              rightValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_DESC_5}
-              href={linkUrls.group5}
-            />
+            <TextItem src={middle_section_img1_txt_5} top={cfg.txt5_top}  position="right" rightValue={cfg.txt5_rv}  width={cfg.txt5_w}  zIndex={Z_INDEX.TEXT_MAIN_5} href={linkUrls.group5} />
+            <TextItem src={t5}                        top={cfg.desc5_top} position="right" rightValue={cfg.desc5_rv} width={cfg.desc5_w} zIndex={Z_INDEX.TEXT_DESC_5} href={linkUrls.group5} />
           </div>
 
-          {/* CLOUD 5 of 5 - LEFT + CENTER (text group 6: t6 + centered text) */}
-          <div className="relative -mt-[clamp(180px,18vw,220px)]" style={{ zIndex: Z_INDEX.CLOUD_5 }}>
+          {/* CLOUD 5 — LEFT + CENTER (group 6 + group 7) */}
+          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_5, marginTop: cfg.cloudStackOffset }}>
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_5} />
-            {/* LEFT: Text group 6 (t6) */}
-            <TextItem
-              src={middle_section_img1_txt_6}
-              top="13%"
-              position="left"
-              leftValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_MAIN_6}
-              href={linkUrls.group6}
-            />
-            <TextItem
-              src={t6}
-              top="30%"
-              position="left"
-              leftValue="32%"
-              width="clamp(160px,16vw,200px)"
-              zIndex={Z_INDEX.TEXT_DESC_6}
-              href={linkUrls.group6}
-            />
-            {/* CENTERED: Final text */}
-            <TextItem
-              src={middle_section_img1_txt_7}
-              top="75%"
-              position="center"
-              width="clamp(200px,20vw,240px)"
-              zIndex={Z_INDEX.TEXT_MAIN_7}
-              href={linkUrls.group7}
-            />
+            <TextItem src={middle_section_img1_txt_6} top={cfg.txt6_top}  position="left" leftValue={cfg.txt6_lv}  width={cfg.txt6_w}  zIndex={Z_INDEX.TEXT_MAIN_6} href={linkUrls.group6} />
+            <TextItem src={t6}                        top={cfg.desc6_top} position="left" leftValue={cfg.desc6_lv} width={cfg.desc6_w} zIndex={Z_INDEX.TEXT_DESC_6} href={linkUrls.group6} />
+            <TextItem src={middle_section_img1_txt_7} top={cfg.txt7_top}  position="center" width={cfg.txt7_w}     zIndex={Z_INDEX.TEXT_MAIN_7} href={linkUrls.group7} />
           </div>
+
         </div>
 
         {/* SUN / BEECH */}
-        <div className="relative -mt-[20px]" style={{ zIndex: Z_INDEX.SUN }}>
+        <div className="relative" style={{ zIndex: Z_INDEX.SUN, marginTop: cfg.sunOffset }}>
           <img src={sun_beech} alt="Sun/Beech" className="w-full" />
         </div>
+
       </div>
     </section>
   );
