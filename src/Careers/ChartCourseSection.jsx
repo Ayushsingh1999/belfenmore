@@ -52,7 +52,7 @@ const stack = [
         <img src ={course} alt="course" className="w-[300px] h-[90px] translate-x-[490px] translate-y-[23px] "/>
       </div>
 
-          <div className="translate-x-[550px] translate-y-[1px] z-100">
+          <div className="translate-x-[560px] translate-y-[1px] z-100">
           <p
             style={{
               fontFamily: "'Cabinet Grotesk Variable",

@@ -4,6 +4,8 @@ import logo from "../assets/subtract.svg";
 import logo2 from "../assets/logo.png";
 import title from "../assets/web_main_title.png";
 import diamond from "../assets/diamond.svg";
+import logo_prospect_augment from "../assets/prospect_augment.svg"
+import logo_Stontonne from "../assets/Strontonne.svg"
 
 const HEADER_HEIGHT = 130;
 const EDGE_PADDING = "p-4";
