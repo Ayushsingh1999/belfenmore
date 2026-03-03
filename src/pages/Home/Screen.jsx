@@ -78,7 +78,7 @@ const Screen = () => {
 
       {/* ================= Purpose Section ================= */}
       <section
-        className="relative w-full h-100 md:h-[450px] lg:h-[550px] 2xl:h-[750px]  flex items-center justify-center hidden md:block"
+        className="relative w-full h-100 md:h-[450px] lg:h-[550px] xl:h-[550px] 2xl:h-[750px]  flex items-center justify-center hidden md:block"
         style={{ marginBottom: "-17%" }}
       >
         <img

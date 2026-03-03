@@ -74,7 +74,7 @@ const SCREEN_CONFIG = {
   },
 
   // ── LAPTOP — 1280 × 800  (MacBook 13" · ThinkPad 16") ───────────────────
-  laptop: {
+laptop  : {
     letterFontSize:    "550px",
     letterBaseSpacing: 183,
     letterSpacing:     [1.4, 0.90, 0.80, 0.94, 0.92, 0.98, 1.0],
