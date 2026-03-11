@@ -264,7 +264,7 @@ const InerSection = () => {
             Envision Excellence
           </h2> */}
 
-          <img src={Envision_Excellence} alt="Envision Excellence" className=" h-[5vh] translate-x-44 translate-y-3 absolute z-10 2xl:translate-x-[140px] 2xl:w-[60%] 2xl:-translate-y-[2px]" />
+          <img src={Envision_Excellence} alt="Envision Excellence" className=" h-[5vh] translate-x-44 translate-y-3 absolute z-10 2xl:translate-x-[140px] 2xl:w-[60%] 2xl:-translate-y-[2px] xl:translate-x-[110px] xl:w-[70%] xl:translate-y-[10px]" />
 
           {/* ================= IMAGE CONTAINER ================= */}
           <div className="relative w-[85%] border border-[#3a3931] overflow-hidden ml-12 mt-8">
