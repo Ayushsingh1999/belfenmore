@@ -18,76 +18,71 @@ import t6 from "./assets/t6.png";
 const SCREEN_CONFIG = {
 
   // ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
-  mobile: {
-    sectionTopOffset:  "-48vh",
-    cloud1StackOffset: "-400px",
-    cloudStackOffset:  "-180px",
+// ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
+mobile: {
+  sectionTopOffset:  "-60vh",
+  cloud1StackOffset: "-90px",
+  cloudStackOffset:  "-30px",
+  sunOffset:         "-10px",
+
+  // ── BIG CLOUD CENTER HEADING (group 1) ──────────────────────────────
+  txt1_top: "33%",
+  txt1_w:   "50vw",
+
+  // ── CLOUD 1 LEFT (group 2) ───────────────────────────────────────────
+  txt2_top:  "15%",  txt2_lv:  "8%",   txt2_w:  "38vw",
+  desc2_top: "35%",  desc2_lv: "8%",   desc2_w: "38vw",
+
+  // ── CLOUD 2 RIGHT (group 3) ──────────────────────────────────────────
+  txt3_top:  "-5%",  txt3_rv:  "19%",   txt3_w:  "38vw",
+  desc3_top: "35%",  desc3_rv: "8%",   desc3_w: "38vw",
+
+  // ── CLOUD 3 LEFT (group 4) ───────────────────────────────────────────
+  txt4_top:  "15%",  txt4_lv:  "8%",   txt4_w:  "38vw",
+  desc4_top: "35%",  desc4_lv: "8%",   desc4_w: "38vw",
+
+  // ── CLOUD 4 RIGHT (group 5) ──────────────────────────────────────────
+  txt5_top:  "15%",  txt5_rv:  "8%",   txt5_w:  "38vw",
+  desc5_top: "35%",  desc5_rv: "8%",   desc5_w: "38vw",
+
+  // ── CLOUD 5 LEFT (group 6) ───────────────────────────────────────────
+  txt6_top:  "15%",  txt6_lv:  "8%",   txt6_w:  "38vw",
+  desc6_top: "35%",  desc6_lv: "8%",   desc6_w: "38vw",
+
+  // ── BOTTOM CENTER (group 7) ──────────────────────────────────────────
+  txt7_top: "72%",
+  txt7_w:   "50vw",
+},
+  // ── TABLET — 768 × 1024 ──────────────────────────────────────────────────
+  tablet: {
+    sectionTopOffset:  "-60vh",
+    cloud1StackOffset: "-180px",
+    cloudStackOffset:  "-100px",
     sunOffset:         "-20px",
 
-    txt1_top: "32%", txt1_w: "clamp(200px,20vw,240px)",
+    txt1_top: "35%",
+    txt1_w:   "80px",
 
-    txt2_top: "15%",  txt2_lv: "32%",  txt2_w: "clamp(160px,16vw,200px)",
-    desc2_top: "30%", desc2_lv: "32%", desc2_w: "clamp(160px,16vw,200px)",
+    txt2_top:  "18%",  txt2_lv:  "10%",  txt2_w:  "60px",
+    desc2_top: "32%",  desc2_lv: "10%",  desc2_w: "60px",
 
-    txt3_top: "15%",  txt3_rv: "32%",  txt3_w: "clamp(160px,16vw,200px)",
-    desc3_top: "30%", desc3_rv: "32%", desc3_w: "clamp(160px,16vw,200px)",
-
-    txt4_top: "15%",  txt4_lv: "32%",  txt4_w: "clamp(160px,16vw,200px)",
-    desc4_top: "30%", desc4_lv: "32%", desc4_w: "clamp(160px,16vw,200px)",
-
-    txt5_top: "15%",  txt5_rv: "32%",  txt5_w: "clamp(160px,16vw,200px)",
-    desc5_top: "30%", desc5_rv: "32%", desc5_w: "clamp(160px,16vw,200px)",
-
-    txt6_top: "13%",  txt6_lv: "32%",  txt6_w: "clamp(160px,16vw,200px)",
-    desc6_top: "30%", desc6_lv: "32%", desc6_w: "clamp(160px,16vw,200px)",
-
-    txt7_top: "75%", txt7_w: "clamp(200px,20vw,240px)",
-  },
-
-  // ── TABLET — 768 × 1024 ──────────────────────────────────────────────────
-  // txt = heading images, desc = description images
-  // increase top % to move DOWN, decrease to move UP
-  // increase w to make BIGGER, decrease to make SMALLER
-// ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
-  // Test at: F12 → Ctrl+Shift+M → width 390, height 844
-mobile: {
-
-    // ── SECTION & CLOUD STACKING ─────────────────────────────────────────
-    sectionTopOffset:  "-60vh",        // ↑ more negative = section higher / ↓ less negative = lower
-    cloud1StackOffset: "-180px",     // ↑ more negative = first stacked cloud overlaps more
-    cloudStackOffset:  "-100px",     // ↑ more negative = all other clouds overlap more
-    sunOffset:         "-20px",      // ↑ more negative = sun higher / ↓ lower
-
-    // ── BIG CLOUD CENTER HEADING (group 1) ──────────────────────────────
-    txt1_top: "35%",                 // ↑ move DOWN / ↓ move UP inside big cloud
-    txt1_w:   "80px",                // ↑ bigger / ↓ smaller
-
-    // ── CLOUD 1 LEFT (group 2) ───────────────────────────────────────────
-    txt2_top:  "18%",  txt2_lv:  "10%",  txt2_w:  "60px",   // top=↑down, lv=↑right, w=↑bigger
-    desc2_top: "32%",  desc2_lv: "10%",  desc2_w: "60px",   // same controls for description
-
-    // ── CLOUD 2 RIGHT (group 3) ──────────────────────────────────────────
-    txt3_top:  "18%",  txt3_rv:  "10%",  txt3_w:  "60px",   // rv=↑moves LEFT from right edge
+    txt3_top:  "18%",  txt3_rv:  "10%",  txt3_w:  "60px",
     desc3_top: "32%",  desc3_rv: "10%",  desc3_w: "60px",
 
-    // ── CLOUD 3 LEFT (group 4) ───────────────────────────────────────────
     txt4_top:  "18%",  txt4_lv:  "10%",  txt4_w:  "60px",
     desc4_top: "32%",  desc4_lv: "10%",  desc4_w: "60px",
 
-    // ── CLOUD 4 RIGHT (group 5) ──────────────────────────────────────────
     txt5_top:  "18%",  txt5_rv:  "10%",  txt5_w:  "60px",
     desc5_top: "32%",  desc5_rv: "10%",  desc5_w: "60px",
 
-    // ── CLOUD 5 LEFT (group 6) ───────────────────────────────────────────
     txt6_top:  "16%",  txt6_lv:  "10%",  txt6_w:  "60px",
     desc6_top: "32%",  desc6_lv: "10%",  desc6_w: "60px",
 
-    // ── CLOUD 5 CENTER BOTTOM HEADING (group 7) ──────────────────────────
-    txt7_top: "78%",                 // ↑ move DOWN / ↓ move UP inside last cloud
-    txt7_w:   "80px",                // ↑ bigger / ↓ smaller
+    txt7_top: "78%",
+    txt7_w:   "80px",
   },
 
-  // ── LAPTOP — 1280 × 800  (MacBook 13" · ThinkPad 16") ───────────────────
+  // ── LAPTOP — 1280 × 800 ──────────────────────────────────────────────────
   laptop: {
     sectionTopOffset:  "-48vh",
     cloud1StackOffset: "-400px",
@@ -114,8 +109,7 @@ mobile: {
     txt7_top: "75%", txt7_w: "clamp(200px,20vw,240px)",
   },
 
-  // ── DESKTOP — 1536 × 864  YOUR THINKPAD 14" REFERENCE — DO NOT TOUCH ────
-  // also covers MacBook 14" (1512) and MacBook 16" (1728)
+  // ── DESKTOP — 1536 × 864  ────────────────────────────────────────────────
   desktop: {
     sectionTopOffset:  "-48vh",
     cloud1StackOffset: "-400px",
@@ -142,7 +136,7 @@ mobile: {
     txt7_top: "75%", txt7_w: "320px",
   },
 
-  // ── ULTRAWIDE — 1920 × 1080  (ThinkPad 13") ─────────────────────────────
+  // ── ULTRAWIDE — 1920 × 1080 ──────────────────────────────────────────────
   ultrawide: {
     sectionTopOffset:  "-48vh",
     cloud1StackOffset: "-400px",
@@ -284,7 +278,7 @@ const Middle = () => {
       className="relative w-full pointer-events-none overflow-x-hidden"
       style={{ zIndex: Z_INDEX.CONTAINER, marginTop: cfg.sectionTopOffset }}
     >
-      {/* ── DEV LABEL — delete before going live ────────────────────────── */}
+      {/* ── DEV LABEL ───────────────────────────────────────────────────── */}
       <div
         style={{
           position: "fixed", bottom: 8, right: 12,
@@ -295,7 +289,6 @@ const Middle = () => {
       >
         {bpKey} · {typeof window !== "undefined" ? window.innerWidth : ""}px
       </div>
-      {/* ─────────────────────────────────────────────────────────────────── */}
 
       <div className="relative w-full max-w-[2000px] mx-auto">
 
