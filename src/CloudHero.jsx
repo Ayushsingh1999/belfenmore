@@ -33,35 +33,45 @@ import layer2 from "../src/assets/image_886_updated.webp";
 
 const SCREEN_CONFIG = {
 
-  // ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
+// ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
+  // Test at: F12 → Ctrl+Shift+M → set width 390, height 844
   mobile: {
-    letterFontSize:    "110px",
-    letterBaseSpacing: 56,
+
+    // ── LETTERS ──────────────────────────────────────────────────────────
+    letterFontSize:    "200px",        // ↑ bigger / ↓ smaller letters
+    letterBaseSpacing: 72,             // ↑ more spread / ↓ tighter overall
     letterSpacing:     [1.2, 0.77, 0.62, 0.77, 0.82, 0.77, 1.0],
-    letterPaddingX:    "50px",
-    letterTop:         "30%",
-    letterLeft:        "-10%",
-    cloud1Top:         "6%",
-    cloud1Width:       "142%",
-    cloud2Top:         "30%",
-    cloud2Width:       "130%",
-    textTop:           "0%",
-    textLeft:          "50%",
-    headingSize:       "18px",
-    bodySize:          "7px",
-    textBlockWidth:    "110px",
-    textBlockLeft:     "-25px",
+    //                  E     n     c     h     a     n     t
+    //                  ↑ each number = gap multiplier after that letter
+
+    letterPaddingX:    "60px",         // ↑ more overlap / ↓ less overlap between letters
+    letterTop:         "30%",          // ↑ move letters DOWN / ↓ move UP
+    letterLeft:        "-20%",          // ↑ shift letters RIGHT / ↓ shift LEFT
+
+    // ── CLOUDS ───────────────────────────────────────────────────────────
+    cloud1Top:         "25%",           // ↑ move cloud1 DOWN / ↓ move UP
+    cloud1Width:       "200%",         // ↑ wider / ↓ narrower
+    cloud2Top:         "33%",          // ↑ move cloud2 DOWN — match letterTop to keep letters behind cloud
+    cloud2Width:       "185%",         // ↑ wider / ↓ narrower
+
+    // ── "BUILD MORE" TEXT BLOCK ──────────────────────────────────────────
+    textTop:           "5%",           // ↑ move text block DOWN / ↓ move UP
+    textLeft:          "20%",          // ↑ shift RIGHT / ↓ shift LEFT
+    headingSize:       "25px",         // ↑ bigger heading / ↓ smaller
+    bodySize:          "6.5px",        // ↑ bigger body text / ↓ smaller
+    textBlockWidth:    "300px",        // ↑ wider text container / ↓ narrower
+    textBlockLeft:     "-130px",        // negative = nudge left, positive = nudge right
   },
 
   // ── TABLET — 768 × 1024 ──────────────────────────────────────────────────
   tablet: {
-    letterFontSize:    "210px",
+    letterFontSize:    "410px",
     letterBaseSpacing: 110,
-    letterSpacing:     [1.2, 0.77, 0.62, 0.77, 0.82, 0.77, 1.0],
+    letterSpacing:     [1.8, 1.0, 0.90, 1.0, 1.0, 1.0, 1.5],
     letterPaddingX:    "100px",
     letterTop:         "30%",
     letterLeft:        "-10%",
-    cloud1Top:         "6%",
+    cloud1Top:         "20%",
     cloud1Width:       "142%",
     cloud2Top:         "30%",
     cloud2Width:       "130%",
