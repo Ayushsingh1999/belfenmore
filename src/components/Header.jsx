@@ -4,8 +4,8 @@ import logo from "../assets/subtract.svg";
 import logo2 from "../assets/logo.png";
 import title from "../assets/web_main_title.png";
 import diamond from "../assets/diamond.svg";
-import logo_prospect_augment from "../assets/prospect_augment.svg"
-import logo_Stontonne from "../assets/Strontonne.svg"
+import logo_prospect_augment from "../assets/prospect_augment.svg";
+import logo_Stontonne from "../assets/Strontonne.svg";
 
 const HEADER_HEIGHT = 130;
 const EDGE_PADDING = "p-4";
@@ -14,15 +14,14 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [open]);
 
@@ -42,18 +41,18 @@ const Header = () => {
     { path: "/domains", label: "DOMAINS", number: "01" },
     { path: "/solve", label: "SOLVE", number: "02" },
     { path: "/brands", label: "BRANDS", number: "03" },
-    { path: "/careers", label: "CAREERS", number: "04" }
+    { path: "/careers", label: "CAREERS", number: "04" },
   ];
 
   return (
     <header
-      className="fixed top-0 left-0 w-screen z-50 bg-transparent"
+      className="fixed top-0 left-0 w-full z-50 bg-transparent global-zoom"
       style={{ height: HEADER_HEIGHT }}
     >
       <div
         className={`
           relative
-          w-screen
+          w-full
           h-full
           flex
           items-start
@@ -62,7 +61,7 @@ const Header = () => {
         `}
       >
         {/* LEFT LOGO (DESKTOP ONLY) */}
-        <Link to='/'>
+        <Link to="/">
           <div className="hidden md:flex items-start transition-all duration-300 ease-out">
             {isProspectArgumentPage && (
               <div className="hidden md:flex items-start gap-3">
@@ -78,13 +77,19 @@ const Header = () => {
               </div>
             )}
 
-            {(isDomain || isSolve || isRoot || isCareer) && <img src={logo} alt="Logo" className="w-12 mt-0" />}
+            {(isDomain || isSolve || isRoot || isCareer) && (
+              <img src={logo} alt="Logo" className="w-12 mt-0" />
+            )}
           </div>
         </Link>
 
-        {/* CENTER TITLE (DESKTOP ONLY) - HIDDEN ON MOBILE WHEN MENU IS OPEN */}
-        <Link to='/'>
-          <div className={`absolute left-1/2 -translate-x-1/2 ${open ? 'hidden' : 'block'}`}>
+        {/* CENTER TITLE */}
+        <Link to="/">
+          <div
+            className={`absolute left-1/2 -translate-x-1/2 ${
+              open ? "hidden" : "block"
+            }`}
+          >
             <img
               src={title}
               alt="Main Title"
@@ -93,7 +98,7 @@ const Header = () => {
           </div>
         </Link>
 
-        {/* RIGHT MENU (DESKTOP) */}
+        {/* DESKTOP MENU */}
         <nav
           className="
             hidden
@@ -109,36 +114,42 @@ const Header = () => {
             font-['Plus_Jakarta_Sans']
           "
         >
-          <Link to="/domains" className={isDomain ? "font-semibold" : ""}>DOMAINS</Link>
-          <Link to="/solve" className={isSolve ? "font-semibold" : ""}>SOLVE</Link>
-          
-          {isProspectArgumentPage ? (
-            <Link to="/brands" className={isBrand ? "font-semibold" : ""}>BRANDS</Link>
-          ) : (
-            <Link to="/brands" className={isBrand ? "font-semibold" : ""}>
-              BRANDS
-            </Link>
-          )}
-          <Link to="/careers" className={isCareer ? "font-semibold" : ""}>CAREERS</Link>
+          <Link to="/domains" className={isDomain ? "font-semibold" : ""}>
+            DOMAINS
+          </Link>
+
+          <Link to="/solve" className={isSolve ? "font-semibold" : ""}>
+            SOLVE
+          </Link>
+
+          <Link to="/brands" className={isBrand ? "font-semibold" : ""}>
+            BRANDS
+          </Link>
+
+          <Link to="/careers" className={isCareer ? "font-semibold" : ""}>
+            CAREERS
+          </Link>
         </nav>
 
-        {/* MOBILE MENU ICON */}
+        {/* MOBILE MENU BUTTON */}
         <button
           className="md:hidden text-2xl z-50 relative"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
-          style={{ color: open ? '#000' : '#000' }}
         >
           {open ? "✕" : "☰"}
         </button>
       </div>
 
-      {/* MOBILE FULL-SCREEN MENU */}
+      {/* MOBILE FULL SCREEN MENU */}
       {open && (
         <div
           className="
             fixed
-            inset-0
+            top-0
+            left-0
+            w-full
+            h-full
             md:hidden
             flex
             flex-col
@@ -147,97 +158,75 @@ const Header = () => {
             px-6
             overflow-y-auto
           "
-          style={{ 
-            backgroundColor: '#FFE95A',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-          }}
+          style={{ backgroundColor: "#FFE95A" }}
         >
-          {/* Title image in top left corner for mobile */}
+          {/* MOBILE TITLE */}
           <div className="absolute top-4 left-4">
-            <Link to='/' onClick={handleLinkClick}>
+            <Link to="/" onClick={handleLinkClick}>
               <img src={title} alt="Main Title" className="w-32 object-contain" />
             </Link>
           </div>
 
-          {/* Menu items with responsive spacing */}
+          {/* MENU ITEMS */}
           <div className="flex flex-col w-full mt-28 px-2">
-            {menuItems.map((item) => {
-              return (
-                <div key={item.path} className="mb-14 last:mb-0">
-                  <Link 
-                    to={item.path}
-                    onClick={handleLinkClick}
-                    className="flex items-start gap-2 group relative w-full"
-                  >
-                    {/* Number with dot - smaller and aligned top right */}
-                    <div className="flex items-start mt-1.5 min-w-[22px]">
-                      <span 
-                        className="text-right"
+            {menuItems.map((item) => (
+              <div key={item.path} className="mb-14 last:mb-0">
+                <Link
+                  to={item.path}
+                  onClick={handleLinkClick}
+                  className="flex items-start gap-2 group relative w-full"
+                >
+                  {/* NUMBER */}
+                  <div className="flex items-start mt-1.5 min-w-[22px]">
+                    <span
+                      style={{
+                        fontFamily: "Plus Jakarta Sans",
+                        fontWeight: 300,
+                        fontSize: "11px",
+                        color: "#0E1319",
+                      }}
+                    >
+                      {item.number}
+                    </span>
+                    <span
+                      className="ml-0.5"
+                      style={{
+                        fontFamily: "Plus Jakarta Sans",
+                        fontWeight: 300,
+                        fontSize: "11px",
+                        color: "#0E1319",
+                      }}
+                    >
+                      .
+                    </span>
+                  </div>
+
+                  {/* LABEL */}
+                  <div className="flex flex-col w-full">
+                    <span
+                      style={{
+                        fontFamily: "Plus Jakarta Sans",
+                        fontWeight: 300,
+                        fontSize: "32px",
+                        color: "#0E1319",
+                      }}
+                    >
+                      {item.label}
+                    </span>
+
+                    <div className="mt-5 w-full">
+                      <div
                         style={{
-                          fontFamily: 'Plus Jakarta Sans',
-                          fontWeight: 300,
-                          fontSize: '11px',
-                          lineHeight: '100%',
-                          letterSpacing: '0%',
-                          color: '#0E1319',
+                          width: "min(280px,85vw)",
+                          height: "1.5px",
+                          backgroundColor: "#0E1319",
                         }}
-                      >
-                        {item.number}
-                      </span>
-                      <span 
-                        className="ml-0.5"
-                        style={{
-                          fontFamily: 'Plus Jakarta Sans',
-                          fontWeight: 300,
-                          fontSize: '11px',
-                          lineHeight: '100%',
-                          letterSpacing: '0%',
-                          color: '#0E1319',
-                        }}
-                      >
-                        .
-                      </span>
+                      />
                     </div>
-                    
-                    {/* Menu text with responsive container */}
-                    <div className="flex flex-col w-full">
-                      <span 
-                        className="relative inline-block"
-                        style={{
-                          fontFamily: 'Plus Jakarta Sans',
-                          fontWeight: 300,
-                          fontSize: '32px',
-                          lineHeight: '100%',
-                          letterSpacing: '0%',
-                          color: '#0E1319',
-                          fontStyle: 'normal',
-                          width: 'fit-content',
-                          maxWidth: '100%',
-                          wordBreak: 'break-word'
-                        }}
-                      >
-                        {item.label}
-                      </span>
-                      
-                      {/* Responsive underline */}
-                      <div className="mt-5 w-full">
-                        <div 
-                          style={{
-                            width: 'min(280px, 85vw)',
-                            height: '1.5px',
-                            backgroundColor: '#0E1319',
-                            opacity: 1,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              );
-            })}
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       )}

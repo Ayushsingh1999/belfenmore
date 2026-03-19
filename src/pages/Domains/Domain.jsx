@@ -8,10 +8,14 @@ function Domain() {
 
   return (
     <>
-      <Hero/>  
+     <div className=" global-zoom viewport-container">
+      <div className="viewport-scale-wrapper">
+         <Hero/>  
       <CloudSection/>  
       <ExpertiseSection/>
       <TreeSection/>
+      </div>
+      </div>
     </>
   )
 }

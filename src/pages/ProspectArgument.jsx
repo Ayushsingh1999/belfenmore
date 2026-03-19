@@ -7,11 +7,15 @@ import ServicesSection from "../ProspectAugment/ServicesSection";
 const ProspectArgument = () => {
   return (
     <>
-      <Hero />
+     <div className=" global-zoom viewport-container">
+      <div className="viewport-scale-wrapper">
+    <Hero />
     <ServicesSection />
     <JourneySection />
     <HeroSection />
     <EnvisionSection />
+      </div>
+      </div>
     </>
   );
 };

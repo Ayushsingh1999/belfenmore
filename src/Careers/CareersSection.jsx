@@ -13,7 +13,7 @@ const CareersSection = () => {
   return (
     <section className="w-full relative">
       {/* DESKTOP / LAPTOP / TABLET */}
-      <div className="hidden md:flex flex-col items-center justify-center text-center pt-2 min-h-screen">
+      <div className="hidden md:flex flex-col items-center justify-center text-center pt[2] min-h-screen">
         
         {/* ROW 1: Join our team of [Img2] Innovators & */}
         <div className="relative flex items-center justify-center mt-2">

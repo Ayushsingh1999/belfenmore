@@ -8,10 +8,14 @@ import UniqueSection from "../Careers/UniqueSection";
 const Careers = () => {
   return (
     <>
+    <div className="global-zoom viewport-container">
+      <div className="viewport-scale-wrapper">
     <CareersSection/>
     <UniqueSection/>
     <ChartCourseSection/>
     <JourneyCareerSection/>
+      </div>
+      </div>
     </>
   );
 };

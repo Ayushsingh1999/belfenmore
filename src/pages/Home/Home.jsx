@@ -8,11 +8,15 @@ import Screen from './Screen'
 function Home() {
 
   return (
-    <>
-      <Header/>
+    <> 
+          <Header/>
+      <div className=" global-zoom viewport-container">
+      <div className="viewport-scale-wrapper">
       <Screen/>
       <InerSection/>
       <Footer/>
+    </div>
+    </div>
     </>
 
   )

@@ -48,3 +48,39 @@ body {
 .mob-text {
   hyphens: auto;
 }
+
+html, body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+/* Container */
+.viewport-container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.viewport-scale-wrapper{
+  width:100%;
+  max-width:1440px;
+}
+
+.global-zoom {
+  zoom: 1;
+}
+
+/* 16 inch screens */
+@media (min-width:1600px){
+  .global-zoom {
+    zoom: 1.55;
+  }
+}
+
+/* very large monitors */
+@media (min-width:2560px){
+  .global-zoom {
+    zoom: 1.55;
+  }
+}

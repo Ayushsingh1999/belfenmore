@@ -8,10 +8,14 @@ function Solve() {
 
   return (
     <>
-      <TailoredSection/>
+      <div className="global-zoom viewport-container">
+      <div className="viewport-scale-wrapper">
+        <TailoredSection/>
       <NatureHero/>
       <ValueMapSection/>
       <TreeSection/>
+      </div>
+      </div>
     </>
   )
 }
