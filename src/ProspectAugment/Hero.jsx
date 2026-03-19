@@ -25,7 +25,7 @@ const Hero = () => {
     -translate-y-20
     md:-translate-y-30
     2xl:-translate-y-[120px]
-    2xl:h-[500px]
+    2xl:h-[610px]
   "
 />
       </div>
@@ -35,7 +35,7 @@ const Hero = () => {
         <img
           src={Prospect_Augument_img}
           alt="Prospect Augument"
-          className="w-[500px] mx-auto relative z-40 translate-y-[130px]  2xl:w-[600px] 2xl:translate-y-64"
+          className="w-[500px] mx-auto relative z-40 translate-y-[130px]  2xl:w-[900px] 2xl:translate-y-64"
         />
 
         <img

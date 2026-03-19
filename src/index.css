@@ -74,7 +74,7 @@ html, body{
 /* 16 inch screens */
 @media (min-width:1600px){
   .global-zoom {
-    zoom: 1.55;
+    zoom: 1.65;
   }
 }
 
