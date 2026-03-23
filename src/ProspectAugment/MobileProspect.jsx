@@ -1,8 +1,11 @@
 import React from "react";
+import title from "../../src/assets/web_main_title.png";
+import augment_img from "../assets/augment_img.svg";
+import footerimg from "../../src/assets/footerimg_home.png";
 
 export default function MobileProspect() {
   return (
-    <div className="main-container w-[390px] h-[5684px] bg-[#fffdec] relative overflow-hidden mx-auto my-0">
+    <div className="main-container w-[390px] h-[5800px] bg-[#fffdec] relative overflow-hidden mx-auto my-0">
       {/* <div className="w-[390px] h-[45px] bg-[#343538] relative z-[114] mt-[-6.645px] mr-0 mb-0 ml-0">
         <div className="w-[318.369px] h-[12.378px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/9YosfaZ5Lw.png)] bg-cover bg-no-repeat relative z-[115] mt-[19.56px] mr-0 mb-0 ml-[38.125px]" />
       </div>
@@ -25,15 +28,28 @@ export default function MobileProspect() {
       {/* <div className="w-[120.582px] h-[14px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/LQ0uPgWSCw.png)] bg-cover bg-no-repeat relative z-[113] mt-[6.141px] mr-0 mb-0 ml-[20.75px]" /> */}
       <div className="w-[28.799px] h-[30px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/jGTBQPii2Q.png)] bg-cover bg-no-repeat relative z-[7] mt-[102.502px] mr-0 mb-0 ml-[180.601px]" />
       <div className="w-[250px] h-[29.026px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/pUD2yniUON.png)] bg-cover bg-no-repeat relative z-[4] mt-[28.466px] mr-0 mb-0 ml-[70px]" />
-      <div className="w-[389.953px] h-[338.418px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/0RTk89OovU.png)] bg-cover bg-no-repeat relative z-[] mt-[-7.513px] mr-0 mb-0 ml-[0.05px]">
-        <span className="flex h-[187px] justify-start items-start font-['Edwardian_Script_ITC'] text-[100.6074676513672px] font-normal leading-[186.952px] text-[#ffe95a] absolute top-[34.209px] left-[calc(50%-195.02px)] text-left whitespace-nowrap z-[2]">
-          Augment
-        </span>
-      </div>
+     <div className="relative w-[389.953px] h-[338.418px] mt-[-7.513px] ml-[0.05px]">
+
+  {/* 🔽 Augment Image (Bottom Layer) */}
+  <img
+    src={augment_img}
+    alt="Augment"
+    className="absolute top-[34px] left-1/2 -translate-x-1/2 z-[1] w-[390px] object-contain translate-y-[76px]"
+  />
+
+  {/* 🔼 Background Image (Top Layer) */}
+  <div
+    className="absolute inset-0 bg-cover bg-no-repeat z-[2]"
+    style={{
+      backgroundImage: `url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/0RTk89OovU.png)`
+    }}
+  />
+
+</div>
       <span className="block h-[33px] font-['Meie_Script'] text-[26px] font-normal leading-[32.932px] text-[#32312b] relative text-left whitespace-nowrap z-[5] mt-[32.312px] mr-0 mb-0 ml-[90.5px]">
         Augment Solutions
       </span>
-      <span className="flex w-[250px] h-[90px] justify-center items-start font-['Times_Now'] text-[12px] font-normal leading-[18px] text-[#32312b] relative text-center z-[6] mt-[16.099px] mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[90px] justify-center items-start font-['Times_Now'] text-[12px]  font-normal leading-[18px] text-[#32312b] relative text-center z-[6] mt-[16.099px] mr-0 mb-0 ml-[70px]">
         A curated showcase of our consulting craftsmanship — a comprehensive
         lineup of services tailored to solve complex challenges, drive
         measurable outcomes, and deliver value through strategic thinking and
@@ -44,7 +60,7 @@ export default function MobileProspect() {
           Finance
         </span>
       </div>
-      <span className="flex w-[250px] h-[66px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-10 mt-[18px] mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[66px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal text-justify leading-[22px] text-[#32312b] relative z-10 mt-[18px] mr-0 mb-0 ml-[70px]">
         Portfolio - to - Profit. Architecting financial transformation through
         co-innovation and co-engineering for superior functionality.
       </span>
@@ -53,7 +69,7 @@ export default function MobileProspect() {
           FMCG
         </span>
       </div>
-      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[11] mt-[8px] mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal text-justify leading-[22px] text-[#32312b] relative z-[11] mt-[8px] mr-0 mb-0 ml-[70px]">
         Production - to - Palm. Designing integrated value ecosystems that
         translate consumer insight into scalable commercial impact.
       </span>
@@ -62,7 +78,7 @@ export default function MobileProspect() {
           Industrial
         </span>
       </div>
-      <span className="flex w-[250px] h-[66px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[14] mt-[18px] mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[66px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal text-justify leading-[22px] text-[#32312b] relative z-[14] mt-[18px] mr-0 mb-0 ml-[70px]">
         Plant - to - Platform. Blending your industry expertise with our
         technical depth to pioneer bespoke solutions.
       </span>
@@ -71,11 +87,11 @@ export default function MobileProspect() {
           Medical
         </span>
       </div>
-      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[17] mt-[18px] mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-justify text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[17] mt-[18px] mr-0 mb-0 ml-[70px]">
         Precision - to - Pulse. Co-Authoring Next-Gen Patient Outcomes by
         harmonizing Your Clinical Expertise with Our Precision Tech Ops.
       </span>
-      <div className="w-[322px] h-[127.865px] relative z-[23] mt-[129.733px] mr-0 mb-0 ml-[34px]">
+      <div className="w-[322px] h-[127.865px] relative z-[23] mt-[129.733px] mr-0 mb-0 ml-[34px] translate-y-[170px]">
         <span className="flex h-[76px] justify-start items-start font-['Meie_Script'] text-[60px] font-normal leading-[75.996px] text-[#32312b] absolute top-[calc(50%-63.93px)] left-[calc(50%-80.24px)] text-left whitespace-nowrap z-[22]">
           journey
         </span>
@@ -87,116 +103,116 @@ export default function MobileProspect() {
         </span>
         <div className="w-[322px] h-[90px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/usNDYEqOWn.png)] bg-cover bg-no-repeat absolute top-[37.865px] left-1/2 translate-x-[-50%] translate-y-0 overflow-hidden z-[21]" />
       </div>
-      <span className="flex w-[250px] h-[42px] justify-center items-start font-['Times_Now'] text-[12px] font-normal leading-[13.8px] text-[#32312b] relative text-center z-[44] mt-[54px] mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[42px] justify-center items-start font-['Times_Now'] text-[12px] font-normal leading-[13.8px] text-[#32312b] relative text-center z-[44] mt-[54px] mr-0 mb-0 ml-[70px] translate-y-[170px] ">
         Propel innovation and transformation together, powered by our
         Intelligent Assets that shape industry trends and emerging technologies.
       </span>
-      <span className="flex w-[140px] h-[13px] items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative uppercase whitespace-nowrap z-[28] mt-[54px] mr-0 mb-0 ml-[125px]">
+      <span className="flex w-[140px] h-[13px] items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative uppercase whitespace-nowrap z-[28] mt-[54px] mr-0 mb-0 ml-[125px] translate-y-[170px]">
         domain Tech
       </span>
-      <span className="flex w-[133px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[26] mt-[18px] mr-0 mb-0 ml-[128.5px]">
+      <span className="flex w-[133px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[26] mt-[18px] mr-0 mb-0 ml-[128.5px] translate-y-[170px]">
         Solution engineering
       </span>
-      <span className="flex w-[133px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[27] mt-[14px] mr-0 mb-0 ml-[128.5px]">
+      <span className="flex w-[133px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[27] mt-[14px] mr-0 mb-0 ml-[128.5px] translate-y-[170px]">
         Business engineering
       </span>
-      <span className="flex w-[94px] h-[13px] items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative uppercase whitespace-nowrap z-[33] mt-[54px] mr-0 mb-0 ml-[148px]">
+      <span className="flex w-[94px] h-[13px] items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative uppercase whitespace-nowrap z-[33] mt-[54px] mr-0 mb-0 ml-[148px] translate-y-[170px]">
         tech ops
       </span>
-      <span className="flex w-[88px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[31] mt-[18px] mr-0 mb-0 ml-[151px]">
+      <span className="flex w-[88px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[31] mt-[18px] mr-0 mb-0 ml-[151px] translate-y-[170px]">
         Site reliability
       </span>
-      <span className="flex w-[141px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[32] mt-[14px] mr-0 mb-0 ml-[124.5px]">
+      <span className="flex w-[141px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[32] mt-[14px] mr-0 mb-0 ml-[124.5px] translate-y-[170px]">
         security & compliance
       </span>
-      <span className="flex w-[135px] h-[13px] justify-end items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative text-right uppercase whitespace-nowrap z-[38] mt-[54px] mr-0 mb-0 ml-[127.5px]">
+      <span className="flex w-[135px] h-[13px] justify-end items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative text-right uppercase whitespace-nowrap z-[38] mt-[54px] mr-0 mb-0 ml-[127.5px] translate-y-[170px]">
         Business ops
       </span>
-      <span className="block h-[15px] font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative text-left uppercase whitespace-nowrap z-[36] mt-[18px] mr-0 mb-0 ml-[136px]">
+      <span className="block h-[15px] font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative text-left uppercase whitespace-nowrap z-[36] mt-[18px] mr-0 mb-0 ml-[136px] translate-y-[170px]">
         Customer Journey
       </span>
-      <span className="flex w-[98px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[37] mt-[14px] mr-0 mb-0 ml-[146px]">
+      <span className="flex w-[98px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[37] mt-[14px] mr-0 mb-0 ml-[146px] translate-y-[170px]">
         Product Design
       </span>
-      <span className="flex w-[162px] h-[13px] justify-end items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative text-right uppercase whitespace-nowrap z-[43] mt-[54px] mr-0 mb-0 ml-[114px]">
+      <span className="flex w-[162px] h-[13px] justify-end items-end font-['Times_Now'] text-[20px] font-normal leading-[13px] text-[rgba(50,49,43,0.44)] relative text-right uppercase whitespace-nowrap z-[43] mt-[54px] mr-0 mb-0 ml-[114px] translate-y-[170px]">
         Emerging Tech
       </span>
-      <span className="flex w-[88px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[41] mt-[18px] mr-0 mb-0 ml-[151px]">
+      <span className="flex w-[88px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[41] mt-[18px] mr-0 mb-0 ml-[151px] translate-y-[170px]">
         AI Engineering
       </span>
-      <span className="flex w-[96px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[42] mt-[14px] mr-0 mb-0 ml-[147px]">
+      <span className="flex w-[96px] h-[15px] items-start font-['Cabinet_Grotesk_Variable'] text-[12px] font-medium leading-[14.88px] text-[#32312b] relative uppercase whitespace-nowrap z-[42] mt-[14px] mr-0 mb-0 ml-[147px] translate-y-[170px]">
         AI Architecture
       </span>
-      <div className="w-[322px] h-[187px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/CO5OCgb17Q.png)] bg-cover bg-no-repeat relative overflow-hidden z-[46] mt-[140px] mr-0 mb-0 ml-[34px]" />
+      <div className="w-[322px] h-[187px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/CO5OCgb17Q.png)] bg-cover bg-no-repeat relative overflow-hidden z-[46] mt-[313px] mr-0 mb-0 ml-[34px]" />
       <div className="w-[107.168px] h-[108px] relative z-[53] mt-[54px] mr-0 mb-0 ml-[141.416px]">
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-53.58px)] text-left whitespace-nowrap z-[51]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-53.58px)] text-left whitespace-nowrap z-[51] -translate-y-12">
           E
         </span>
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-52.58px)] text-left whitespace-nowrap z-[52]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-52.58px)] text-left whitespace-nowrap z-[52] -translate-y-12">
           E
         </span>
         <span className="flex h-[30px] justify-start items-end font-['Times_Now'] text-[26px] font-semibold leading-[29.9px] text-[#25241e] absolute top-[calc(50%-0)] left-[calc(50%-30.42px)] text-left whitespace-nowrap z-[53]">
           xpertise
         </span>
       </div>
-      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[48] mt-0 mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal text-justify leading-[22px] text-[#32312b] relative z-[48] mt-0 mr-0 mb-0 ml-[70px]">
         Pivot on rigours engineering practices to provide seamless, scalable and
         reliable business critical solutions for present day demands.
       </span>
       <div className="w-[119.168px] h-[108px] relative z-[59] mt-[54px] mr-0 mb-0 ml-[135.416px]">
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-59.58px)] text-left whitespace-nowrap z-[57]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-59.58px)] text-left whitespace-nowrap z-[57] -translate-y-12">
           E
         </span>
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-58.58px)] text-left whitespace-nowrap z-[58]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-58.58px)] text-left whitespace-nowrap z-[58] -translate-y-12">
           E
         </span>
         <span className="flex h-[30px] justify-start items-start font-['Times_Now'] text-[26px] font-semibold leading-[29.9px] text-[#25241e] absolute top-[calc(50%-0)] left-[calc(50%-36.42px)] text-left whitespace-nowrap z-[59]">
           xcellence
         </span>
       </div>
-      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[60] mt-0 mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal text-justify leading-[22px] text-[#32312b] relative z-[60] mt-0 mr-0 mb-0 ml-[70px]">
         Focus on quality, resilience, governance and performance at every stage
         of design, development, delivery and operations for consistent results.
       </span>
       <div className="w-[97.168px] h-[108px] relative z-[66] mt-[54px] mr-0 mb-0 ml-[146.416px]">
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-48.58px)] text-left whitespace-nowrap z-[64]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-48.58px)] text-left whitespace-nowrap z-[64] -translate-y-12">
           E
         </span>
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-47.58px)] text-left whitespace-nowrap z-[65]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-47.58px)] text-left whitespace-nowrap z-[65] -translate-y-12">
           E
         </span>
         <span className="flex h-[30px] justify-start items-start font-['Times_Now'] text-[26px] font-semibold leading-[29.9px] text-[#25241e] absolute top-[calc(50%-0)] left-[calc(50%-25.42px)] text-left whitespace-nowrap z-[66]">
           fficient
         </span>
       </div>
-      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[67] mt-0 mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-justify text-[#32312b] relative z-[67] mt-0 mr-0 mb-0 ml-[70px]">
         Excel in reducing computation complexity, latency, cost, operational
         fatigue and manual interventions using insights from data, systems and
         processes.
       </span>
       <div className="w-[116.168px] h-[108px] relative z-[73] mt-[54px] mr-0 mb-0 ml-[136.916px]">
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-58.08px)] text-left whitespace-nowrap z-[71]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#25241e] absolute top-[calc(50%-54px)] left-[calc(50%-58.08px)] text-left whitespace-nowrap z-[71] -translate-y-12">
           E
         </span>
-        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-57.08px)] text-left whitespace-nowrap z-[72]">
+        <span className="flex h-[108px] justify-start items-start font-['Luxurious_Script'] text-[90px] font-normal leading-[108px] text-[#ffe95a] absolute top-[calc(50%-54px)] left-[calc(50%-57.08px)] text-left whitespace-nowrap z-[72] -translate-y-12">
           E
         </span>
         <span className="flex h-[30px] justify-start items-start font-['Times_Now'] text-[26px] font-semibold leading-[29.9px] text-[#25241e] absolute top-[calc(50%-0)] left-[calc(50%-34.92px)] text-left whitespace-nowrap z-[73]">
           nterprise
         </span>
       </div>
-      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-[#32312b] relative z-[74] mt-0 mr-0 mb-0 ml-[70px]">
+      <span className="flex w-[250px] h-[88px] items-start font-['Cabinet_Grotesk_Variable'] text-[14px] font-normal leading-[22px] text-justify text-[#32312b] relative z-[74] mt-0 mr-0 mb-0 ml-[70px]">
         Scale businesses and initiatives through clear roadmaps, proactive risk
         mitigation, global reach, and evolution from bespoke solutions to robust
         standards.
       </span>
-      <span className="block h-[210px] font-['Luxurious_Script'] text-[174.70465087890625px] font-normal leading-[209.646px] relative text-left whitespace-nowrap mt-[58.761px] mr-0 mb-0 ml-0">
-        Envision
-      </span>
+<span className="block text-[#F4F2DF] font-['Luxurious_Script'] text-[174px] leading-[210px] mt-[58px]">
+  Envision
+</span>
       <div className="w-[390px] h-px bg-[#32312b] relative z-[80] mt-[46.844px] mr-0 mb-0 ml-0" />
       <div className="w-[35.063px] h-[18px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/LizFk7uhr1.png)] bg-cover bg-no-repeat relative z-[98] mt-[46px] mr-0 mb-0 ml-[177.469px]" />
       <div className="w-[106px] h-[16px] font-['Editor's_Note'] text-[22.233963012695312px] font-[1] leading-[16px] relative text-left whitespace-nowrap z-[100] mt-[12.047px] mr-0 mb-0 ml-[141px]">
-        <span className="font-['Editor's_Note'] text-[22.233963012695312px] font-extralight leading-[28.459px] text-[#0e1319] relative text-left">
+        {/* <span className="font-['Editor's_Note'] text-[22.233963012695312px] font-extralight leading-[28.459px] text-[#0e1319] relative text-left">
           B
         </span>
         <span className="font-['Editor's_Note'] text-[17.78717803955078px] font-extralight leading-[28.459px] text-[#0e1319] relative text-left">
@@ -204,9 +220,14 @@ export default function MobileProspect() {
         </span>
         <span className="font-['Editor's_Note'] text-[17.78742218017578px] font-extralight leading-[28.459px] text-[#0e1319] relative text-left">
           E
-        </span>
+        </span> */}
+        <img
+               src={title}
+               alt="Belfenmore Logo"
+               className="w-[106px] h-[16px] object-contain mt-[12.047px] ml-[141px] relative z-[70] translate-x-[-135px]"
+             />
       </div>
-      <span className="block h-[14px] font-['Times_Now'] text-[12px] font-normal leading-[13.8px] text-[#32312b] relative text-left whitespace-nowrap z-[97] mt-[13.953px] mr-0 mb-0 ml-[110px]">
+      <span className="block h-[14px] font-['Times_Now'] text-[12px] font-normal italic leading-[13.8px] text-[#32312b] relative text-left whitespace-nowrap z-[97] mt-[13.953px] mr-0 mb-0 ml-[110px]">
         A Threadality Technology Company
       </span>
       <div className="flex w-[235px] gap-[9.6px] justify-center items-center flex-nowrap relative z-[101] mt-[12px] mr-0 mb-0 ml-[77.5px]">
@@ -267,15 +288,19 @@ export default function MobileProspect() {
           <div className="w-[10px] h-[10px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/r04irc8RJd.png)] bg-cover bg-no-repeat relative overflow-hidden z-[96]" />
         </div>
       </div>
-      <div className="w-[474.293px] h-[206.655px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/6LY0ka4UTk.png)] bg-cover bg-no-repeat relative z-[78] mt-[46.813px] mr-0 mb-0 ml-[-42.146px] translate-y-[120px]">
-        <div className="w-[390px] h-[82.776px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/uZZrrNp6tr.png)] bg-cover bg-no-repeat relative z-[77] mt-[7.373px] mr-0 mb-0 ml-[42.146px]" />
+      {/* <div className="w-[474.293px] h-[206.655px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/6LY0ka4UTk.png)] bg-cover bg-no-repeat relative z-[70] mt-[46.813px] mr-0 mb-0 ml-[-42.146px] translate-y-[60px]">
+        <div className="w-[390px] h-[82.776px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/uZZrrNp6tr.png)] bg-cover bg-no-repeat relative z-[78] mt-[7.373px] mr-0 mb-0 ml-[42.146px]" />
         <span className="flex w-[48px] h-[16px] justify-end items-start font-['Plus_Jakarta_Sans'] text-[13px] font-semibold leading-[16px] text-[#fff] relative text-right whitespace-nowrap z-[79] mt-[58.952px] mr-0 mb-0 ml-[350.146px]">
           © 2025
         </span>
-      </div>
+      </div> */}
+      <div
+  className="w-[474.293px] h-[226.655px] bg-cover bg-no-repeat relative z-[48] mt-[40.367px] ml-[-42.146px] translate-y-[44px]"
+  style={{ backgroundImage: `url(${footerimg})` }}
+></div>
       <div className="w-[751.286px] h-[500.951px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/xnBpfzudxn.png)] bg-cover bg-no-repeat absolute top-1/2 left-1/2 translate-x-[-47.24%] translate-y-[-94.07%] z-[1]" />
       <div className="w-[489.952px] h-[280.728px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/gO8Y1up9q0.png)] bg-cover bg-no-repeat absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[219.94%] z-[45]" />
-      <div className="w-[854.147px] h-[124px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/3k2FwEj9WC.png)] bg-cover bg-no-repeat absolute bottom-[668.468px] left-1/2 translate-x-[-50%] translate-y-[-117px] z-[75]" />
+      <div className="w-[854.147px] h-[124px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/3k2FwEj9WC.png)] bg-cover bg-no-repeat absolute bottom-[668.468px] left-1/2 translate-x-[-50%] translate-y-[-60px] z-[75]" />
     </div>
   );
 }
