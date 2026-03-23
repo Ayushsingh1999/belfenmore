@@ -15,44 +15,51 @@ import t4 from "./assets/t4.png";
 import t5 from "./assets/t5.png";
 import t6 from "./assets/t6.png";
 
+//mobile
+import t2_phone from "./assets/txt1_phone.png";
+import t3_phone from "./assets/txt2_phone.png";
+import t4_phone from "./assets/txt3_phone.png";
+import t5_phone from "./assets/txt4_phone.png";
+import t6_phone from "./assets/txt5_phone.png";
+
 const SCREEN_CONFIG = {
-
   // ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
-// ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
-mobile: {
-  sectionTopOffset:  "-60vh",
-  cloud1StackOffset: "-90px",
-  cloudStackOffset:  "-30px",
-  sunOffset:         "-10px",
+  mobile: {
+    sectionTopOffset:  "-60vh",
+    cloud1StackOffset: "-70px",
+    cloudStackOffset:  "-60px",
+    sunOffset:         "-10px",
+    cloudGroupLeftOffset: "-35%",   // For flip false clouds (left side)
+cloudGroupRightOffset: "25%",   // For flip true clouds (right side)
 
-  // ── BIG CLOUD CENTER HEADING (group 1) ──────────────────────────────
-  txt1_top: "33%",
-  txt1_w:   "50vw",
+    // ── BIG CLOUD CENTER HEADING (group 1) ──────────────────────────────
+    txt1_top: "33%",
+    txt1_w:   "50vw",
 
-  // ── CLOUD 1 LEFT (group 2) ───────────────────────────────────────────
-  txt2_top:  "15%",  txt2_lv:  "8%",   txt2_w:  "38vw",
-  desc2_top: "35%",  desc2_lv: "8%",   desc2_w: "38vw",
+    // ── CLOUD 1 LEFT (group 2) ───────────────────────────────────────────
+    txt2_top:  "8%",  txt2_lv:  "29%",   txt2_w:  "40vw",
+    desc2_top: "35%",  desc2_lv: "29%",   desc2_w: "70vw",
 
-  // ── CLOUD 2 RIGHT (group 3) ──────────────────────────────────────────
-  txt3_top:  "-5%",  txt3_rv:  "19%",   txt3_w:  "38vw",
-  desc3_top: "35%",  desc3_rv: "8%",   desc3_w: "38vw",
+    // ── CLOUD 2 RIGHT (group 3) ──────────────────────────────────────────
+    txt3_top:  "10%",  txt3_rv:  "28%",   txt3_w:  "40vw",
+    desc3_top: "35%",  desc3_rv: "28%",   desc3_w: "70vw",
 
-  // ── CLOUD 3 LEFT (group 4) ───────────────────────────────────────────
-  txt4_top:  "15%",  txt4_lv:  "8%",   txt4_w:  "38vw",
-  desc4_top: "35%",  desc4_lv: "8%",   desc4_w: "38vw",
+    // ── CLOUD 3 LEFT (group 4) ───────────────────────────────────────────
+    txt4_top:  "8%",  txt4_lv:  "29%",   txt4_w:  "40vw",
+    desc4_top: "35%",  desc4_lv: "29%",   desc4_w: "70vw",
 
-  // ── CLOUD 4 RIGHT (group 5) ──────────────────────────────────────────
-  txt5_top:  "15%",  txt5_rv:  "8%",   txt5_w:  "38vw",
-  desc5_top: "35%",  desc5_rv: "8%",   desc5_w: "38vw",
+    // ── CLOUD 4 RIGHT (group 5) ──────────────────────────────────────────
+    txt5_top:  "3%",  txt5_rv:  "28%",   txt5_w:  "40vw",
+    desc5_top: "35%",  desc5_rv: "30%",   desc5_w: "70vw",
 
-  // ── CLOUD 5 LEFT (group 6) ───────────────────────────────────────────
-  txt6_top:  "15%",  txt6_lv:  "8%",   txt6_w:  "38vw",
-  desc6_top: "35%",  desc6_lv: "8%",   desc6_w: "38vw",
+    // ── CLOUD 5 LEFT (group 6) ───────────────────────────────────────────
+    txt6_top:  "5%",  txt6_lv:  "30%",   txt6_w:  "40vw",
+    desc6_top: "35%",  desc6_lv: "30%",   desc6_w: "70vw",
 
-  // ── BOTTOM CENTER (group 7) ──────────────────────────────────────────
-  txt7_top: "72%",
-  txt7_w:   "50vw",
-},
+    // ── BOTTOM CENTER (group 7) ──────────────────────────────────────────
+    txt7_top: "72%",
+    txt7_w:   "50vw",
+  },
   // ── TABLET — 768 × 1024 ──────────────────────────────────────────────────
   tablet: {
     sectionTopOffset:  "-60vh",
@@ -263,6 +270,9 @@ const Middle = () => {
   const bpKey = useBreakpoint();
   const cfg   = SCREEN_CONFIG[bpKey];
 
+  // Determine which assets to use based on breakpoint (only for description images)
+  const isMobile = bpKey === "mobile";
+  
   const linkUrls = {
     group1: "https://www.youtube.com",
     group2: "/prospect-augment",
@@ -271,6 +281,12 @@ const Middle = () => {
     group5: "https://x.com/",
     group6: "https://www.freecodecamp.org/",
     group7: "https://interpl.ai/",
+  };
+
+  // Get alignment class based on flip value and screen size
+  const getAlignmentClass = (flip) => {
+    if (!isMobile) return '';
+    return flip ? 'right-0 translate-x-1/4' : 'left-0 -translate-x-1/4';
   };
 
   return (
@@ -308,40 +324,164 @@ const Middle = () => {
         {/* STACKED CLOUDS */}
         <div className="relative">
 
-          {/* CLOUD 1 — LEFT (group 2) */}
-          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_1, marginTop: cfg.cloud1StackOffset }}>
+          {/* CLOUD 1 — LEFT (group 2) - flip false = left alignment */}
+          <div 
+            className={`relative ${isMobile ? 'w-[160%]' : ''}`}
+            style={{ zIndex: Z_INDEX.CLOUD_1, marginTop: cfg.cloud1StackOffset,  ...(isMobile && { left: cfg.cloudGroupLeftOffset })}}
+          >
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_1} />
-            <TextItem src={middle_section_img1_txt_2} top={cfg.txt2_top}  position="left" leftValue={cfg.txt2_lv}  width={cfg.txt2_w}  zIndex={Z_INDEX.TEXT_MAIN_2} href={linkUrls.group2} />
-            <TextItem src={t2}                        top={cfg.desc2_top} position="left" leftValue={cfg.desc2_lv} width={cfg.desc2_w} zIndex={Z_INDEX.TEXT_DESC_2} href={linkUrls.group2} />
+            <TextItem 
+              src={middle_section_img1_txt_2} 
+              top={cfg.txt2_top}  
+              position="left" 
+              leftValue={cfg.txt2_lv}  
+              width={cfg.txt2_w}  
+              zIndex={Z_INDEX.TEXT_MAIN_2} 
+              href={linkUrls.group2} 
+            />
+            <TextItem 
+              src={isMobile ? t2_phone : t2}                        
+              top={cfg.desc2_top} 
+              position="left" 
+              leftValue={cfg.desc2_lv} 
+              width={cfg.desc2_w} 
+              zIndex={Z_INDEX.TEXT_DESC_2} 
+              href={linkUrls.group2} 
+            />
           </div>
 
-          {/* CLOUD 2 — RIGHT (group 3) */}
-          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_2, marginTop: cfg.cloudStackOffset }}>
+          {/* CLOUD 2 — RIGHT (group 3) - flip true = right alignment */}
+          <div 
+            className={`relative ${isMobile ? 'w-[160%]' : ''}`}
+            style={{ zIndex: Z_INDEX.CLOUD_2, marginTop: cfg.cloudStackOffset, ...(isMobile && { right: cfg.cloudGroupRightOffset })}}
+          >
             <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_2} />
-            <TextItem src={middle_section_img1_txt_3} top={cfg.txt3_top}  position="right" rightValue={cfg.txt3_rv}  width={cfg.txt3_w}  zIndex={Z_INDEX.TEXT_MAIN_3} href={linkUrls.group3} />
-            <TextItem src={t3}                        top={cfg.desc3_top} position="right" rightValue={cfg.desc3_rv} width={cfg.desc3_w} zIndex={Z_INDEX.TEXT_DESC_3} href={linkUrls.group3} />
+            <TextItem 
+              src={middle_section_img1_txt_3} 
+              top={cfg.txt3_top}  
+              position="right" 
+              rightValue={cfg.txt3_rv}  
+              width={cfg.txt3_w}  
+              zIndex={Z_INDEX.TEXT_MAIN_3} 
+              href={linkUrls.group3} 
+            />
+            <TextItem 
+              src={isMobile ? t3_phone : t3}                        
+              top={cfg.desc3_top} 
+              position="right" 
+              rightValue={cfg.desc3_rv} 
+              width={cfg.desc3_w} 
+              zIndex={Z_INDEX.TEXT_DESC_3} 
+              href={linkUrls.group3} 
+            />
           </div>
 
-          {/* CLOUD 3 — LEFT (group 4) */}
-          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_3, marginTop: cfg.cloudStackOffset }}>
+          {/* CLOUD 3 — LEFT (group 4) - flip false = left alignment */}
+          <div 
+            className={`relative ${isMobile ? 'w-[160%]' : ''}`}
+            style={{ zIndex: Z_INDEX.CLOUD_3, marginTop: cfg.cloudStackOffset, ...(isMobile && { left: cfg.cloudGroupLeftOffset }) }}
+          >
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_3} />
-            <TextItem src={middle_section_img1_txt_4} top={cfg.txt4_top}  position="left" leftValue={cfg.txt4_lv}  width={cfg.txt4_w}  zIndex={Z_INDEX.TEXT_MAIN_4} href={linkUrls.group4} />
-            <TextItem src={t4}                        top={cfg.desc4_top} position="left" leftValue={cfg.desc4_lv} width={cfg.desc4_w} zIndex={Z_INDEX.TEXT_DESC_4} href={linkUrls.group4} />
+            <TextItem 
+              src={middle_section_img1_txt_4} 
+              top={cfg.txt4_top}  
+              position="left" 
+              leftValue={cfg.txt4_lv}  
+              width={cfg.txt4_w}  
+              zIndex={Z_INDEX.TEXT_MAIN_4} 
+              href={linkUrls.group4} 
+            />
+            <TextItem 
+              src={isMobile ? t4_phone : t4}                        
+              top={cfg.desc4_top} 
+              position="left" 
+              leftValue={cfg.desc4_lv} 
+              width={cfg.desc4_w} 
+              zIndex={Z_INDEX.TEXT_DESC_4} 
+              href={linkUrls.group4} 
+            />
           </div>
 
-          {/* CLOUD 4 — RIGHT (group 5) */}
-          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_4, marginTop: cfg.cloudStackOffset }}>
+          {/* CLOUD 4 — RIGHT (group 5) - flip true = right alignment */}
+          <div 
+            className={`relative ${isMobile ? 'w-[160%]' : ''}`}
+            style={{ zIndex: Z_INDEX.CLOUD_4, marginTop: cfg.cloudStackOffset, ...(isMobile && { right: cfg.cloudGroupRightOffset }) }}
+          >
             <MaskedBlendImage src={middle_cloud_2} flip={true} zIndex={Z_INDEX.CLOUD_4} />
-            <TextItem src={middle_section_img1_txt_5} top={cfg.txt5_top}  position="right" rightValue={cfg.txt5_rv}  width={cfg.txt5_w}  zIndex={Z_INDEX.TEXT_MAIN_5} href={linkUrls.group5} />
-            <TextItem src={t5}                        top={cfg.desc5_top} position="right" rightValue={cfg.desc5_rv} width={cfg.desc5_w} zIndex={Z_INDEX.TEXT_DESC_5} href={linkUrls.group5} />
+            <TextItem 
+              src={middle_section_img1_txt_5} 
+              top={cfg.txt5_top}  
+              position="right" 
+              rightValue={cfg.txt5_rv}  
+              width={cfg.txt5_w}  
+              zIndex={Z_INDEX.TEXT_MAIN_5} 
+              href={linkUrls.group5} 
+            />
+            <TextItem 
+              src={isMobile ? t5_phone : t5}                        
+              top={cfg.desc5_top} 
+              position="right" 
+              rightValue={cfg.desc5_rv} 
+              width={cfg.desc5_w} 
+              zIndex={Z_INDEX.TEXT_DESC_5} 
+              href={linkUrls.group5} 
+            />
           </div>
 
-          {/* CLOUD 5 — LEFT + CENTER (group 6 + group 7) */}
-          <div className="relative" style={{ zIndex: Z_INDEX.CLOUD_5, marginTop: cfg.cloudStackOffset }}>
+          {/* CLOUD 5 — LEFT + CENTER (group 6 + group 7) - flip false = left alignment */}
+          <div 
+            className={`relative ${isMobile ? 'w-[160%]' : ''}`}
+            style={{ zIndex: Z_INDEX.CLOUD_5, marginTop: cfg.cloudStackOffset, ...(isMobile && { left: cfg.cloudGroupLeftOffset }) }}
+          >
             <MaskedBlendImage src={middle_cloud_2} flip={false} zIndex={Z_INDEX.CLOUD_5} />
-            <TextItem src={middle_section_img1_txt_6} top={cfg.txt6_top}  position="left" leftValue={cfg.txt6_lv}  width={cfg.txt6_w}  zIndex={Z_INDEX.TEXT_MAIN_6} href={linkUrls.group6} />
-            <TextItem src={t6}                        top={cfg.desc6_top} position="left" leftValue={cfg.desc6_lv} width={cfg.desc6_w} zIndex={Z_INDEX.TEXT_DESC_6} href={linkUrls.group6} />
-            <TextItem src={middle_section_img1_txt_7} top={cfg.txt7_top}  position="center" width={cfg.txt7_w}     zIndex={Z_INDEX.TEXT_MAIN_7} href={linkUrls.group7} />
+            <TextItem 
+              src={middle_section_img1_txt_6} 
+              top={cfg.txt6_top}  
+              position="left" 
+              leftValue={cfg.txt6_lv}  
+              width={cfg.txt6_w}  
+              zIndex={Z_INDEX.TEXT_MAIN_6} 
+              href={linkUrls.group6} 
+            />
+            <TextItem 
+              src={isMobile ? t6_phone : t6}                        
+              top={cfg.desc6_top} 
+              position="left" 
+              leftValue={cfg.desc6_lv} 
+              width={cfg.desc6_w} 
+              zIndex={Z_INDEX.TEXT_DESC_6} 
+              href={linkUrls.group6} 
+            />
+             {/* Last text - positioned on right side only for mobile */}
+  {isMobile ? (
+    <div
+      className="absolute"
+      style={{
+        top: cfg.txt7_top,
+        right: '30%',
+        width: cfg.txt7_w,
+        zIndex: Z_INDEX.TEXT_MAIN_7,
+      }}
+    >
+      <a 
+        href={linkUrls.group7} 
+        target={linkUrls.group7.startsWith("http") ? "_blank" : "_self"}
+        rel={linkUrls.group7.startsWith("http") ? "noopener noreferrer" : undefined}
+        className="pointer-events-auto"
+      >
+        <img src={middle_section_img1_txt_7} alt="" className="w-full" />
+      </a>
+    </div>
+  ) : (
+    <TextItem 
+      src={middle_section_img1_txt_7} 
+      top={cfg.txt7_top}  
+      position="center" 
+      width={cfg.txt7_w}     
+      zIndex={Z_INDEX.TEXT_MAIN_7} 
+      href={linkUrls.group7} 
+    />
+  )}
           </div>
 
         </div>

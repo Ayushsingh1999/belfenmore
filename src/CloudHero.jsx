@@ -57,8 +57,8 @@ const SCREEN_CONFIG = {
     // ── "BUILD MORE" TEXT BLOCK ──────────────────────────────────────────
     textTop:           "5%",           // ↑ move text block DOWN / ↓ move UP
     textLeft:          "20%",          // ↑ shift RIGHT / ↓ shift LEFT
-    headingSize:       "25px",         // ↑ bigger heading / ↓ smaller
-    bodySize:          "6.5px",        // ↑ bigger body text / ↓ smaller
+    headingSize:       "28px",         // ↑ bigger heading / ↓ smaller
+    bodySize:          "11px",        // ↑ bigger body text / ↓ smaller
     textBlockWidth:    "300px",        // ↑ wider text container / ↓ narrower
     textBlockLeft:     "-130px",        // negative = nudge left, positive = nudge right
   },
@@ -254,41 +254,50 @@ const CloudHero = () => {
       />
 
       {/* BUILD MORE SECTION */}
-      <div
-        className="absolute z-50 text-left"
-        style={{ top: cfg.textTop, left: cfg.textLeft }}
-      >
-        <h2
-          className="font-normal leading-[100%] tracking-[0] text-[#32312B] select-none ml-0"
-          style={{ fontFamily: "Meie Script", fontSize: cfg.headingSize }}
-        >
-          Build more with us
-        </h2>
+<div
+  className={`absolute z-50 ${bpKey === "mobile" ? "text-center" : "text-left"}`}
+  style={{
+    top: cfg.textTop,
+    left: bpKey === "mobile" ? "50%" : cfg.textLeft,
+    transform: bpKey === "mobile" ? "translateX(-50%)" : "none",
+    width: bpKey === "mobile" ? "100%" : "auto",
+  }}
+>
+  <h2
+    className={`font-normal leading-[100%] tracking-[0] text-[#32312B] select-none ml-0 ${bpKey === "mobile" ? 'mb-2' : ''}`}
+    style={{ fontFamily: "Meie Script", fontSize: cfg.headingSize }}
+  >
+    Build more with us
+  </h2>
 
-        <div
-          className="mt-2 text-right relative"
-          style={{ width: cfg.textBlockWidth, left: cfg.textBlockLeft }}
-        >
-          <p
-            className="font-[500] leading-[1.2] text-[#32312B] pl-24"
-            style={{ fontFamily: "Times Now", fontSize: cfg.bodySize }}
-          >
-            Explore the range and depth of our robust assortment
-          </p>
-          <p
-            className="font-[500] leading-[1.2] text-[#32312B] pl-12"
-            style={{ fontFamily: "Times Now", fontSize: cfg.bodySize }}
-          >
-            of offering, tailored to address ever-evolving
-          </p>
-          <p
-            className="font-[500] leading-[1.2] text-[#32312B]"
-            style={{ fontFamily: "Times Now", fontSize: cfg.bodySize }}
-          >
-            business needs and expectations.
-          </p>
-        </div>
-      </div>
+  <div
+    className={`mt-5 relative ${bpKey === "mobile" ? "text-center" : "text-right"}`}
+    style={{
+      width: cfg.textBlockWidth,
+      left: bpKey === "mobile" ? "auto" : cfg.textBlockLeft,
+      margin: bpKey === "mobile" ? "0 auto" : "0",
+    }}
+  >
+    <p
+      className={`font-[500] leading-[1.2] text-[#32312B] ${bpKey === "mobile" ? "" : "pl-24"}`}
+      style={{ fontFamily: "Times Now", fontSize: cfg.bodySize }}
+    >
+      Explore the range and depth of our robust assortment
+    </p>
+    <p
+      className={`font-[500] leading-[1.2] text-[#32312B] ${bpKey === "mobile" ? "" : "pl-12"}`}
+      style={{ fontFamily: "Times Now", fontSize: cfg.bodySize }}
+    >
+      of offering, tailored to address ever-evolving
+    </p>
+    <p
+      className="font-[500] leading-[1.2] text-[#32312B]"
+      style={{ fontFamily: "Times Now", fontSize: cfg.bodySize }}
+    >
+      business needs and expectations.
+    </p>
+  </div>
+</div>
 
     </div>
   );
