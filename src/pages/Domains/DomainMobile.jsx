@@ -1,5 +1,12 @@
 import React from "react";
 import title from "../../assets/web_main_title.png";
+import Group1 from "../../assets/Group1.png";
+import Group2 from "../../assets/Group2.png";
+import Group3 from "../../assets/Group3.png";
+import Group4 from "../../assets/Group4.png";
+import Group5 from "../../assets/Group5.png";
+import BlossomTree from "../../assets/Bloosm_tree.png"
+import footerimg from "../../assets/footerimg_home.png";
 
 export default function DomainMobile() {
   return (
@@ -47,8 +54,13 @@ export default function DomainMobile() {
           seamless execution.
         </span>
       </div>
-      <div className="w-[250px] h-[250px] border-solid border-[0.83px] border-[#3a3931] relative z-[49] mt-[125.15px] mr-0 mb-0 ml-[70px]">
-        <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/zG5tsxazY9.png)] bg-cover bg-no-repeat relative overflow-hidden z-50 mt-[8.333px] mr-0 mb-0 ml-[8.333px]" />
+      <div className="w-[250px] h-[250px]  relative z-[49] mt-[125.15px] mr-0 mb-0 ml-[70px]">
+        {/* <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/zG5tsxazY9.png)] bg-cover bg-no-repeat relative overflow-hidden z-50 mt-[8.333px] mr-0 mb-0 ml-[8.333px]" /> */}
+        <img
+  src={Group1}
+  alt="group1"
+  className="w-[233.333px] h-[233.333px] object-cover mt-[8.333px] ml-[8.333px] z-50"
+/>
       </div>
       <span className="flex w-[7px] h-[11px] justify-end items-end font-['Cabinet_Grotesk_Variable'] text-[16px] font-light leading-[11px] text-[#32312b] relative text-right whitespace-nowrap z-[53] mt-[18px] mr-0 mb-0 ml-[142.91px]">
         1.
@@ -56,8 +68,13 @@ export default function DomainMobile() {
       <span className="flex w-[83px] h-[13px] items-end font-['Cabinet_Grotesk_Variable'] text-[20px] font-light leading-[13px] text-[#32312b] relative whitespace-nowrap z-[52] mt-[-4.5px] mr-0 mb-0 ml-[154.386px]">
         Payments
       </span>
-      <div className="w-[250px] h-[250px] border-solid border-[0.83px] border-[#3a3931] relative z-[56] mt-[90px] mr-0 mb-0 ml-[70px]">
-        <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/GYKkFBHxN0.png)] bg-cover bg-no-repeat relative overflow-hidden z-[57] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" />
+      <div className="w-[250px] h-[250px] relative z-[56] mt-[90px] mr-0 mb-0 ml-[70px]">
+        {/* <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/GYKkFBHxN0.png)] bg-cover bg-no-repeat relative overflow-hidden z-[57] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" /> */}
+        <img
+  src={Group2}
+  alt="group2"
+  className="w-[233.333px] h-[233.333px] object-cover mt-[8.333px] ml-[8.333px] z-50"
+/>
       </div>
       <span className="flex w-[12px] h-[11px] justify-end items-end font-['Cabinet_Grotesk_Variable'] text-[16px] font-light leading-[11px] text-[#32312b] relative text-right whitespace-nowrap z-[59] mt-[18px] mr-0 mb-0 ml-[106.174px]">
         2.
@@ -65,8 +82,13 @@ export default function DomainMobile() {
       <span className="flex w-[146px] h-[13px] items-end font-['Cabinet_Grotesk_Variable'] text-[20px] font-light leading-[13px] text-[#32312b] relative whitespace-nowrap z-[60] mt-[-4.5px] mr-0 mb-0 ml-[122.65px]">
         Unsecured Loans
       </span>
-      <div className="w-[250px] h-[250px] border-solid border-[0.83px] border-[#3a3931] relative z-[63] mt-[90px] mr-0 mb-0 ml-[70px]">
-        <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/t9zUP1FL01.png)] bg-cover bg-no-repeat relative overflow-hidden z-[64] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" />
+      <div className="w-[250px] h-[250px]  relative z-[63] mt-[90px] mr-0 mb-0 ml-[70px]">
+        {/* <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/t9zUP1FL01.png)] bg-cover bg-no-repeat relative overflow-hidden z-[64] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" /> */}
+        <img
+  src={Group3}
+  alt="group3"
+  className="w-[233.333px] h-[233.333px] object-cover mt-[8.333px] ml-[8.333px] z-50"
+/>
       </div>
       <span className="flex w-[12px] h-[11px] justify-end items-end font-['Cabinet_Grotesk_Variable'] text-[16px] font-light leading-[11px] text-[#32312b] relative text-right whitespace-nowrap z-[66] mt-[18.19px] mr-0 mb-0 ml-[121.957px]">
         3.
@@ -74,8 +96,13 @@ export default function DomainMobile() {
       <span className="flex w-[118px] h-[13px] items-end font-['Cabinet_Grotesk_Variable'] text-[20px] font-light leading-[13px] text-[#32312b] relative whitespace-nowrap z-[67] mt-[-4.5px] mr-0 mb-0 ml-[138.433px]">
         Retail Banking
       </span>
-      <div className="w-[250px] h-[250px] border-solid border-[0.83px] border-[#3a3931] relative z-[70] mt-[90px] mr-0 mb-0 ml-[70px]">
-        <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/z6C4BNzPxK.png)] bg-cover bg-no-repeat relative overflow-hidden z-[71] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" />
+      <div className="w-[250px] h-[250px] relative z-[70] mt-[90px] mr-0 mb-0 ml-[70px]">
+        {/* <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/z6C4BNzPxK.png)] bg-cover bg-no-repeat relative overflow-hidden z-[71] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" /> */}
+        <img
+  src={Group4}
+  alt="group4"
+  className="w-[233.333px] h-[233.333px] object-cover mt-[8.333px] ml-[8.333px] z-50"
+/>
       </div>
       <span className="flex w-[13px] h-[11px] justify-end items-end font-['Cabinet_Grotesk_Variable'] text-[16px] font-light leading-[11px] text-[#32312b] relative text-right whitespace-nowrap z-[73] mt-[18px] mr-0 mb-0 ml-[131.445px]">
         4.
@@ -83,8 +110,13 @@ export default function DomainMobile() {
       <span className="flex w-[94px] h-[13px] items-end font-['Cabinet_Grotesk_Variable'] text-[20px] font-light leading-[13px] text-[#32312b] relative whitespace-nowrap z-[74] mt-[-4.5px] mr-0 mb-0 ml-[148.921px]">
         Collections
       </span>
-      <div className="w-[250px] h-[250px] border-solid border-[0.83px] border-[#3a3931] relative z-[77] mt-[90px] mr-0 mb-0 ml-[70px]">
-        <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/WFSgXpSohE.png)] bg-cover bg-no-repeat relative overflow-hidden z-[78] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" />
+      <div className="w-[250px] h-[250px]  relative z-[77] mt-[90px] mr-0 mb-0 ml-[70px]">
+        {/* <div className="w-[233.333px] h-[233.333px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/WFSgXpSohE.png)] bg-cover bg-no-repeat relative overflow-hidden z-[78] mt-[8.333px] mr-0 mb-0 ml-[8.333px]" /> */}
+        <img
+  src={Group5}
+  alt="group5"
+  className="w-[233.333px] h-[233.333px] object-cover mt-[8.333px] ml-[8.333px] z-50"
+/>
       </div>
       <span className="flex w-[13px] h-[11px] justify-end items-end font-['Cabinet_Grotesk_Variable'] text-[16px] font-light leading-[11px] text-[#32312b] relative text-right whitespace-nowrap z-[80] mt-[18px] mr-0 mb-0 ml-[137.945px]">
         5.
@@ -207,7 +239,12 @@ export default function DomainMobile() {
           Turning bold aspirations into executable plans powered by decisive
           actions and effective change management.
         </span>
-        <div className="w-[273.3px] h-[200px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/hgcvKSF5fM.png)] bg-cover bg-no-repeat absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-0 z-[125]" />
+        {/* <div className="w-[273.3px] h-[200px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/hgcvKSF5fM.png)] bg-cover bg-no-repeat absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-0 z-[125]" /> */}
+        <img
+  src={BlossomTree}
+  alt="Bloosm Tree"
+  className="w-[273.3px] h-[200px] bg-cover bg-no-repeat absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-0 z-[125]"
+/>
         <div className="w-[390px] h-px bg-[#32312b] absolute top-[194.418px] left-0 z-[6]" />
       </div>
       <div className="w-[35.063px] h-[18px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/mfAufgTWGS.png)] bg-cover bg-no-repeat relative z-[24] mt-[36.405px] mr-0 mb-0 ml-[173.469px]" />
@@ -288,12 +325,16 @@ export default function DomainMobile() {
           <div className="w-[10px] h-[10px] shrink-0 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/uw5jaZ5Q3h.png)] bg-cover bg-no-repeat relative overflow-hidden z-[22]" />
         </div>
       </div>
-      <div className="w-[474.293px] h-[206.655px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/VGEvUcWrPK.png)] bg-cover bg-no-repeat relative z-[4] mt-[46.825px] mr-0 mb-0 ml-[-42.146px]">
+      {/* <div className="w-[474.293px] h-[206.655px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/VGEvUcWrPK.png)] bg-cover bg-no-repeat relative z-[4] mt-[46.825px] mr-0 mb-0 ml-[-42.146px]">
         <div className="w-[390px] h-[82.776px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/0XFSo5uCae.png)] bg-cover bg-no-repeat relative z-[3] mt-[7.373px] mr-0 mb-0 ml-[42.146px]" />
         <span className="flex w-[48px] h-[16px] justify-end items-start font-['Plus_Jakarta_Sans'] text-[13px] font-semibold leading-[16px] text-[#fff] relative text-right whitespace-nowrap z-[5] mt-[58.952px] mr-0 mb-0 ml-[350.146px]">
           © 2025
         </span>
-      </div>
+      </div> */}
+      <div
+  className="w-[474.293px] h-[206.655px] bg-cover bg-no-repeat relative z-[48] mt-[40.367px] ml-[-42.146px] translate-y-[-9px]"
+  style={{ backgroundImage: `url(${footerimg})` }}
+></div>
       <div className="w-[423.037px] h-[723.245px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/rm3B29Atp2.png)] bg-cover bg-no-repeat absolute top-[143.364px] left-1/2 translate-x-[-53.9%] translate-y-0 z-[39]" />
       <div className="w-[390px] h-[694px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2026-03-23/LspB3S7G53.png)] bg-cover bg-no-repeat absolute top-[3179.162px] left-1/2 translate-x-[-50%] translate-y-0 overflow-hidden z-[83]" />
     </div>
