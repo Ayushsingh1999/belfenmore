@@ -53,7 +53,6 @@ const Header = () => {
         className={`
           relative
           w-full
-          h-full
           flex
           items-start
           justify-between

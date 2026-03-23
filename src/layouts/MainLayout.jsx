@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer"
+import { useViewport } from "../hooks/useViewPort";
 
 const MainLayout = () => {
+  const { isMobile } = useViewport();
+
   return (
     <div className="bg-[#FFFDEC] min-h-screen overflow-x-hidden">
       <Header />
 
       {/* offset for fixed header */}
-      <main className="pt-[120px] md:pt-[140px]">
+      <main className={isMobile ? "pt-[0px]" : "pt-[140px]"}>
         {/* ===== EFFECT WRAPPER (IMPORTANT) ===== */}
         <div className="relative">
           {/* CREAM OVERLAY — extended UPWARD */}
@@ -34,7 +37,7 @@ const MainLayout = () => {
         </div>
       </main>
 
-      <Footer />
+      {!isMobile && <Footer />}
     </div>
   );
 };
