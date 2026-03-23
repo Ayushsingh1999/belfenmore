@@ -21,6 +21,7 @@ import t3_phone from "./assets/txt2_phone.png";
 import t4_phone from "./assets/txt3_phone.png";
 import t5_phone from "./assets/txt4_phone.png";
 import t6_phone from "./assets/txt5_phone.png";
+import Footer from "./pages/Footer";
 
 const SCREEN_CONFIG = {
   // ── MOBILE — 390 × 844 ───────────────────────────────────────────────────
@@ -491,6 +492,10 @@ const Middle = () => {
           <img src={sun_beech} alt="Sun/Beech" className="w-full" />
         </div>
 
+      </div>
+      
+      <div>
+      {isMobile && <Footer/>}
       </div>
     </section>
   );

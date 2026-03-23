@@ -10,6 +10,31 @@ import logo_Stontonne from "../assets/Strontonne.svg";
 const HEADER_HEIGHT = 130;
 const EDGE_PADDING = "p-4";
 
+// Mobile configuration object with percentages
+const MOBILE_CONFIG = {
+  title: {
+    alignment: "left", // 'left' for mobile, automatically centers on desktop
+    widthPercentage: 53, // 40% of container width on mobile
+    marginLeftPercentage: 0, // 0% margin from left
+    marginTopPercentage: 5, // 5% margin from top
+  },
+  hamburger: {
+    borderRadius: 8, // Border radius in pixels for the square button
+    stickRadius: 100, // Border radius for sticks (100 = fully rounded)
+    backgroundColor: "rgba(246, 242, 226, 0.8)", // F6F2E2 with 80% opacity
+    stickColor: "#0E1319", // 100% opacity dark color
+    stickHeight: 2, // in pixels - bolder/thicker sticks
+    stickWidth: 18, // in pixels - wider sticks
+    squareSize: 44, // in pixels - square button size (44px for better touch target)
+    gap: 3, // gap between sticks in pixels
+    padding: 23, // padding inside the button (creates equal space from all sides)
+    position: {
+      topPercentage: 0,
+      rightPercentage: 0,
+    },
+  },
+};
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -82,17 +107,27 @@ const Header = () => {
           </div>
         </Link>
 
-        {/* CENTER TITLE */}
+        {/* CENTER TITLE - Using percentage-based configuration */}
         <Link to="/">
           <div
-            className={`absolute left-1/2 -translate-x-1/2 ${
-              open ? "hidden" : "block"
-            }`}
+            className={`
+              ${open ? "hidden" : "block"}
+              ${MOBILE_CONFIG.title.alignment === "left" ? "md:absolute md:left-1/2 md:-translate-x-1/2" : ""}
+              md:block
+            `}
+            style={{
+              marginLeft: MOBILE_CONFIG.title.marginLeftPercentage > 0 ? `${MOBILE_CONFIG.title.marginLeftPercentage}%` : undefined,
+              marginTop: MOBILE_CONFIG.title.marginTopPercentage > 0 ? `${MOBILE_CONFIG.title.marginTopPercentage}%` : undefined,
+            }}
           >
             <img
               src={title}
               alt="Main Title"
-              className="w-36 md:w-40 object-contain"
+              className="object-contain"
+              style={{
+                width: `${MOBILE_CONFIG.title.widthPercentage}%`,
+                maxWidth: "100%",
+              }}
             />
           </div>
         </Link>
@@ -130,13 +165,92 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* MOBILE MENU BUTTON - Fixed with proper padding and cross button */}
         <button
-          className="md:hidden text-2xl z-50 relative"
+          className="md:hidden relative flex items-center justify-center"
+          style={{
+            backgroundColor: MOBILE_CONFIG.hamburger.backgroundColor,
+            borderRadius: `${MOBILE_CONFIG.hamburger.borderRadius}px`,
+            width: `${MOBILE_CONFIG.hamburger.squareSize}px`,
+            height: `${MOBILE_CONFIG.hamburger.squareSize}px`,
+            padding: `${MOBILE_CONFIG.hamburger.padding}px`,
+            top: MOBILE_CONFIG.hamburger.position.topPercentage > 0 ? `${MOBILE_CONFIG.hamburger.position.topPercentage}%` : undefined,
+            right: MOBILE_CONFIG.hamburger.position.rightPercentage > 0 ? `${MOBILE_CONFIG.hamburger.position.rightPercentage}%` : undefined,
+          }}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? "✕" : "☰"}
+          {!open ? (
+            // Hamburger icon
+            <div 
+              className="flex flex-col items-center justify-center"
+              style={{
+                gap: `${MOBILE_CONFIG.hamburger.gap}px`,
+              }}
+            >
+              <span 
+                className="block"
+                style={{
+                  borderRadius: `${MOBILE_CONFIG.hamburger.stickRadius}px`,
+                  width: `${MOBILE_CONFIG.hamburger.stickWidth}px`,
+                  height: `${MOBILE_CONFIG.hamburger.stickHeight}px`,
+                  backgroundColor: MOBILE_CONFIG.hamburger.stickColor,
+                }}
+              ></span>
+              <span 
+                className="block"
+                style={{
+                  borderRadius: `${MOBILE_CONFIG.hamburger.stickRadius}px`,
+                  width: `${MOBILE_CONFIG.hamburger.stickWidth}px`,
+                  height: `${MOBILE_CONFIG.hamburger.stickHeight}px`,
+                  backgroundColor: MOBILE_CONFIG.hamburger.stickColor,
+                }}
+              ></span>
+              <span 
+                className="block"
+                style={{
+                  borderRadius: `${MOBILE_CONFIG.hamburger.stickRadius}px`,
+                  width: `${MOBILE_CONFIG.hamburger.stickWidth}px`,
+                  height: `${MOBILE_CONFIG.hamburger.stickHeight}px`,
+                  backgroundColor: MOBILE_CONFIG.hamburger.stickColor,
+                }}
+              ></span>
+            </div>
+          ) : (
+            // Close icon (X) - Fixed to appear properly
+            <div 
+              className="relative flex items-center justify-center"
+              style={{
+                width: `${MOBILE_CONFIG.hamburger.stickWidth + 8}px`,
+                height: `${MOBILE_CONFIG.hamburger.stickWidth + 8}px`,
+              }}
+            >
+              {/* First diagonal line of X */}
+              <span 
+                className="absolute block"
+                style={{
+                  position: "absolute",
+                  width: `${MOBILE_CONFIG.hamburger.stickWidth + 4}px`,
+                  height: `${MOBILE_CONFIG.hamburger.stickHeight}px`,
+                  backgroundColor: MOBILE_CONFIG.hamburger.stickColor,
+                  borderRadius: `${MOBILE_CONFIG.hamburger.stickRadius}px`,
+                  transform: "rotate(45deg)",
+                }}
+              ></span>
+              {/* Second diagonal line of X */}
+              <span 
+                className="absolute block"
+                style={{
+                  position: "absolute",
+                  width: `${MOBILE_CONFIG.hamburger.stickWidth + 4}px`,
+                  height: `${MOBILE_CONFIG.hamburger.stickHeight}px`,
+                  backgroundColor: MOBILE_CONFIG.hamburger.stickColor,
+                  borderRadius: `${MOBILE_CONFIG.hamburger.stickRadius}px`,
+                  transform: "rotate(-45deg)",
+                }}
+              ></span>
+            </div>
+          )}
         </button>
       </div>
 
